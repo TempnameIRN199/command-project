@@ -20,6 +20,10 @@ namespace command_project
     /// </summary>
     public partial class MainWindow : Window
     {
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         public MainWindow()
         {
             InitializeComponent();
