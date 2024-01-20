@@ -20,6 +20,8 @@ namespace command_project
     /// </summary>
     public partial class MainWindow : Window
     {
+        // дизайнер
+
         public MainWindow()
         {
             InitializeComponent();
