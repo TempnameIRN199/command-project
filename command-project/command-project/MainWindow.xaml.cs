@@ -21,7 +21,16 @@ namespace command_project
         {
             InitializeComponent();
 
-            
+            string mySkills = "C#^5|SQL^3";
+            MessageBox.Show(SkillsIntoText(mySkills));
+
+
+            List<Skill> skills = GetSkills(mySkills);
+            MessageBox.Show(SkillsIntoDBFormat(skills));
+
+            MessageBox.Show(ChangeSkillTime(mySkills, new Skill() { Name = "C#", Time = 10 }));
+            MessageBox.Show(DeleteSkill(mySkills, "C#"));
+            MessageBox.Show(AddSkill(mySkills, new Skill() { Name = "C++", Time = 1 }));
         }
 
         //Из поля баз данных перевод в лист навыков
@@ -67,6 +76,88 @@ namespace command_project
 
             return isEnough;
         }
+
+
+
+
+        //Возвращает строку навыков пользователя с новым навыком
+        string AddSkill(string userSkills, Skill skill)
+        {
+            return userSkills + "|" + skill.Name + "^" + skill.Time;
+        }
+
+
+        //Возвращает строку навыков с измененным стажем
+        string ChangeSkillTime(string userSkills, Skill skill)
+        {
+            string changedSkills = "";
+
+            List<string> skillsTextParts = userSkills.Split('|').ToList();
+            foreach (string skillText in skillsTextParts)
+            {
+                List<string> parts = skillText.Split('^').ToList();
+                Skill currentSkill = new Skill() { Name = parts[0], Time = int.Parse(parts[1]) };
+
+                if (currentSkill.Name == skill.Name)
+                {
+                    changedSkills += "|" + skill.DBFormat();
+                }
+                else
+                {
+                    changedSkills += "|" + currentSkill.DBFormat();
+                }
+            }
+
+            return changedSkills.TrimStart('|');
+        }
+
+
+        //Возвращает строку навыков с удаленным навыком
+        string DeleteSkill(string userSkills, string skillName)
+        {
+            string changedSkills = "";
+
+            List<string> skillsTextParts = userSkills.Split('|').ToList();
+            foreach (string skillText in skillsTextParts)
+            {
+                List<string> parts = skillText.Split('^').ToList();
+                Skill currentSkill = new Skill() { Name = parts[0], Time = int.Parse(parts[1]) };
+
+                if (currentSkill.Name != skillName)
+                {
+                    changedSkills += "|" + currentSkill.DBFormat();
+                }
+            }
+
+            return changedSkills.TrimStart('|');
+        }
+
+
+        //Возвращает навыки в формате поля базы данных
+        string SkillsIntoDBFormat(List<Skill> skills)
+        {
+            string result = "";
+            skills.ForEach(i => result += "|" + i.DBFormat());
+            return result.TrimStart('|');
+        }
+
+
+
+
+        //Возвращает пользователю навыки в понятном ему формате 
+        string SkillsIntoText(List<Skill> skills) 
+        {
+            string result = "";
+            skills.ForEach(i => result += i.ReadSkill() + "\n");
+            return result;
+        }
+
+        string SkillsIntoText(string skills)
+        {
+            string result = "";
+            GetSkills(skills).ForEach(i => result += i.ReadSkill() + "\n");
+            return result;
+        }
     }
 
     class Skill
@@ -75,5 +166,8 @@ namespace command_project
         public int Time { get; set; }
 
         public Skill() { }
+
+        public string ReadSkill() { return Name + " - " + Time + " years"; }
+        public string DBFormat() { return Name + "^" + Time; }
     }
 }
