@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace command_project
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml aaaaaaaa иииии
+    /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
