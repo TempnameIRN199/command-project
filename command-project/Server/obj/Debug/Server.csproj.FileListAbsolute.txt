@@ -1,0 +1,7 @@
+D:\Progs\Visual Studio 2022\Proj\CommandProject\command-project\command-project\Server\bin\Debug\Server.exe.config
+D:\Progs\Visual Studio 2022\Proj\CommandProject\command-project\command-project\Server\bin\Debug\Server.exe
+D:\Progs\Visual Studio 2022\Proj\CommandProject\command-project\command-project\Server\bin\Debug\Server.pdb
+D:\Progs\Visual Studio 2022\Proj\CommandProject\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\Progs\Visual Studio 2022\Proj\CommandProject\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\Progs\Visual Studio 2022\Proj\CommandProject\command-project\command-project\Server\obj\Debug\Server.exe
+D:\Progs\Visual Studio 2022\Proj\CommandProject\command-project\command-project\Server\obj\Debug\Server.pdb
