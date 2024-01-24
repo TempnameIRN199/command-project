@@ -12,10 +12,11 @@ namespace command_project
         private int Id { get; set; }
         private string Name { get; set; }
         private string SecondName { get; set; }
+        private string Email { get; set; }
         private int Age { get; set; }
         //айди юзера в приложении
         private string UserId { get; set; }
-        private string Country { get; set; }
+        private string Country { get; set; }    
         private string City { get; set; }
         //кто пользователь(Worker,Employer,Admin)
         private string Status { get; set; }
