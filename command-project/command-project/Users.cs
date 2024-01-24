@@ -19,6 +19,8 @@ namespace command_project
         private string City { get; set; }
         //кто пользователь(Worker,Employer,Admin)
         private string Status { get; set; }
+        //номер телефона
+        private string PhoneNumber { get; set; }
 
     }
 }
