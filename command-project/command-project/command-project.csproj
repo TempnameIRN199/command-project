@@ -66,6 +66,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CV.cs" />
+    <Compile Include="Database\CV.cs" />
+    <Compile Include="Database\Request.cs" />
+    <Compile Include="Database\RequestUser.cs" />
+    <Compile Include="Database\Skills.cs" />
+    <Compile Include="Database\Users.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="RequestUser.cs" />
     <Compile Include="Skills.cs" />
