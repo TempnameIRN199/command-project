@@ -13,7 +13,7 @@ namespace command_project
         //работадатель, который оставил вакансию
         private Users Employer { get; set; }
         //когда выставили вакансию
-        private DateTime RequestTime { get; set; }
+        private DateTime RequestDate { get; set; }
         //описание вакансии
         private string RequstInfo { get; set; }
 
