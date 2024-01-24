@@ -68,6 +68,7 @@
     <Compile Include="CV.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="RequestUser.cs" />
+    <Compile Include="Skills.cs" />
     <Compile Include="Users.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

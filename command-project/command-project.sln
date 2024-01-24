@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tables", "Tables", "{732D66
 		command-project\CV.cs = command-project\CV.cs
 		command-project\Request.cs = command-project\Request.cs
 		command-project\RequestUser.cs = command-project\RequestUser.cs
+		command-project\Skills.cs = command-project\Skills.cs
 		command-project\Users.cs = command-project\Users.cs
 	EndProjectSection
 EndProject
