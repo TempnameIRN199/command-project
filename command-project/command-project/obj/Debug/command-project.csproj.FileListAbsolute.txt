@@ -30,3 +30,35 @@ D:\Coding\Learn\Управління проектами\command-project\command-
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\LiveCharts.xml
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.pdb
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.xml
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\command-project.exe.config
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\command-project.exe
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\command-project.pdb
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\EntityFramework.dll
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\EntityFramework.SqlServer.dll
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\LiveCharts.dll
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.dll
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\EntityFramework.xml
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\EntityFramework.SqlServer.xml
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\LiveCharts.pdb
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\LiveCharts.xml
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.pdb
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.xml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project.csproj.AssemblyReference.cache
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\style\CustomLabel.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\style\CustomTabItem.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\style\GradientLabel.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\style\GradientLabel2.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\admin\Menu.g.cs
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\MainWindow.g.cs
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\App.g.cs
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project_MarkupCompile.cache
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project_MarkupCompile.lref
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\admin\Menu.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\MainWindow.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project.g.resources
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command_project.Properties.Resources.resources
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project.csproj.GenerateResource.cache
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project.csproj.CoreCompileInputs.cache
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project.csproj.CopyComplete
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project.exe
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project.pdb
