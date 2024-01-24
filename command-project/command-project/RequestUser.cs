@@ -16,7 +16,7 @@ namespace command_project
         //какую именно вакансию
         private Requests Request { get; set; }
         //когда работник принял вакансию
-        private DateTime RequestTime { get; set; }
+        private DateTime RequestDate { get; set; }
         //принял ли работодатель работника(3 варианта:Accepted UnderReview Denied)
         private string Status { get; set; }
     }
