@@ -12,7 +12,7 @@ namespace command_project
         //айди в таблице
         private int Id { get; set; }
         //юзер, который сделал резюме
-        private Users user { get; set; }
+        private Users User { get; set; }
         //когда было сделано резюме
         private DateTime CVDate { get; set; }
         //пример C#^5|SQL^2 (сначала идет язык, знак ^ и цифра после него - сколько лет у юзера стаж работы с этим языком)
