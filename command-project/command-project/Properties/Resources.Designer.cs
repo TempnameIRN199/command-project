@@ -15,19 +15,11 @@ namespace command_project.Properties
     /// <summary>
     ///   Класс ресурсов со строгим типом для поиска локализованных строк и пр.
     /// </summary>
-<<<<<<< Updated upstream
     // Этот класс был автоматически создан при помощи StronglyTypedResourceBuilder
     // класс с помощью таких средств, как ResGen или Visual Studio.
     // Для добавления или удаления члена измените файл .ResX, а затем перезапустите ResGen
     // с параметром /str или заново постройте свой VS-проект.
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
-=======
-    // Этот класс создан автоматически классом StronglyTypedResourceBuilder
-    // с помощью такого средства, как ResGen или Visual Studio.
-    // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
-    // с параметром /str или перестройте свой проект VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
->>>>>>> Stashed changes
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources
