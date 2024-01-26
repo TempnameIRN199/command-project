@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project.csproj.AssemblyReference.cache
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\admin\Menu.g.cs
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\MainWindow.g.cs
@@ -30,3 +31,15 @@ D:\Coding\Learn\Управління проектами\command-project\command-
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\LiveCharts.xml
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.pdb
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.xml
+=======
+E:\command\command-project\command-project\command-project\obj\Debug\command-project.csproj.AssemblyReference.cache
+E:\command\command-project\command-project\command-project\obj\Debug\MainWindow.g.cs
+E:\command\command-project\command-project\command-project\obj\Debug\App.g.cs
+E:\command\command-project\command-project\command-project\obj\Debug\command-project_MarkupCompile.cache
+E:\command\command-project\command-project\command-project\obj\Debug\command-project_MarkupCompile.lref
+D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project.csproj.AssemblyReference.cache
+D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\Window1.g.cs
+D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\App.g.cs
+D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project_MarkupCompile.cache
+D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project_MarkupCompile.lref
+>>>>>>> Stashed changes
