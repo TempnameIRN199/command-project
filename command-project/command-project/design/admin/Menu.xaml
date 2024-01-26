@@ -91,14 +91,22 @@
                                    FontSize="20" Margin="2,25,2,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle2}"/>
                         </StackPanel>
                     </Grid>
-                    <lvc:CartesianChart Series="{Binding SeriesCollection}" Grid.Row="1">
+                    <lvc:CartesianChart Grid.Row="1">
+                        <lvc:CartesianChart.Series>
+                            <lvc:LineSeries Title="Registered Users" Values="{Binding UserCounts}" PointGeometry="{x:Null}" LineSmoothness="0.8"/>
+                        </lvc:CartesianChart.Series>
+
                         <lvc:CartesianChart.AxisX>
-                            <lvc:Axis Title="Дата" Labels="{Binding Labels}"/>
+                            <lvc:Axis Title="Date" Labels="{Binding DateLabels}" LabelFormatter="{Binding DateAxisLabelFormatter}"/>
                         </lvc:CartesianChart.AxisX>
+
                         <lvc:CartesianChart.AxisY>
-                            <lvc:Axis Title="Кількість"/>
+                            <lvc:Axis Title="User Count" LabelFormatter="{Binding UserCountFormatter}"/>
                         </lvc:CartesianChart.AxisY>
                     </lvc:CartesianChart>
+
+
+
                 </Grid>
 
             </TabItem>

@@ -26,8 +26,8 @@ namespace command_project.design.admin
         public Menu()
         {
             InitializeComponent();
-        }
 
-        // Зробити сортування за алфавітом для кожного стовпця з _VerifiedResumes
+            // Зробити сортування за алфавітом для кожного стовпця з _VerifiedResumes
+        }
     }
 }
