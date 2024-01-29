@@ -62,7 +62,7 @@ namespace command_project.coding
         }
 
 
-        //Возвращает строку навыков с измененным стажем
+        //Возвращает строку навыков с измененным стажем 
         string ChangeSkillTime(string userSkills, Skill skill)
         {
             string changedSkills = "";
