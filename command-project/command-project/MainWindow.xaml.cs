@@ -16,10 +16,6 @@ using Work.EDM;
 
 namespace command_project
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    /// qweasd
     public partial class MainWindow : Window
     {
         public MainWindow()
