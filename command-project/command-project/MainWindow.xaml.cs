@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Work.EDM;
 
 namespace command_project
 {
@@ -20,6 +21,10 @@ namespace command_project
         public MainWindow()
         {
             InitializeComponent();
+            using (WorkContext context = new WorkContext())
+            {
+                var users = context.Users.ToList();
+            }
         }
     }
 }

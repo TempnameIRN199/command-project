@@ -1,11 +1,12 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace command_project.EDM
+namespace Work.EDM
 {
     public class CV
     {
@@ -17,10 +18,9 @@ namespace command_project.EDM
         public DateTime CreationDate { get; set; }
         public string UserInfo { get; set; }
         public virtual ICollection<RequestCV> RequestCVs { get; set; }
-        public CV()
+        public CV() 
         {
             RequestCVs = new List<RequestCV>();
         }
     }
 }
-    
