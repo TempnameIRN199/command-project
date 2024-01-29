@@ -6,9 +6,9 @@ namespace Work.EDM
 {
     public class WorkContext : DbContext
     {
-        public WorkContext(): base("WorkContext")
+        public WorkContext(): base("Work")
         {
-            Database.SetInitializer(new CreateDatabaseIfNotExists<WorkContext>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<WorkContext>());
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Skill> Skills { get; set; }

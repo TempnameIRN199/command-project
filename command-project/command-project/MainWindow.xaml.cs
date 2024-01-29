@@ -24,6 +24,7 @@ namespace command_project
             using (WorkContext context = new WorkContext())
             {
                 var users = context.Users.ToList();
+                Console.WriteLine(users);
             }
         }
     }
