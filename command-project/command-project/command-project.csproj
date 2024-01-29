@@ -75,6 +75,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="design\style\CustomCartesianChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="design\style\CustomLabel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,6 +149,9 @@
     <Resource Include="design\icon\free-icon-favorite-2891938.png" />
     <Resource Include="design\icon\free-icon-job-search-2808930.png" />
     <Resource Include="design\icon\free-icon-video-call-5696590.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="design\statsTest.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
