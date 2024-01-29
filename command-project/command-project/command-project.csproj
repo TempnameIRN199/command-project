@@ -68,11 +68,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="coding\Functions.cs" />
-    <Compile Include="Database\CV.cs" />
-    <Compile Include="Database\Request.cs" />
-    <Compile Include="Database\RequestUser.cs" />
-    <Compile Include="Database\Skills.cs" />
-    <Compile Include="Database\Users.cs" />
     <Page Include="design\admin\Menu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
