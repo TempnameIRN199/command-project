@@ -14,6 +14,7 @@
                 <ResourceDictionary Source="../style/CustomLabel.xaml"/>
                 <ResourceDictionary Source="../style/GradientLabel.xaml"/>
                 <ResourceDictionary Source="../style/GradientLabel2.xaml"/>
+                <ResourceDictionary Source="../style/CustomCartesianChart.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -91,18 +92,8 @@
                                    FontSize="20" Margin="2,25,2,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle2}"/>
                         </StackPanel>
                     </Grid>
-                    <lvc:CartesianChart Grid.Row="1">
-                        <lvc:CartesianChart.Series>
-                            <lvc:LineSeries Title="Registered Users" Values="{Binding UserCounts}" PointGeometry="{x:Null}" LineSmoothness="0.8"/>
-                        </lvc:CartesianChart.Series>
-
-                        <lvc:CartesianChart.AxisX>
-                            <lvc:Axis Title="Date" Labels="{Binding DateLabels}" LabelFormatter="{Binding DateAxisLabelFormatter}"/>
-                        </lvc:CartesianChart.AxisX>
-
-                        <lvc:CartesianChart.AxisY>
-                            <lvc:Axis Title="User Count" LabelFormatter="{Binding UserCountFormatter}"/>
-                        </lvc:CartesianChart.AxisY>
+                    <lvc:CartesianChart x:Name="statsDash" Series="{Binding SeriesCollection}"
+                                        Grid.Row="1" Style="{StaticResource CustomCartesianChartStyle}">
                     </lvc:CartesianChart>
 
 
