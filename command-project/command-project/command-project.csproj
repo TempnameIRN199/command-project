@@ -65,16 +65,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CV.cs" />
-    <Compile Include="Database\CV.cs" />
-    <Compile Include="Database\Request.cs" />
-    <Compile Include="Database\RequestUser.cs" />
-    <Compile Include="Database\Skills.cs" />
-    <Compile Include="Database\Users.cs" />
-    <Compile Include="Request.cs" />
-    <Compile Include="RequestUser.cs" />
-    <Compile Include="Skills.cs" />
-    <Compile Include="Users.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -83,12 +73,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EDM\CV.cs" />
+    <Compile Include="EDM\Request.cs" />
+    <Compile Include="EDM\RequestCV.cs" />
+    <Compile Include="EDM\Skill.cs" />
+    <Compile Include="EDM\User.cs" />
+    <Compile Include="EDM\WorkContext.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202401291504139_InitialCreate.cs" />
+    <Compile Include="Migrations\202401291504139_InitialCreate.designer.cs">
+      <DependentUpon>202401291504139_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -102,6 +103,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202401291504139_InitialCreate.resx">
+      <DependentUpon>202401291504139_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
