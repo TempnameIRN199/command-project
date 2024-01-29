@@ -33,7 +33,6 @@ namespace command_project.design.admin
         {
             InitializeComponent();
 
-            // Инициализация данных
             SeriesCollection = new SeriesCollection
             {
                 new LineSeries
