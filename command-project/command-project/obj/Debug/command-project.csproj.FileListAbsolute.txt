@@ -64,3 +64,5 @@ D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\comm
 D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command-project.pdb
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\style\CustomCartesianChart.baml
 D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command_project.Migrations.InitialCreate.resources
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\style\CustomCartesianChart.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\command_project.Migrations.InitialCreate.resources
