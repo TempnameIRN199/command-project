@@ -1,4 +1,4 @@
-﻿namespace command_project.Migrations
+﻿namespace Server.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

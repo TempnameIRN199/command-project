@@ -10,3 +10,17 @@ D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.csproj
 D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.csproj.CopyComplete
 D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.exe
 D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.pdb
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.exe.config
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.exe
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.pdb
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.dll
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.dll
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.xml
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CopyComplete
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.exe
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.pdb
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
