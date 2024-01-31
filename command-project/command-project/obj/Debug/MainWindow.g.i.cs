@@ -30,6 +30,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
 using command_project;
+using command_project.design;
 
 
 namespace command_project {

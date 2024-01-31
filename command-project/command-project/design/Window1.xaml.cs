@@ -10,22 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Work.EDM;
 
-namespace command_project
+namespace command_project.design
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для Window1.xaml
+    /// </summary>
+    public partial class Window1 : Window
     {
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
-            using (WorkContext context = new WorkContext())
-            {
-                var users = context.Users.ToList();
-                Console.WriteLine(users);
-            }
         }
     }
 }
