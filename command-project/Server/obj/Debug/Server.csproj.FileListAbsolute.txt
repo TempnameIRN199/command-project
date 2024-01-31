@@ -24,3 +24,5 @@ D:\Coding\Learn\Управління проектами\command-project\command-
 D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.pdb
 D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
 D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache

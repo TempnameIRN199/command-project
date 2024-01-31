@@ -23,8 +23,26 @@ namespace Server
             //context.Skills.Add(new Skill() { Name = "C#" });
             //context.SaveChanges();
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
+            while (true) { }
         }
 
+        public static int GetFreePort()
+        {
+            int port = 31000;
+            while (true)
+            {
+                try
+                {
+                    UdpClient client = new UdpClient(port);
+                    client.Close();
+                    return port;
+                }
+                catch
+                {
+                    port++;
+                }
+            }
+        }
         static void ReceiveData(object state)
         {
             while (true)
@@ -35,23 +53,31 @@ namespace Server
                 byte[] responce = client.Receive(ref ipEnd);
                 string text = Encoding.Unicode.GetString(responce);
                 List<string> texts = text.Split('>').ToList();
+
                 if (texts[0] == "checkPassword")
                 {
                     //checkPassword>login>password>port
-
-                    User thisUser = context.Users.First(i => i.Login == texts[1]);
-
-                    if (thisUser.Password == texts[2])
+                    if (context.Users.ToList().Where(i => i.Login == texts[1]).Count() > 0)
                     {
-                        int clientPort = 31000 + thisUser.Id;
-                        int serverPort = 41000 + thisUser.Id;
-                        //rightPassword>login>newClientPort>newServerPort
-                        string data = "rightPassword>" + thisUser.Login + ">" + clientPort + ">" + serverPort;
-                        SendData(data, int.Parse(texts[3]));
+                        User thisUser = context.Users.ToList().First(i => i.Login == texts[1]);
 
-                        Connection tempCon = new Connection(clientPort, serverPort);
-                        connections.Add(tempCon);
-                        ThreadPool.QueueUserWorkItem(ConnectionServerClient, tempCon);
+                        if (thisUser.Password == texts[2])
+                        {
+                            int clientPort = int.Parse(texts[3]);
+                            int serverPort = GetFreePort();
+                            //rightPassword>login>newServerPort
+                            string data = "rightPassword>" + thisUser.Login + ">" + serverPort + ">" + thisUser.Status;
+                            SendData(data, int.Parse(texts[3]));
+
+                            Connection tempCon = new Connection(clientPort, serverPort);
+                            connections.Add(tempCon);
+                            ThreadPool.QueueUserWorkItem(ConnectionServerClient, tempCon);
+                        }
+                        else
+                        {
+                            string data = "wrongPassword";
+                            SendData(data, int.Parse(texts[3]));
+                        }
                     }
                     else
                     {
@@ -63,7 +89,7 @@ namespace Server
                 {
                     //login>login>password>name>secondName>email>number>country>city>age>status>port
 
-                    if (context.Users.Count(i => i.Login == texts[1]) == 0)
+                    if (context.Users.ToList().Count(i => i.Login == texts[1]) == 0)
                     {
                         User tempUser = new User() 
                         { 
@@ -86,6 +112,7 @@ namespace Server
                         SendData(data, int.Parse(texts[11]));
                     }
                 }
+
                 client.Close();
             }
         }

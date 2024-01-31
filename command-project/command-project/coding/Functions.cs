@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace command_project.coding
     internal class Functions
     {
         //Из поля баз данных перевод в лист навыков
-        List<Skill> GetSkills(string skillsText)
+        public static List<Skill> GetSkills(string skillsText)
         {
             //Из C#^5|SQL^2 в Skill(){Name = "C#", Time = 5}, Skill(){Name = "SQL", Time = 2}
             List<Skill> skills = new List<Skill>();
@@ -27,7 +28,7 @@ namespace command_project.coding
 
 
         //Проверка достаточно ли навыков у пользователя для резюме по листу его навыков и листу необходимых навыков
-        bool IsEnoughSkills(List<Skill> userSkills, List<Skill> requiredSkills)
+        public static bool IsEnoughSkills(List<Skill> userSkills, List<Skill> requiredSkills)
         {
             bool isEnough = true;
 
@@ -57,14 +58,14 @@ namespace command_project.coding
 
 
         //Возвращает строку навыков пользователя с новым навыком
-        string AddSkill(string userSkills, Skill skill)
+        public static string AddSkill(string userSkills, Skill skill)
         {
             return userSkills + "|" + skill.Name + "^" + skill.Time;
         }
 
 
         //Возвращает строку навыков с измененным стажем 
-        string ChangeSkillTime(string userSkills, Skill skill)
+        public static string ChangeSkillTime(string userSkills, Skill skill)
         {
             string changedSkills = "";
 
@@ -89,7 +90,7 @@ namespace command_project.coding
 
 
         //Возвращает строку навыков с удаленным навыком
-        string DeleteSkill(string userSkills, string skillName)
+        public static string DeleteSkill(string userSkills, string skillName)
         {
             string changedSkills = "";
 
@@ -110,7 +111,7 @@ namespace command_project.coding
 
 
         //Возвращает навыки в формате поля базы данных
-        string SkillsIntoDBFormat(List<Skill> skills)
+        public static string SkillsIntoDBFormat(List<Skill> skills)
         {
             string result = "";
             skills.ForEach(i => result += "|" + i.DBFormat());
@@ -121,14 +122,14 @@ namespace command_project.coding
 
 
         //Возвращает пользователю навыки в понятном ему формате 
-        string SkillsIntoText(List<Skill> skills)
+        public static string SkillsIntoText(List<Skill> skills)
         {
             string result = "";
             skills.ForEach(i => result += i.ReadSkill() + "\n");
             return result;
         }
 
-        string SkillsIntoText(string skills)
+        public static string SkillsIntoText(string skills)
         {
             string result = "";
             GetSkills(skills).ForEach(i => result += i.ReadSkill() + "\n");
