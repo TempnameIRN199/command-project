@@ -19,9 +19,10 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <TabControl Grid.Row="0" TabStripPlacement="Left" Margin="8,-2,0,0">
+        <TabControl TabStripPlacement="Left" Margin="5,-2,0,0">
             <TabItem Name="_Dashboard" Header="Дашборд" Tag="../icon/stats.png"
-                     Style="{StaticResource TundraTabItem}">
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight"
+                     Width="270">
                 <Grid>
                     <Grid.Effect>
                         <DropShadowEffect ShadowDepth="0" Color="Gray" Opacity="0" BlurRadius="15"/>
@@ -44,8 +45,9 @@
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../icon/free-icon-job-search-2808930.png" Width="50" Height="50" Margin="20,20,5,0"
                                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Label Content="Потребують підтвердження" Width="350" Height="50" FontSize="25" 
-                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                                <Label Content="Потребують підтвердження" Width="360" Height="50" FontSize="25" 
+                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                                       FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
                             <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60"
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
@@ -58,7 +60,8 @@
                                 <Image Source="../icon/free-icon-favorite-2891938.png" Width="40" Height="40" Margin="20,20,5,0"
                                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
                                 <Label Content="Схвалені резюме" Width="350" Height="50" FontSize="25" 
-                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                                       FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
                             <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
@@ -70,8 +73,9 @@
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../icon/free-icon-video-call-5696590.png" Width="40" Height="40" Margin="20,20,5,0"
                                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Label Content="Всього резюме" Width="350" Height="50" FontSize="25" 
-                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                                <Label Content="Всього резюме" Width="360" Height="50" FontSize="25" 
+                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                                       FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
                             <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
@@ -83,8 +87,9 @@
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../icon/free-icon-briefcase-2313256.png" Width="50" Height="50" Margin="20,20,5,0"
                                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Label Content="Відхилені резюме" Width="350" Height="50" FontSize="25" 
-                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                                <Label Content="Відхилені резюме" Width="360" Height="50" FontSize="25" 
+                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                                       FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
                             <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
@@ -99,7 +104,7 @@
 
             </TabItem>
             <TabItem Header="Потребують підтвердження" Name="_TabVerifiedResumes"
-                     Style="{StaticResource TundraTabItem}">
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -138,6 +143,15 @@
                             <TextBlock Text="5 років"/>
                             <TextBlock Text="5+ років"/>
                         </ComboBox>
+
+                        <Slider Name="_Experience" Width="190" Height="25" Margin="5" Minimum="1" Maximum="5"/>
+                        <StackPanel Orientation="Horizontal">
+                            
+                        </StackPanel>
+                        <Label Content="{Binding ElementName=_Experience, Path=Value, StringFormat='Досвід розробки: {0:F0}'}"
+                               Width="Auto" Height="25" Margin="5" HorizontalAlignment="Center"
+                               FontFamily="Cascadia Mono ExtraLight"/>
+
                         <!--додати Slider та форму з вибором досвіду-->
                         <Button Content="Підтвердити" Width="190" Height="25" Margin="5"/>
                         <!--Label з описом запиту пошуку-->
@@ -147,15 +161,13 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Відхилені резюме" Name="_TabRejectionResume"
-                     Style="{StaticResource TundraTabItem}">
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">
 
             </TabItem>
-            <TabItem Header="Схвалені резюме" Name="_TabApprovedResumes"
-                     Style="{StaticResource TundraTabItem}">
-
-            </TabItem>
+            <TabItem Header="Схвалені резюме" x:Name="_TabApprovedResumes"
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight"/>
             <TabItem Header="Усі резюме" Name="_TabAllResumes"
-                     Style="{StaticResource TundraTabItem}">
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">
 
             </TabItem>
         </TabControl>
