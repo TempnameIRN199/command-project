@@ -54,7 +54,7 @@
                 <TabItem BorderBrush="{x:Null}"
                      Header="Увійти" 
                      FontFamily="Cascadia Mono ExtraLight" 
-                     FontSize="20">
+                     FontSize="20" Margin="-2,-2,-103,0">
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -101,7 +101,6 @@
                              Grid.Column="0" Grid.ColumnSpan="3"
                              Grid.Row="3"
                              Padding="25,3,3,3"
-                             materialDesign:HintAssist.Hint="Введіть логін"
                              FontSize="20"
                              VerticalContentAlignment="Center"
                              FontFamily="Cascadia Mono ExtraLight" 
@@ -116,7 +115,6 @@
                         <PasswordBox Name="pbPassSign"
                                  BorderBrush="{x:Null}"
                                  Padding="25,3,3,3"
-                                 materialDesign:HintAssist.Hint="Введіть пароль"
                                  VerticalContentAlignment="Center"
                                  FontSize="20" 
                                  Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7"
@@ -151,13 +149,24 @@
                         Height="3"
                                Stroke="LightGray"
                                Fill="LightGray"/>
+                        <Button Name="bSingGuest" 
+                            BorderBrush="{x:Null}" 
+                            FontSize="20" 
+                            Height="50"
+                            Grid.ColumnSpan="3"
+                            Grid.Row="15"
+                            Content="Увiйти, як адмін"
+                            FontFamily="Cascadia Mono Light"
+                            Foreground="Black"
+                            Background="#FFEAEAEA" 
+                            Click="bSingAdm_Click" />
 
                     </Grid>
                 </TabItem>
-                <TabItem BorderBrush="{x:Null}" Header="Реєстрація" Height="50" Width="238" FontFamily="Cascadia Mono ExtraLight"  FontSize="20"  >
+                <TabItem BorderBrush="{x:Null}" Header="Реєстрація" Height="50" Width="238" FontFamily="Cascadia Mono ExtraLight"  FontSize="20" Margin="132,0,-132,0"  >
                     <Grid>
 
-                        <TextBox Name="tbEmailReg" Padding="25,3,3,3" BorderBrush="{x:Null}" materialDesign:HintAssist.Hint="Вкажіть Email"  HorizontalAlignment="Left" Margin="7,95,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="447" Height="43" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
+                        <TextBox Name="tbEmailReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="7,95,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="447" Height="43" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="88" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
                         <Button  Name="bRegistration" BorderBrush="{x:Null}" FontSize="20"  Content="Реєстрація" HorizontalAlignment="Center" Margin="0,470,0,0" VerticalAlignment="Top" Width="444" Height="48" Background="Black" Foreground="White"  FontFamily="Cascadia Mono ExtraLight" Click="bRegistration_Click" Cursor="Hand"/>
                         <CheckBox Name="cbCheckReg" Margin="29,150,-2,89">
