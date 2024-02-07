@@ -26,3 +26,17 @@ D:\Coding\Learn\Управління проектами\command-project\command-
 D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
 D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
 D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.exe.config
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.exe
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.pdb
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.dll
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.dll
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.xml
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CopyComplete
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.exe
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.pdb
