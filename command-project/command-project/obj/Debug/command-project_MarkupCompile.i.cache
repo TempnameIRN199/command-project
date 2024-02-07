@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\
 command_project
 none
 false
 DEBUG;TRACE
-D:\ItStep\Current\command-project\command-project\command-project\App.xaml
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\App.xaml
 72128376675
 
 81000533691
-201445191245
+20406637793
 design\admin\Menu.xaml;design\style\CustomCartesianChart.xaml;design\style\CustomLabel.xaml;design\style\CustomTabItem.xaml;design\style\GradientLabel.xaml;design\style\GradientLabel2.xaml;MainWindow.xaml;
 
-False
+True
 
