@@ -28,12 +28,8 @@ namespace command_project
         public int clientPort = 0;
         public string login = "";
 
-        static string localLogin = null;
-        static string localEmail = null;
-        static bool localModeGuest = false;
-        public string LoginThisUser { get; set; } = localLogin;
-        public string EmailUser { get; set; } = localEmail;
-        public bool ModeGuest { get; set; } = localModeGuest;
+        bool working = true;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +38,7 @@ namespace command_project
         }
         void ReceiveData(object state)
         {
-            while (true)
+            while (working)
             {
                 UdpClient client = new UdpClient(clientPort);
                 IPEndPoint ipEnd = null;
@@ -56,17 +52,19 @@ namespace command_project
                     string status = texts[3];
                     if (status == "Admin")
                     {
+                        working = false;
                         design.admin.Menu menu = null;
-                        Dispatcher.Invoke(new Action(() => menu = new design.admin.Menu()));
+                        Dispatcher.Invoke(new Action(() => menu = new design.admin.Menu(login, serverPort, clientPort)));
                         Dispatcher.Invoke(new Action(() => menu.Show()));
                         Dispatcher.Invoke(new Action(() => Close()));
                     }
+                    Dispatcher.Invoke(new Action(() => Close()));
                 }
                 else
                 {
                     MessageBox.Show("Wrong login or password");
                 }
-                client.Close();
+                client?.Close();
             }
         }
         void SendData(string text)
@@ -134,6 +132,11 @@ namespace command_project
         private void bSingAdm_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            working = false;
         }
     }
 }

@@ -17,7 +17,10 @@ using LiveCharts;
 using LiveCharts.Definitions.Charts;
 using LiveCharts.Wpf;
 using LiveCharts.Defaults;
-using command_project.design.admin.choose;
+using System.Net.Sockets;
+using System.Net;
+using System.Threading;
+using command_project.coding;
 
 namespace command_project.design.admin
 {
@@ -30,9 +33,24 @@ namespace command_project.design.admin
         List<string> list = new List<string>();
         int numberOfMonths = 12;
 
-        public Menu()
+        string login = "";
+        int serverPort = 0;
+        int clientPort = 0;
+
+        List<Skill> listSkills = new List<Skill>();
+        Skill addSkill = new Skill();
+        Skill currentSkill = new Skill();
+
+        List<string> skills = new List<string>();
+
+        public Menu(string login, int serverPort, int clientPort)
         {
             InitializeComponent();
+            this.login = login;
+            this.serverPort = serverPort;
+            this.clientPort = clientPort;
+
+            ThreadPool.QueueUserWorkItem(ReceiveData, 0);
 
             SeriesCollection = new SeriesCollection
             {
@@ -96,10 +114,110 @@ namespace command_project.design.admin
             return 0;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        void ReceiveData(object state)
         {
-            ChooseWindow chooseWindow = new ChooseWindow();
-            chooseWindow.Show();
+            Thread.Sleep(200);
+            string sendIt = "getAdmin";
+            SendData(sendIt);
+            while (true)
+            {
+                UdpClient client = new UdpClient(clientPort);
+                IPEndPoint ipEnd = null;
+                byte[] responce = client.Receive(ref ipEnd);
+                string text = Encoding.Unicode.GetString(responce);
+                List<string> texts = text.Split('>').ToList();
+                if (texts[0] == "infoForAdmin")
+                {
+                    skills = texts[1].Split('|').ToList();
+                    Dispatcher.Invoke(new Action(() => _Skills.ItemsSource = skills));
+                }
+                client.Close();
+            }
+        }
+        void SendData(string text)
+        {
+            byte[] bytes = Encoding.Unicode.GetBytes(text);
+
+            UdpClient client = new UdpClient();
+            IPEndPoint ipEnd = new IPEndPoint(IPAddress.Parse("127.0.0.1"), serverPort);
+
+            client.Send(bytes, bytes.Length, ipEnd);
+
+            client.Close();
+
+            Console.WriteLine(text);
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            SendData("close");
+        }
+
+        private void _txtFindSkills_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            _Skills.ItemsSource = skills.Where(i => i.ToLower().Contains(_txtFindSkills.Text.ToLower()));
+        }
+
+
+
+        private void _Skills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_Skills.SelectedIndex >= 0)
+            {
+                addSkill = new Skill() { Name = _Skills.SelectedItem.ToString(), Time = (int)_Experience.Value };
+                _addSkillLabel.Content = addSkill.ReadSkill();
+            }
+        }
+        private void _Experience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (_Skills.SelectedIndex >= 0)
+            {
+                addSkill = new Skill() { Name = _Skills.SelectedItem.ToString(), Time = (int)_Experience.Value };
+                _addSkillLabel.Content = addSkill.ReadSkill();
+            }
+        }
+
+        private void RefreshList()
+        {
+            _listFindData.ItemsSource = listSkills.Select(i => i.ReadSkill()).ToList();
+        }
+
+        private void _addSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (_addSkillLabel.Content.ToString() != "" && listSkills.Where(i => i.Name == addSkill.Name).ToList().Count == 0)
+            {
+                listSkills.Add(addSkill);
+                RefreshList();
+            }
+            _addSkillLabel.Content = "";
+        }
+
+        private void _listFindData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_listFindData.SelectedIndex != -1)
+            {
+                _changeSkillLabel.Content = _listFindData.SelectedItem.ToString();
+            }
+        }
+
+        private void _changeSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (_listFindData.SelectedIndex != -1)
+            {
+                listSkills.First(i => i.ReadSkill() == _changeSkillLabel.Content.ToString()).Time = (int)_SelectedExperience.Value;
+                RefreshList();
+            }
+            _changeSkillLabel.Content = "";
+        }
+
+        private void _deleteSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (_listFindData.SelectedIndex != -1)
+            {
+                listSkills.Remove(listSkills.First(i => i.ReadSkill() == _changeSkillLabel.Content.ToString()));
+                RefreshList();
+            }
+            _changeSkillLabel.Content = "";
         }
 
 

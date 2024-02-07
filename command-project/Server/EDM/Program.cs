@@ -164,6 +164,18 @@ namespace Server
             string text = Encoding.Unicode.GetString(responce);
             List<string> texts = text.Split('>').ToList();
 
+            if (texts[0] == "getAdmin")
+            {
+                string sendIt = "infoForAdmin>";
+                WorkContext context = new WorkContext();
+                sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                SendData(sendIt);
+            }
+            else if (texts[0] == "close")
+            {
+                isWorking = false;
+            }
+
             client.Close();
         }
 
