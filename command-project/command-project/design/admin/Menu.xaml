@@ -114,9 +114,24 @@
                     <!--додати DisplayMemberBinding під назви полів-->
                     <!--додати прив'язку до методу сортування під назви полів-->
                     <!--замінити Width на Auto-->
-                    <ListView Name="_VerifiedResumes" Grid.Column="0">
+                    <ListView Name="_VerifiedResumes" Grid.Column="0" BorderBrush="Black">
                         <ListView.View>
                             <GridView>
+                                <GridView.ColumnHeaderContainerStyle>
+                                    <Style TargetType="GridViewColumnHeader">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                    <GradientStop Color="#A8EDEA" Offset="0"/>
+                                                    <GradientStop Color="#FED6E3" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="BorderThickness" Value="0,0,1,0"/>
+                                        <Setter Property="BorderBrush" Value="Black"/>
+                                    </Style>
+                                </GridView.ColumnHeaderContainerStyle>
+
                                 <GridViewColumn Width="100">
                                     <GridViewColumnHeader Content="ПІБ"/>
                                 </GridViewColumn>
@@ -128,35 +143,56 @@
                                 </GridViewColumn>
                             </GridView>
                         </ListView.View>
+
+                        <ListView.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#A8EDEA" Offset="1"/>
+                                <GradientStop Color="#FED6E3" Offset="0"/>
+                            </LinearGradientBrush>
+                        </ListView.Background>
                     </ListView>
 
                     <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Left"
                                 VerticalAlignment="Stretch">
                         <Label Content="Досвід розробки" Width="190" Height="25" Margin="5"/>
-                        <!--{Binding Skills} у Content для Label вписати-->
-                        <Label Content="SQL | C# | C++" Width="190" Height="25" Margin="5"/>
-                        <ComboBox Name="_Vacancy" Width="190" Height="25" Margin="5">
-                            <TextBlock Text="1 рік"/>
-                            <TextBlock Text="2 роки"/>
-                            <TextBlock Text="3 роки"/>
-                            <TextBlock Text="4 роки"/>
-                            <TextBlock Text="5 років"/>
-                            <TextBlock Text="5+ років"/>
-                        </ComboBox>
 
-                        <Slider Name="_Experience" Width="190" Height="25" Margin="5" Minimum="1" Maximum="5"/>
-                        <StackPanel Orientation="Horizontal">
-                            
-                        </StackPanel>
-                        <Label Content="{Binding ElementName=_Experience, Path=Value, StringFormat='Досвід розробки: {0:F0}'}"
-                               Width="Auto" Height="25" Margin="5" HorizontalAlignment="Center"
-                               FontFamily="Cascadia Mono ExtraLight"/>
+                        <!--<Button Content="Обрати мови" Width="190" Height="25" Margin="5"
+                                Click="Button_Click"/>-->
+                        <!--{Binding Skills} у Content для Label вписати-->
+
+                        <TextBox x:Name="_txtFindSkills" Width="190" Height="30" Margin="5"
+                                 FontFamily="Cascadia Mono ExtraLight" FontSize="20"/>
+                        <!--відображати тут записи, які будуть введені у TextBox-->
+                        <ComboBox Name="_Skills" Width="190" Height="25" Margin="5"
+                                  FontFamily="Cascadia Mono ExtraLight" FontSize="20"/>
 
                         <!--додати Slider та форму з вибором досвіду-->
-                        <Button Content="Підтвердити" Width="190" Height="25" Margin="5"/>
-                        <!--Label з описом запиту пошуку-->
+                        <Slider Name="_Experience" Width="190" Height="25" Margin="5" Minimum="1" Maximum="5"
+                                TickFrequency="1" IsSnapToTickEnabled="True"/>
+                        <Label Content="{Binding ElementName=_Experience, Path=Value, StringFormat='Досвід розробки: { 0 }'}"
+                               Width="Auto" Height="25" Margin="5" HorizontalAlignment="Center"
+                               FontFamily="Cascadia Mono ExtraLight"/>
+                        <!--Label з описом запиту пошуку перед відправленням у ListBox-->
+                        <!--{Binding FindData} у Label-->
+                        <Label Content="Тест опису" Width="190" Height="25" Margin="5" Padding="55,0,0,0"/>
+                        <Button Content="Додати" Width="190" Height="25" Margin="5"
+                                Click="Button_Click"/>
                         <!--ListBox та TextBox для пошуку текстом-->
-                        
+                        <ListBox x:Name="_listFindData" Width="190" Height="300" Margin="5"
+                                 FontFamily="Cascadia Mono ExtraLight" FontSize="20"/>
+
+                        <!--редагування років досвіду-->
+                        <Label Content="Тест обраного"  Width="190" Height="25" Margin="5" Padding="45,0,0,0"/>
+                        <Slider Name="_SelectedExperience" Width="190" Height="25" Margin="5" Minimum="1" Maximum="5"
+                                TickFrequency="1" IsSnapToTickEnabled="True"/>
+                        <Label Content="{Binding ElementName=_SelectedExperience, Path=Value, StringFormat='Досвід розробки: { 0 }'}"
+                               Width="Auto" Height="25" Margin="5" HorizontalAlignment="Center"
+                               FontFamily="Cascadia Mono ExtraLight"/>
+                        <!--для редагування вмісту ListBox-->
+                        <Button Content="Редагувати" Width="190" Height="25" Margin="5"/>
+                        <!--для видалення вмісту ListBox-->
+                        <Button Content="Видалити" Width="190" Height="25" Margin="5"/>
+
                     </StackPanel>
                 </Grid>
             </TabItem>
