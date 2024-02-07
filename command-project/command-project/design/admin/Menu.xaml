@@ -19,9 +19,10 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <TabControl Grid.Row="0" TabStripPlacement="Left" Margin="8,-2,0,0">
+        <TabControl TabStripPlacement="Left" Margin="5,-2,0,0">
             <TabItem Name="_Dashboard" Header="Дашборд" Tag="../icon/stats.png"
-                     Style="{StaticResource TundraTabItem}">
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight"
+                     Width="270">
                 <Grid>
                     <Grid.Effect>
                         <DropShadowEffect ShadowDepth="0" Color="Gray" Opacity="0" BlurRadius="15"/>
@@ -44,8 +45,9 @@
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../icon/free-icon-job-search-2808930.png" Width="50" Height="50" Margin="20,20,5,0"
                                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Label Content="Потребують підтвердження" Width="350" Height="50" FontSize="25" 
-                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                                <Label Content="Потребують підтвердження" Width="360" Height="50" FontSize="25" 
+                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                                       FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
                             <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60"
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
@@ -58,7 +60,8 @@
                                 <Image Source="../icon/free-icon-favorite-2891938.png" Width="40" Height="40" Margin="20,20,5,0"
                                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
                                 <Label Content="Схвалені резюме" Width="350" Height="50" FontSize="25" 
-                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                                       FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
                             <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
@@ -70,8 +73,9 @@
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../icon/free-icon-video-call-5696590.png" Width="40" Height="40" Margin="20,20,5,0"
                                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Label Content="Всього резюме" Width="350" Height="50" FontSize="25" 
-                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                                <Label Content="Всього резюме" Width="360" Height="50" FontSize="25" 
+                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                                       FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
                             <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
@@ -83,8 +87,9 @@
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../icon/free-icon-briefcase-2313256.png" Width="50" Height="50" Margin="20,20,5,0"
                                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Label Content="Відхилені резюме" Width="350" Height="50" FontSize="25" 
-                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                                <Label Content="Відхилені резюме" Width="360" Height="50" FontSize="25" 
+                                       Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                                       FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
                             <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
@@ -99,7 +104,7 @@
 
             </TabItem>
             <TabItem Header="Потребують підтвердження" Name="_TabVerifiedResumes"
-                     Style="{StaticResource TundraTabItem}">
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -109,9 +114,24 @@
                     <!--додати DisplayMemberBinding під назви полів-->
                     <!--додати прив'язку до методу сортування під назви полів-->
                     <!--замінити Width на Auto-->
-                    <ListView Name="_VerifiedResumes" Grid.Column="0">
+                    <ListView Name="_VerifiedResumes" Grid.Column="0" BorderBrush="Black">
                         <ListView.View>
                             <GridView>
+                                <GridView.ColumnHeaderContainerStyle>
+                                    <Style TargetType="GridViewColumnHeader">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                    <GradientStop Color="#A8EDEA" Offset="0"/>
+                                                    <GradientStop Color="#FED6E3" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="BorderThickness" Value="0,0,1,0"/>
+                                        <Setter Property="BorderBrush" Value="Black"/>
+                                    </Style>
+                                </GridView.ColumnHeaderContainerStyle>
+
                                 <GridViewColumn Width="100">
                                     <GridViewColumnHeader Content="ПІБ"/>
                                 </GridViewColumn>
@@ -123,39 +143,67 @@
                                 </GridViewColumn>
                             </GridView>
                         </ListView.View>
+
+                        <ListView.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#A8EDEA" Offset="1"/>
+                                <GradientStop Color="#FED6E3" Offset="0"/>
+                            </LinearGradientBrush>
+                        </ListView.Background>
                     </ListView>
 
                     <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Left"
                                 VerticalAlignment="Stretch">
                         <Label Content="Досвід розробки" Width="190" Height="25" Margin="5"/>
+
+                        <!--<Button Content="Обрати мови" Width="190" Height="25" Margin="5"
+                                Click="Button_Click"/>-->
                         <!--{Binding Skills} у Content для Label вписати-->
-                        <Label Content="SQL | C# | C++" Width="190" Height="25" Margin="5"/>
-                        <ComboBox Name="_Vacancy" Width="190" Height="25" Margin="5">
-                            <TextBlock Text="1 рік"/>
-                            <TextBlock Text="2 роки"/>
-                            <TextBlock Text="3 роки"/>
-                            <TextBlock Text="4 роки"/>
-                            <TextBlock Text="5 років"/>
-                            <TextBlock Text="5+ років"/>
-                        </ComboBox>
+
+                        <TextBox x:Name="_txtFindSkills" Width="190" Height="30" Margin="5"
+                                 FontFamily="Cascadia Mono ExtraLight" FontSize="20"/>
+                        <!--відображати тут записи, які будуть введені у TextBox-->
+                        <ComboBox Name="_Skills" Width="190" Height="25" Margin="5"
+                                  FontFamily="Cascadia Mono ExtraLight" FontSize="20"/>
+
                         <!--додати Slider та форму з вибором досвіду-->
-                        <Button Content="Підтвердити" Width="190" Height="25" Margin="5"/>
-                        <!--Label з описом запиту пошуку-->
+                        <Slider Name="_Experience" Width="190" Height="25" Margin="5" Minimum="1" Maximum="5"
+                                TickFrequency="1" IsSnapToTickEnabled="True"/>
+                        <Label Content="{Binding ElementName=_Experience, Path=Value, StringFormat='Досвід розробки: { 0 }'}"
+                               Width="Auto" Height="25" Margin="5" HorizontalAlignment="Center"
+                               FontFamily="Cascadia Mono ExtraLight"/>
+                        <!--Label з описом запиту пошуку перед відправленням у ListBox-->
+                        <!--{Binding FindData} у Label-->
+                        <Label Content="Тест опису" Width="190" Height="25" Margin="5" Padding="55,0,0,0"/>
+                        <Button Content="Додати" Width="190" Height="25" Margin="5"
+                                Click="Button_Click"/>
                         <!--ListBox та TextBox для пошуку текстом-->
-                        
+                        <ListBox x:Name="_listFindData" Width="190" Height="300" Margin="5"
+                                 FontFamily="Cascadia Mono ExtraLight" FontSize="20"/>
+
+                        <!--редагування років досвіду-->
+                        <Label Content="Тест обраного"  Width="190" Height="25" Margin="5" Padding="45,0,0,0"/>
+                        <Slider Name="_SelectedExperience" Width="190" Height="25" Margin="5" Minimum="1" Maximum="5"
+                                TickFrequency="1" IsSnapToTickEnabled="True"/>
+                        <Label Content="{Binding ElementName=_SelectedExperience, Path=Value, StringFormat='Досвід розробки: { 0 }'}"
+                               Width="Auto" Height="25" Margin="5" HorizontalAlignment="Center"
+                               FontFamily="Cascadia Mono ExtraLight"/>
+                        <!--для редагування вмісту ListBox-->
+                        <Button Content="Редагувати" Width="190" Height="25" Margin="5"/>
+                        <!--для видалення вмісту ListBox-->
+                        <Button Content="Видалити" Width="190" Height="25" Margin="5"/>
+
                     </StackPanel>
                 </Grid>
             </TabItem>
             <TabItem Header="Відхилені резюме" Name="_TabRejectionResume"
-                     Style="{StaticResource TundraTabItem}">
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">
 
             </TabItem>
-            <TabItem Header="Схвалені резюме" Name="_TabApprovedResumes"
-                     Style="{StaticResource TundraTabItem}">
-
-            </TabItem>
+            <TabItem Header="Схвалені резюме" x:Name="_TabApprovedResumes"
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight"/>
             <TabItem Header="Усі резюме" Name="_TabAllResumes"
-                     Style="{StaticResource TundraTabItem}">
+                     Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">
 
             </TabItem>
         </TabControl>

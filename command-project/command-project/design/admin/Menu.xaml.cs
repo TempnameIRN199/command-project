@@ -17,6 +17,7 @@ using LiveCharts;
 using LiveCharts.Definitions.Charts;
 using LiveCharts.Wpf;
 using LiveCharts.Defaults;
+using command_project.design.admin.choose;
 
 namespace command_project.design.admin
 {
@@ -92,8 +93,13 @@ namespace command_project.design.admin
                     }
                 }
             }
-
             return 0;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ChooseWindow chooseWindow = new ChooseWindow();
+            chooseWindow.Show();
         }
 
 
