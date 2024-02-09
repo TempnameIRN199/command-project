@@ -15,13 +15,18 @@ using System.Windows.Shapes;
 namespace command_project.design
 {
     /// <summary>
-    /// Логика взаимодействия для Window1.xaml
+    /// Логика взаимодействия для WindowMyProfile.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class WindowMyProfile : Window
     {
-        public Window1()
+        public WindowMyProfile()
         {
             InitializeComponent();
+        }
+
+        private void cbMyProfile_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
