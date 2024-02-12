@@ -12,31 +12,38 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace command_project.design.admin.choose
+namespace command_project.design
 {
-    /// <summary>
-<<<<<<<< HEAD:command-project/command-project/design/admin/choose/ChooseWindow.xaml.cs
-    /// Логика взаимодействия для ChooseWindow.xaml
-    /// </summary>
-    public partial class ChooseWindow : Window
-    {
-        public ChooseWindow()
-========
     /// Логика взаимодействия для WindowMyProfile.xaml
     /// </summary>
     public partial class WindowMyProfile : Window
     {
         public WindowMyProfile()
->>>>>>>> design:command-project/command-project/design/WindowMyProfile.xaml.cs
         {
             InitializeComponent();
         }
 
-<<<<<<<< HEAD:command-project/command-project/design/admin/choose/ChooseWindow.xaml.cs
-        private void Button_Click(object sender, RoutedEventArgs e)
-========
         private void cbMyProfile_SelectionChanged(object sender, SelectionChangedEventArgs e)
->>>>>>>> design:command-project/command-project/design/WindowMyProfile.xaml.cs
+        {
+
+        }
+
+        private void lMyPig_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void lExit_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void bAddAd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void imgEditInfoProf_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
         }
