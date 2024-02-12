@@ -75,23 +75,23 @@ namespace command_project.design.admin
 
         private int GetUserDataForMonth(DateTime month)
         {
-            string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\design\statsTest.txt");
-
-            for (int i = 0; i < numberOfMonths; i++)
-            {
-                if (month.ToString("yyyy-MM") == list[i])
-                {
-                    string[] lines = System.IO.File.ReadAllLines(filePath);
-
-                    if (i < lines.Length)
-                    {
-                        if (int.TryParse(lines[i], out int result))
-                        {
-                            return result;
-                        }
-                    }
-                }
-            }
+            //string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\design\statsTest.txt");
+            //
+            //for (int i = 0; i < numberOfMonths; i++)
+            //{
+            //    if (month.ToString("yyyy-MM") == list[i])
+            //    {
+            //        string[] lines = System.IO.File.ReadAllLines(filePath);
+            //
+            //        if (i < lines.Length)
+            //        {
+            //            if (int.TryParse(lines[i], out int result))
+            //            {
+            //                return result;
+            //            }
+            //        }
+            //    }
+            //}
             return 0;
         }
 
@@ -99,6 +99,106 @@ namespace command_project.design.admin
         {
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _txtFindSkills_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void _Skills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _Experience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void _changeSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _deleteSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _listFindData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _addSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _txtRejectedFindSkills_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void _RejectedSkills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _RejectedExperience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void _addRejectedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _listRejectedFindData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _changeRejectedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _deleteRejectedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _txtApprovedFindSkills_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void _ApprovedSkills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _ApprovedExperience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void _addApprovedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _listApprovedFindData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
 
