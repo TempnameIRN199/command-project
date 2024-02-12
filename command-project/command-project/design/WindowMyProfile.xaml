@@ -119,7 +119,7 @@
                         <RowDefinition Height="15"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Label Content="Основна інформація" Grid.Row="1" Grid.Column="1" FontSize="30" Foreground="#FF434B54" VerticalContentAlignment="Center" FontFamily="Cascadia Mono Light"></Label>
-                    <Image x:Name="imgEditInfoProf" Grid.Row="1" Grid.Column="3" MouseDown="imgEditInfoProf_MouseDown" Cursor="Hand"  HorizontalAlignment="Right" Width="30"></Image>
+                    <Image x:Name="imgEditInfoProf" Grid.Row="1" Grid.Column="3" MouseDown="imgEditInfoProf_MouseDown" Cursor=""  HorizontalAlignment="Right" Width="30"></Image>
                     <Label Content="Ім'я та прізвище" Grid.Row="3" Grid.Column="1" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"></Label>
                     <Label x:Name="lName" Content="[test] [test]" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"></Label>
                     <Label Content="Номер телефону" Grid.Row="7" Grid.Column="1" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"></Label>
