@@ -25,7 +25,6 @@ namespace Server
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
             while (true) { }
         }
-
         public static int GetFreePort()
         {
             int port = 31000;
@@ -169,6 +168,15 @@ namespace Server
                 string sendIt = "infoForAdmin>";
                 WorkContext context = new WorkContext();
                 sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                SendData(sendIt);
+            }
+            else if (texts[0] == "getWorker")
+            {
+                string sendIt = "infoForWorker>";
+                WorkContext context = new WorkContext();
+                User user = context.Users.ToList().First(i=>i.Login == texts[1]);
+                //sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                sendIt += user.Email;
                 SendData(sendIt);
             }
             else if (texts[0] == "close")

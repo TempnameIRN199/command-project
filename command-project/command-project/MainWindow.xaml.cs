@@ -58,6 +58,14 @@ namespace command_project
                         Dispatcher.Invoke(new Action(() => menu.Show()));
                         Dispatcher.Invoke(new Action(() => Close()));
                     }
+                    else if (status == "Worker") 
+                    {
+                        working = false;
+                        design.WindowMyProfile window = null;
+                        Dispatcher.Invoke(new Action(() => window = new design.WindowMyProfile(login, serverPort, clientPort)));
+                        Dispatcher.Invoke(new Action(() => window.Show()));
+                        Dispatcher.Invoke(new Action(() => Close()));
+                    }
                     Dispatcher.Invoke(new Action(() => Close()));
                 }
                 else
