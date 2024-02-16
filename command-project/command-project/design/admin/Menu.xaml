@@ -117,7 +117,7 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
-                        
+
                         <ListView Name="_VerifiedResumes" Grid.Row="0" BorderBrush="Black">
                             <ListView.View>
                                 <GridView>
@@ -385,7 +385,96 @@
             </TabItem>
             <TabItem Header="Усі резюме" Name="_TabAllResumes"
                      Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">
-                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <ListView Name="_AllResumes" Grid.Row="0" BorderBrush="Black">
+                            <ListView.View>
+                                <GridView>
+                                    <GridView.ColumnHeaderContainerStyle>
+                                        <Style TargetType="GridViewColumnHeader">
+                                            <Setter Property="Background">
+                                                <Setter.Value>
+                                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                        <GradientStop Color="#A8EDEA" Offset="0"/>
+                                                        <GradientStop Color="#FED6E3" Offset="1"/>
+                                                    </LinearGradientBrush>
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+                                            <Setter Property="BorderBrush" Value="Black"/>
+                                        </Style>
+                                    </GridView.ColumnHeaderContainerStyle>
+
+                                    <GridViewColumn Width="100">
+                                        <GridViewColumnHeader Content="ПІБ"/>
+                                    </GridViewColumn>
+                                    <GridViewColumn Width="100">
+                                        <GridViewColumnHeader Content="Навички"/>
+                                    </GridViewColumn>
+                                    <GridViewColumn Width="100">
+                                        <GridViewColumnHeader Content="Вакансія"/>
+                                    </GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+
+                            <ListView.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <GradientStop Color="#A8EDEA" Offset="1"/>
+                                    <GradientStop Color="#FED6E3" Offset="0"/>
+                                </LinearGradientBrush>
+                            </ListView.Background>
+                        </ListView>
+
+                        <Border Style="{StaticResource CustomStackPanelStyle}" Grid.Row="1" >
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="🡸" FontSize="20" Width="100" Height="40" Margin="5" Style="{StaticResource TransparentButtonStyle}"/>
+                                <Label Content="1" Width="735" FontSize="20" Height="40" Margin="5" Padding="360,10,0,0"/>
+                                <Button Content="🡺" FontSize="20" Width="100" Height="40" Margin="5" Style="{StaticResource TransparentButtonStyle}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Left"
+                                VerticalAlignment="Stretch">
+                        <Label Content="Досвід розробки" Width="190" Height="25" Margin="5"/>
+
+                        <TextBox x:Name="_txtAllFindSkills" Width="190" Height="30" Margin="5"
+                                 FontFamily="Cascadia Mono ExtraLight" FontSize="20" TextChanged="_txtAllFindSkills_TextChanged"/>
+                        <ComboBox Name="_AllSkills" Width="190" Height="25" Margin="5"
+                                  FontFamily="Cascadia Mono ExtraLight" FontSize="20" SelectionChanged="_AllSkills_SelectionChanged"/>
+
+                        <Slider Name="_AllExperience" Width="190" Height="25" Margin="5" Minimum="1" Maximum="5"
+                                TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="_AllExperience_ValueChanged"/>
+                        <Label Content="{Binding ElementName=_Experience, Path=Value, StringFormat='Досвід розробки: { 0 }'}"
+                               Width="Auto" Height="25" Margin="5" HorizontalAlignment="Center"
+                               FontFamily="Cascadia Mono ExtraLight"/>
+                        <Label Name="_addAllSkillLabel" Content="" Width="190" Height="25" Margin="5" Padding="55,0,0,0"/>
+                        <Button Name="_addAllSkillButton" Content="Додати" Width="190" Height="25" 
+                                Margin="5" Click="_addApprovedSkillButton_Click"/>
+                        <ListBox x:Name="_listAllFindData" Width="190" Height="300" Margin="5"
+                                 FontFamily="Cascadia Mono ExtraLight" FontSize="20" SelectionChanged="_listAllFindData_SelectionChanged"/>
+
+                        <Label Name="_changeAllSkillLabel" Content=""  Width="190" Height="25" Margin="5" Padding="45,0,0,0"/>
+                        <Slider Name="_SelectedAllExperience" Width="190" Height="25" Margin="5" Minimum="1" Maximum="5"
+                                TickFrequency="1" IsSnapToTickEnabled="True"/>
+                        <Label Content="{Binding ElementName=_SelectedExperience, Path=Value, StringFormat='Досвід розробки: { 0 }'}"
+                               Width="Auto" Height="25" Margin="5" HorizontalAlignment="Center"
+                               FontFamily="Cascadia Mono ExtraLight"/>
+                        <Button Name="_changeAllSkillButton" Content="Редагувати" Width="190" Height="25" Margin="5"
+                                Click="_changeApprovedSkillButton_Click"/>
+                        <Button Name="_deleteAllSkillButton" Content="Видалити" Width="190" Height="25" Margin="5"
+                                Click="_deleteApprovedSkillButton_Click"/>
+                    </StackPanel>
+                </Grid>
             </TabItem>
             <TabItem Header="Налаштування" Name="_TabSetting"
                      Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">

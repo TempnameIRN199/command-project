@@ -201,6 +201,41 @@ namespace command_project.design.admin
 
         }
 
+        private void _changeApprovedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _deleteApprovedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _txtAllFindSkills_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void _AllSkills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _AllExperience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void _listAllFindData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _Exit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
 
         // Зробити сортування за алфавітом для кожного стовпця з _VerifiedResumes
