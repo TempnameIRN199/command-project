@@ -64,5 +64,12 @@ namespace command_project
         {
             this.Close();
         }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Закрытие приложения
+            Application.Current.Shutdown();
+        }
+
     }
 }

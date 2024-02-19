@@ -40,7 +40,8 @@
 
             <Border Background="#808080" Grid.ColumnSpan="15" Grid.RowSpan="2" Grid.Row="0" BorderThickness="0" CornerRadius="30,30,0,00"></Border>
 
-            <ComboBox x:Name="cbMyProfile" Foreground="Black" Background="#808080" Height="50" FontSize="21" Grid.Column="6" Grid.Row="1"  FontFamily="Cascadia Mono ExtraLight" SelectedIndex="0" Grid.ColumnSpan="2" Margin="210,15,29,0" VerticalAlignment="Top" SelectionChanged="cbMyProfile_SelectionChanged" >
+
+            <ComboBox x:Name="cbMyProfile" Foreground="Black" Background="#808080" Height="50" FontSize="21" Grid.Column="6" Grid.Row="1"  FontFamily="Cascadia Mono ExtraLight" SelectedIndex="0" Grid.ColumnSpan="2" Margin="181,12,58,0" VerticalAlignment="Top" SelectionChanged="cbMyProfile_SelectionChanged" >
                 <ComboBoxItem IsSelected="True" >
                     <StackPanel Orientation="Horizontal">
                         <Label x:Name="lMyProfile" Content="Мій профіль" />
@@ -48,7 +49,7 @@
                 </ComboBoxItem>
                 <ComboBoxItem>
                     <StackPanel Orientation="Horizontal">
-                        <Label x:Name="lMyPig" Content="Мої заявки" MouseDown="lMyPig_MouseDown"/>
+                        <Label x:Name="lMyPig" Content="Мої резюме" MouseDown="lMyPig_MouseDown"/>
                     </StackPanel>
                 </ComboBoxItem>
                 <ComboBoxItem >
@@ -59,15 +60,26 @@
             </ComboBox>
             <Button 
                 x:Name="bAddAd"
-                Grid.Column="8"
+                Grid.Column="7"
                 Grid.Row="1"
                 Height="50"
                 Background="#808080"
                 Foreground="Black"
                 FontFamily="Cascadia Mono ExtraLight"
                 FontSize="21" 
-                Content="Подати об'яву" Click="bAddAd_Click" Cursor="Hand"
+                Content="Подати об'яву" Click="bAddAd_Click" Cursor="Hand" Grid.ColumnSpan="2" Margin="206,12,32,13"
            ></Button>
+            <Button                
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" 
+                Click="CloseButton_Click" 
+                Grid.Column="8" 
+
+                Margin="227,0,10,45" Grid.ColumnSpan="2" Grid.RowSpan="2" Height="50" Width="51">
+
+                <Image Source="/command/command-project/command-project/command-project/Photo/close_icon.png" Width="55" Height="46"/>
+
+            </Button>
 
             <Border BorderThickness="0" CornerRadius="10,10,10,10" Background="WhiteSmoke" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2">
                 <Grid >
@@ -126,8 +138,10 @@
                     <Label x:Name="lPhone" Content="[test] [test]" Grid.Row="9" Grid.Column="1" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"></Label>
                     <Label Content="Електронна пошта" Grid.Row="7" Grid.Column="2" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"></Label>
                     <Label x:Name="lEmail" Content="[test] [test]" Grid.Row="9" Grid.Column="2" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"></Label>
-                    <Label Content="Дата реєстрації" Grid.Row="7" Grid.Column="3" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"></Label>
-                    <Label x:Name="lDateOfRegistration" Content="[test] [test]" Grid.Row="9" Grid.Column="3" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"></Label>
+                    <Label Content="Місце проживання" Grid.Row="7" Grid.Column="3" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"></Label>
+                    <Label x:Name="lPlaceOfResidence" Content="[test] [test]" Grid.Row="9" Grid.Column="3" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"></Label>
+                    <Label Content="Вік"  Grid.Column="3" FontSize="24" Foreground="#FF434B54" Margin="0,10,10,0" Grid.Row="3"/>
+                    <Label  x:Name="lAge" Content="[test] [test]"  Grid.Column="3" FontSize="20" Foreground="#FF434B54" Margin="0,10,10,0" Grid.Row="5"/>
                 </Grid>
             </Border>
             <Border BorderThickness="0" CornerRadius="10,10,10,10" Background="WhiteSmoke" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="7">
