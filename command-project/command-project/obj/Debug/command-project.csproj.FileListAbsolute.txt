@@ -135,3 +135,5 @@ C:\adsdadsdadas\pro2\command-project\command-project\obj\Debug\command-project.c
 C:\adsdadsdadas\pro2\command-project\command-project\obj\Debug\command-project.csproj.CopyComplete
 C:\adsdadsdadas\pro2\command-project\command-project\obj\Debug\command-project.exe
 C:\adsdadsdadas\pro2\command-project\command-project\obj\Debug\command-project.pdb
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\WindowMyProfile.g.cs
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\WindowMyProfile.baml

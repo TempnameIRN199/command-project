@@ -20,7 +20,7 @@ namespace Server
         static void Main(string[] args)
         {
             //WorkContext context = new WorkContext();
-            //context.Skills.Add(new Skill() { Name = "C#" });
+            //context.Skills.Add(new Skill() { Name = "SQL" });
             //context.SaveChanges();
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
             while (true) { }
@@ -80,7 +80,7 @@ namespace Server
                     }
                     else
                     {
-                        string data = "wrongPassword";
+                        string data = "wrongLogin";
                         SendData(data, int.Parse(texts[3]));
                     }
                 }
@@ -96,7 +96,7 @@ namespace Server
                             Name = texts[3], SecondName = texts[4],
                             Email = texts[5], PhoneNumber = texts[6],
                             Country = texts[7], City = texts[8],
-                            Age = int.Parse(texts[9]), Status = texts[10]
+                            //Age = int.Parse(texts[9]), Status = texts[10]
                         };
 
                         context.Users.Add(tempUser);
@@ -107,7 +107,7 @@ namespace Server
                     }
                     else
                     {
-                        string data = "wrongLogin";
+                        string data = "existLogin";
                         SendData(data, int.Parse(texts[11]));
                     }
                 }

@@ -54,3 +54,4 @@ C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.csproj.CoreCompileI
 C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.csproj.CopyComplete
 C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.exe
 C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.pdb
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.Migrations.upd19022024.resources
