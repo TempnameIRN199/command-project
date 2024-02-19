@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:command_project.design.admin"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d" Closed="Window_Closed"
-        Title="Menu" Height="930" Width="1450" ResizeMode="NoResize"> <!--450 930 1450 800-->
+        Title="Menu" Height="930" Width="1450"> <!--450 930 1450 800-->
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

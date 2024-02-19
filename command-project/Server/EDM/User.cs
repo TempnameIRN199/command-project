@@ -15,7 +15,11 @@ namespace Work.EDM
         public string Email { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }        
-        public int Age { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime CreationDate { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime BirthDate { get; set; }
+        //public int Age { get; set; }
         // status = (Worker,Employer,Admin)
         public string Status { get; set; }
         public string Country { get; set; }

@@ -35,6 +35,8 @@ namespace command_project
             InitializeComponent();
             clientPort = GetFreePort();
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
+            bCantSign.Foreground = Brushes.Red;
+            bCantSign.Content = "";
         }
         void ReceiveData(object state)
         {
@@ -68,9 +70,13 @@ namespace command_project
                     }
                     Dispatcher.Invoke(new Action(() => Close()));
                 }
-                else
+                else if (texts[0] == "wrongLogin")
                 {
-                    MessageBox.Show("Wrong login or password");
+                    Dispatcher.Invoke(new Action(() => bCantSign.Content = "Неіснуючий логін"));
+                }
+                else if (texts[0] == "wrongPassword")
+                {
+                    Dispatcher.Invoke(new Action(() => bCantSign.Content = "Неправильний пароль"));
                 }
                 client?.Close();
             }
@@ -132,11 +138,6 @@ namespace command_project
             this.Close();
         }
 
-        private void bCantSign_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void bSingAdm_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -145,6 +146,22 @@ namespace command_project
         private void Window_Closed(object sender, EventArgs e)
         {
             working = false;
+        }
+
+        private void tbLoginSign_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (bCantSign.Content.ToString() != "")
+            {
+                bCantSign.Content = "";
+            }
+        }
+
+        private void pbPassSign_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (bCantSign.Content.ToString() != "")
+            {
+                bCantSign.Content = "";
+            }
         }
     }
 }
