@@ -20,7 +20,7 @@ namespace Server
         static void Main(string[] args)
         {
             //WorkContext context = new WorkContext();
-            //context.Skills.Add(new Skill() { Name = "SQL" });
+            //context.Skills.Add(new Skill() { Name = "C++" });
             //context.SaveChanges();
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
             while (true) { }
@@ -86,7 +86,7 @@ namespace Server
                 }
                 else if (texts[0] == "login")
                 {
-                    //login>login>password>name>secondName>email>number>country>city>age>status>port
+                    //login>login>password>name>secondName>email>number>country>city>BirthDate>status>port
 
                     if (context.Users.ToList().Count(i => i.Login == texts[1]) == 0)
                     {
@@ -96,7 +96,7 @@ namespace Server
                             Name = texts[3], SecondName = texts[4],
                             Email = texts[5], PhoneNumber = texts[6],
                             Country = texts[7], City = texts[8],
-                            //Age = int.Parse(texts[9]), Status = texts[10]
+                            BirthDate = DateTime.Parse(texts[9]),Status = texts[10]
                         };
 
                         context.Users.Add(tempUser);
