@@ -17,5 +17,6 @@ namespace Work.EDM
         public virtual CV CV { get; set; }
         public int RequestId { get; set; }
         public virtual Request Request { get; set; }
+        public string Status { get; set; }
     }
 }
