@@ -176,7 +176,7 @@ namespace Server
                 WorkContext context = new WorkContext();
                 User user = context.Users.ToList().First(i=>i.Login == texts[1]);
                 //sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
-                sendIt += user.Email;
+                sendIt += user.Email + ">" + user.Age;
                 SendData(sendIt);
             }
             else if (texts[0] == "close")

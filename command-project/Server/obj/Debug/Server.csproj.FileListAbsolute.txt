@@ -54,3 +54,17 @@ C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.csproj.CoreCompileI
 C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.csproj.CopyComplete
 C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.exe
 C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.pdb
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\Server.exe.config
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\Server.exe
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\Server.pdb
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.dll
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.xml
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.CopyComplete
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.exe
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.pdb

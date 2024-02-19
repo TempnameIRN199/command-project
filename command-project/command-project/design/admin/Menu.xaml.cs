@@ -95,7 +95,7 @@ namespace command_project.design.admin
         {
         //string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\design\statsTest.txt");
         //string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"D:\ItStep\Current\command-project\command-project\command-project\design\statsTest.txt");
-        string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\adsdadsdadas\pro2\command-project\command-project\design\statsTest.txt");
+        string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\adsdadsdadas\comand\command-project\command-project\command-project\design\statsTest.txt");
             for (int i = 0; i < numberOfMonths; i++)
             {
                 if (month.ToString("yyyy-MM") == list[i])
