@@ -20,7 +20,7 @@ namespace Server
         static void Main(string[] args)
         {
             //WorkContext context = new WorkContext();
-            //context.Skills.Add(new Skill() { Name = "SQL" });
+            //context.Skills.Add(new Skill() { Name = "C++" });
             //context.SaveChanges();
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
             while (true) { }

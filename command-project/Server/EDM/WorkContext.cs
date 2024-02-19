@@ -8,7 +8,7 @@ namespace Work.EDM
     {
         public WorkContext(): base("Work")
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<WorkContext>());
+             //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<WorkContext>());
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Skill> Skills { get; set; }
