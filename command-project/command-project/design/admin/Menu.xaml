@@ -478,7 +478,9 @@
             </TabItem>
             <TabItem Header="Налаштування" Name="_TabSetting"
                      Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">
-                <!--зробити додавання нових язиків у базу-->
+                <ListBox x:Name="addListBox">
+
+                </ListBox>
             </TabItem>
         </TabControl>
     </Grid>
