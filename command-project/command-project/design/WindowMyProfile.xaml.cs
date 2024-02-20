@@ -15,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using command_project.design.admin;
+using System.Runtime.Remoting.Contexts;
+using Work.EDM;
 
 namespace command_project.design
 {
@@ -58,6 +60,10 @@ namespace command_project.design
         {
 
         }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
         void ReceiveData(object state)
         {
             Thread.Sleep(200);
@@ -72,7 +78,10 @@ namespace command_project.design
                 List<string> texts = text.Split('>').ToList();
                 if (texts[0] == "infoForWorker")
                 {
-                    Dispatcher.Invoke(new Action(() => MessageBox.Show(texts[1])));
+                    Dispatcher.Invoke(new Action(() => lName.Content = texts[3] + " " + texts[4]));
+                    //Dispatcher.Invoke(new Action(() => lPhone.Content = texts[10]));
+                    //Dispatcher.Invoke(new Action(() => lEmail.Content = texts[5]));
+                    //Dispatcher.Invoke(new Action(() => lPlaceOfResidence.Content = texts[8] + " " + texts[9]));
                 }
                 client.Close();
             }

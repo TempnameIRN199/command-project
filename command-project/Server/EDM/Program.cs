@@ -64,8 +64,8 @@ namespace Server
                         {
                             int clientPort = int.Parse(texts[3]);
                             int serverPort = GetFreePort();
-                            //rightPassword>login>newServerPort
-                            string data = "rightPassword>" + thisUser.Login + ">" + serverPort + ">" + thisUser.Status;
+                            //rightPassword(0)>login(1)>newServerPort(2)>status(3)>name(4)>secondname(5)>email(6)>CreationDate(7)>BirthDate(8)>Country(9)>City(10)>Phonenumber(11)>
+                            string data = "rightPassword>" + thisUser.Login + ">" + serverPort + ">" + thisUser.Status + ">" + thisUser.Name + ">" + thisUser.SecondName + ">" + thisUser.Email + ">" + thisUser.CreationDate.ToString() + ">" + thisUser.BirthDate + ">" + thisUser.Country + ">" + thisUser.City + ">" + thisUser.PhoneNumber;
                             SendData(data, int.Parse(texts[3]));
 
                             Connection tempCon = new Connection(clientPort, serverPort);
@@ -176,7 +176,8 @@ namespace Server
                 WorkContext context = new WorkContext();
                 User user = context.Users.ToList().First(i=>i.Login == texts[1]);
                 //sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
-                sendIt += user.Email + ">" + user.Age;
+                //login(1)>status(2)>name(3)>secondname(4)>email(5)>CreationDate(6)>BirthDate(7)>Country(8)>City(9)>Phonenumber(10)
+                sendIt += user.Login + ">" + user.Status + ">" + user.Name + ">" + user.SecondName + ">" + user.Email + user.CreationDate.ToString() + ">" + user.BirthDate.ToString() + ">" + user.Country + ">" + user.City + ">" + user.PhoneNumber;
                 SendData(sendIt);
             }
             else if (texts[0] == "close")
