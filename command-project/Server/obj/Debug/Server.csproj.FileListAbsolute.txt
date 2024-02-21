@@ -62,10 +62,7 @@ C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFr
 C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.xml
 C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
 C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
-C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
-C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
 C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
 C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.CopyComplete
 C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.exe
 C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.pdb
-C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.Migrations.upd19022024.resources
