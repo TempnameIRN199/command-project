@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\menu.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\menu.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +34,40 @@
               "RelativeToolTip": "command-project\\design\\admin\\Menu.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-02-13T07:17:04.529Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "04cfbc22-18df-4cd9-bbb0-40a93345b455",
+        "Display": 0,
+        "X": 640,
+        "Y": 410,
+        "Width": 800,
+        "Height": 600,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Menu.xaml",
+              "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\Menu.xaml",
+              "RelativeDocumentMoniker": "command-project\\design\\admin\\Menu.xaml",
+              "ToolTip": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\Menu.xaml",
+              "RelativeToolTip": "command-project\\design\\admin\\Menu.xaml",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAWwMYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-02-21T15:15:28.544Z",
               "EditorCaption": ""
             }
           ]

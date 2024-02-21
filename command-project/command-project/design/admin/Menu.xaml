@@ -117,6 +117,8 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
+                        
+                        <!--додати нове вікно з інформацією про вакансію-->
 
                         <ListView Name="_VerifiedResumes" Grid.Row="0" BorderBrush="Black">
                             <ListView.View>
@@ -140,10 +142,10 @@
                                         <GridViewColumnHeader Content="ПІБ"/>
                                     </GridViewColumn>
                                     <GridViewColumn Width="100">
-                                        <GridViewColumnHeader Content="Навички"/>
+                                        <GridViewColumnHeader Content="Вакансія"/>
                                     </GridViewColumn>
                                     <GridViewColumn Width="100">
-                                        <GridViewColumnHeader Content="Вакансія"/>
+                                        <GridViewColumnHeader Content="Статус"/>
                                     </GridViewColumn>
                                 </GridView>
                             </ListView.View>
@@ -232,12 +234,13 @@
                                         <GridViewColumnHeader Content="ПІБ"/>
                                     </GridViewColumn>
                                     <GridViewColumn Width="100">
-                                        <GridViewColumnHeader Content="Навички"/>
-                                    </GridViewColumn>
-                                    <GridViewColumn Width="100">
                                         <GridViewColumnHeader Content="Вакансія"/>
                                     </GridViewColumn>
+                                    <GridViewColumn Width="100">
+                                        <GridViewColumnHeader Content="Статус"/>
+                                    </GridViewColumn>
                                 </GridView>
+                                <!--встановити статус ReadOnly для кнопки та полів-->
                             </ListView.View>
 
                             <ListView.Background>
@@ -478,8 +481,8 @@
             </TabItem>
             <TabItem Header="Налаштування" Name="_TabSetting"
                      Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight">
-                <ListBox x:Name="addListBox">
-
+                <ListBox x:Name="addListBox" Margin="-6,0,6,0">
+                    
                 </ListBox>
             </TabItem>
         </TabControl>
