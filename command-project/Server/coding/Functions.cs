@@ -10,7 +10,6 @@ namespace command_project.coding
 {
     internal class Functions
     {
-        //посчитать возраст по дате(дата параметр)
         public static int GetAge(DateTime UserDay)
         {
             DateTime today = DateTime.Today;

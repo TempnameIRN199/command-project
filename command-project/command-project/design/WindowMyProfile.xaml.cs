@@ -78,10 +78,12 @@ namespace command_project.design
                 List<string> texts = text.Split('>').ToList();
                 if (texts[0] == "infoForWorker")
                 {
+                    DateTime userBD = DateTime.Parse(texts[7]);
                     Dispatcher.Invoke(new Action(() => lName.Content = texts[3] + " " + texts[4]));
-                    //Dispatcher.Invoke(new Action(() => lPhone.Content = texts[10]));
-                    //Dispatcher.Invoke(new Action(() => lEmail.Content = texts[5]));
-                    //Dispatcher.Invoke(new Action(() => lPlaceOfResidence.Content = texts[8] + " " + texts[9]));
+                    Dispatcher.Invoke(new Action(() => lAge.Content = texts[11]));
+                    Dispatcher.Invoke(new Action(() => lPhone.Content = texts[10]));
+                    Dispatcher.Invoke(new Action(() => lEmail.Content = texts[5]));
+                    Dispatcher.Invoke(new Action(() => lPlaceOfResidence.Content = texts[8] + " " + texts[9]));
                 }
                 client.Close();
             }
