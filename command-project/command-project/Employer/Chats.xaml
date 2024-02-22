@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:command_project.Employer"
         mc:Ignorable="d"
-                Title="Chats" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" ResizeMode="NoResize" Height="930" Width="1450">
+        Title="Chats" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" ResizeMode="NoResize" Height="930" Width="1450">
     <Window.Style>
         <Style TargetType="Window">
             <Setter Property="Template">
@@ -76,7 +76,6 @@
         </Style>
     </Window.Resources>
     <Grid>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -110,8 +109,7 @@
                 </Button>
             </StackPanel>
         </Border>
-
-        <TabControl x:Name="MainTabControl" Margin="1207,273,-206,617" RenderTransformOrigin="0.5,0.5" Grid.Row="1" SelectionChanged="MainTabControl_SelectionChanged">
+        <TabControl x:Name="MainTabControl" Margin="1290,200,-123,690" RenderTransformOrigin="0.5,0.5" Grid.Row="1" SelectionChanged="MainTabControl_SelectionChanged">
             <TabControl.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -120,6 +118,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TabControl.RenderTransform>
+            <!-- Перший таб -->
             <TabItem Header="Профіль" Margin="-2,-2,-7,-12" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" x:Name="ProfileTabItem">
                 <TabItem.RenderTransform>
                     <TransformGroup>
@@ -127,7 +126,9 @@
                         <RotateTransform/>
                     </TransformGroup>
                 </TabItem.RenderTransform>
+                <TextBlock Text="Вміст для вкладки Профіль"/>
             </TabItem>
+            <!-- Другий таб -->
             <TabItem Header="Чати" Margin="7,-2,-26,-12" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" x:Name="ChatsTabItem">
                 <TabItem.RenderTransform>
                     <TransformGroup>
@@ -135,16 +136,9 @@
                         <RotateTransform/>
                     </TransformGroup>
                 </TabItem.RenderTransform>
+                <TextBlock Text="Вміст для вкладки Чати"/>
             </TabItem>
-            <TabItem Header="Створити вакансію" Margin="26,-2,-35,-12" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" x:Name="CreateVacancyTabItem">
-                <TabItem.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <RotateTransform/>
-                    </TransformGroup>
-                </TabItem.RenderTransform>
-            </TabItem>
-            <TabItem Header="Мої вакансію" Margin="34,-2,-43,-15" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" x:Name="MyVacancyTabItem">
+            <TabItem Header="Мої вакансію" Margin="26,-2,-35,-15" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" x:Name="MyVacancyTabItem">
                 <TabItem.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -161,11 +155,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-
-                <!-- Прозоре поле вводу -->
                 <TextBox Grid.Column="0" VerticalAlignment="Top" Margin="5,15,61,0" Height="40" Background="Transparent" BorderThickness="0" TextAlignment="left" FontSize="15" FontWeight="Bold" />
-
-                <!-- Кнопка пошуку -->
                 <Button Content="Search" VerticalAlignment="Center" Margin="329,0,5,0" Style="{StaticResource CustomButtonStyle}" Grid.ColumnSpan="2" Height="30" />
             </Grid>
         </Border>
@@ -175,11 +165,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-
-                <!-- Прозоре поле вводу -->
-                <TextBox Grid.Column="0" VerticalAlignment="Top" Margin="5,15,100,0" Height="40" Background="Transparent" BorderThickness="0" TextAlignment="left" FontSize="15" FontWeight="Bold" />
-
-                <!-- Кнопка пошуку -->
+                <TextBox Grid.Column="0" VerticalAlignment="Top" Margin="5,15,100,0" Height="40" Background="Transparent" BorderThickness="0" TextAlignment="left" FontSize="20" FontWeight="Bold" />
             </Grid>
         </Border>
         <Border Background="Gray" Margin="419,65,50,792" CornerRadius="10" Grid.Row="1">
@@ -189,10 +175,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Валерій Залужний" FontWeight="Bold" FontSize="25" Margin="15,5,733,30"/>
-                <!-- Прозоре поле вводу -->
-
             </Grid>
         </Border>
-
     </Grid>
 </Window>

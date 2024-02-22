@@ -19,16 +19,14 @@ namespace command_project.Employer
     /// </summary>
     public partial class Profile : Window
     {
-        private Profile profileWindow;
-        private Chats chatsWindow;
-        private CreateVacancy createVacancyWindow;
+        //private Profile profileWindow;
+        private Chats chatsWindow; 
         private MyVacancy myVacancyWindow;
         public Profile()
         {
             InitializeComponent();
-            //profileWindow = new MainWindow(); 
+            //profileWindow = new Profile(); 
             chatsWindow = new Chats();
-            createVacancyWindow = new CreateVacancy();
             myVacancyWindow = new MyVacancy();
         }
 
@@ -47,12 +45,7 @@ namespace command_project.Employer
             {
                 if (!chatsWindow.IsVisible)
                     chatsWindow.Show();
-            }
-            else if (MainTabControl.SelectedItem == CreateVacancyTabItem)
-            {
-                if (!createVacancyWindow.IsVisible)
-                    createVacancyWindow.Show();
-            }
+            }          
             else if (MainTabControl.SelectedItem == MyVacancyTabItem)
             {
                 if (!myVacancyWindow.IsVisible)

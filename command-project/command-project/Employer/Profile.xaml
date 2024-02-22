@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:command_project.Employer"
         mc:Ignorable="d"
-               Title="Profile" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" ResizeMode="NoResize" Height="930" Width="1450">
+        Title="Profile" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" ResizeMode="NoResize" Height="930" Width="1450">
     <Window.Style>
         <Style TargetType="Window">
             <Setter Property="Template">
@@ -87,7 +87,7 @@
         </Border>
         <Border Background="LightGray" Margin="50,120,1050,660" CornerRadius="10" Grid.Row="1">
             <Grid>
-                <Image Source="D:/Progs/Visual Studio Community 2022/Proj/EmployerMenu1/Photos/Ava.png" Margin="10,10,231,18" />
+                <!--<Image Source="../icon1/Ava.png" Margin="10,10,231,18" />-->
                 <TextBlock Text="[Верифіковано]" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" Margin="124,0,0,0"/>
                 <Button Content="Верифікувати?" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="28" Width="200" Style="{StaticResource CustomButtonStyle}" Margin="128,98,0,0"/>
             </Grid>
@@ -97,7 +97,7 @@
         </Border>
         <Border Background="LightGray" Margin="455,120,50,478" CornerRadius="10" Grid.Row="1">
             <Grid>
-                <Image Source="D:/Progs/Visual Studio Community 2022/Proj/EmployerMenu1/Photos/edit.png" Margin="854,-12,-16,269" />
+                <!--<Image Source="../icon1/edit.png" Margin="854,-12,-16,269" />-->
                 <TextBlock Text="Основна інформація" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="24"/>
                 <TextBlock Text="Ім'я та Прізвище" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,68,0,0" FontSize="20"/>
                 <TextBlock Text="Тарас Шевченко" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,105,0,0" FontSize="14"/>
@@ -114,7 +114,7 @@
             </Grid>
         </Border>
         <Border Background="LightGray" Margin="455,492,50,50" CornerRadius="10" Grid.Row="1">
-            <TextBlock Text="Останні Запити на Вакансію" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24"/>
+            <TextBlock Text=" Створення вакансії" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24"/>
         </Border>
         <Border Background="Gray" Margin="70,394,1070,70" CornerRadius="10" Grid.Row="1">
             <Grid>
@@ -123,7 +123,7 @@
                 <Button Content="Валерій Гончаренко SQL" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="290" Style="{StaticResource CustomButtonStyle}" Margin="0,136,0,0" FontSize="20"/>
             </Grid>
         </Border>
-        <TabControl x:Name="MainTabControl" Margin="1207,273,-206,617" RenderTransformOrigin="0.5,0.5" Grid.Row="1" SelectionChanged="MainTabControl_SelectionChanged">
+        <TabControl x:Name="MainTabControl" Margin="1290,200,-123,690" RenderTransformOrigin="0.5,0.5" Grid.Row="1" SelectionChanged="MainTabControl_SelectionChanged">
             <TabControl.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -152,16 +152,7 @@
                 </TabItem.RenderTransform>
                 <TextBlock Text="Вміст для вкладки Чати"/>
             </TabItem>
-            <TabItem Header="Створити вакансію" Margin="26,-2,-35,-12" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" x:Name="CreateVacancyTabItem">
-                <TabItem.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <RotateTransform/>
-                    </TransformGroup>
-                </TabItem.RenderTransform>
-                <TextBlock Text="Вміст для вкладки Створити вакансію"/>
-            </TabItem>
-            <TabItem Header="Мої вакансію" Margin="34,-2,-43,-15" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" x:Name="MyVacancyTabItem">
+            <TabItem Header="Мої вакансію" Margin="26,-2,-35,-15" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" x:Name="MyVacancyTabItem">
                 <TabItem.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

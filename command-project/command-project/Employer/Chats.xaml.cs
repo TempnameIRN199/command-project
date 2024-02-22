@@ -19,16 +19,14 @@ namespace command_project.Employer
     /// </summary>
     public partial class Chats : Window
     {
-        private MainWindow profileWindow;
+        private Profile profileWindow;
         private Chats chatsWindow;
-        private CreateVacancy createVacancyWindow;
         private MyVacancy myVacancyWindow;
         public Chats()
         {
             InitializeComponent();
-            // Видаліть рядок, який створює новий екземпляр Chats
-            // chatsWindow = new Chats(); 
-            createVacancyWindow = new CreateVacancy();
+            profileWindow = new Profile();
+            //chatsWindow = new Chats(); 
             myVacancyWindow = new MyVacancy();
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -46,11 +44,6 @@ namespace command_project.Employer
             {
                 if (!chatsWindow.IsVisible)
                     chatsWindow.Show();
-            }
-            else if (MainTabControl.SelectedItem == CreateVacancyTabItem)
-            {
-                if (!createVacancyWindow.IsVisible)
-                    createVacancyWindow.Show();
             }
             else if (MainTabControl.SelectedItem == MyVacancyTabItem)
             {
