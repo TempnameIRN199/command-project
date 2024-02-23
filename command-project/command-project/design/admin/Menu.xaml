@@ -21,7 +21,7 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <TabControl TabStripPlacement="Left" Margin="5,-2,0,0">
+        <TabControl Name="myTabControl" TabStripPlacement="Left" Margin="5,-2,0,0">
             <TabItem Name="_Dashboard" Header="Дашборд" Tag="../icon/stats.png"
                      Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight"
                      Width="270">
