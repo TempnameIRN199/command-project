@@ -119,6 +119,8 @@
                         </Grid.RowDefinitions>
                         
                         <!--додати нове вікно з інформацією про вакансію-->
+                        <!--зробити GridViewColumn не клікабельним-->
+                        <!--зробити всюди один GridViewColumn-->
 
                         <ListView Name="_VerifiedResumes" Grid.Row="0" BorderBrush="Black">
                             <ListView.View>
@@ -490,9 +492,27 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <ListBox x:Name="addListBox" Margin="-6,0,6,0" Grid.Column="0" Grid.ColumnSpan="2"
-                             Grid.Row="0" Grid.RowSpan="2">
-                    </ListBox>
+                    <ListView x:Name="_addSkillsView" Grid.Column="0" Grid.Row="0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="{Binding ElementName=_addSkillsView, Path=ActualWidth}">
+                                    <GridViewColumnHeader Content="Назва" />
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Grid Grid.Row="0" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="Додати навичку" Width="190" Height="40" Margin="5" Padding="10,0,0,0" Grid.Row="0" FontSize="20"/>
+                        <TextBox x:Name="_txtAddSkills" Width="190" Height="30" Margin="5" Grid.Row="1"
+                                 FontFamily="Cascadia Mono ExtraLight" FontSize="20"/>
+                        <Button Name="_addSkillsButton" Content="Додати" Width="190" Height="30" Margin="5" Grid.Row="2"
+                                Click="_addSkillsButton_Click"/>
+                    </Grid>
                 </Grid>
             </TabItem>
         </TabControl>

@@ -46,11 +46,11 @@
       "FloatingWindowState": {
         "Id": "04cfbc22-18df-4cd9-bbb0-40a93345b455",
         "Display": 0,
-        "X": 640,
-        "Y": 410,
+        "X": 452,
+        "Y": -20,
         "Width": 800,
         "Height": 600,
-        "WindowState": 0
+        "WindowState": 2
       },
       "DocumentGroups": [
         {
@@ -65,7 +65,7 @@
               "RelativeDocumentMoniker": "command-project\\design\\admin\\Menu.xaml",
               "ToolTip": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\Menu.xaml",
               "RelativeToolTip": "command-project\\design\\admin\\Menu.xaml",
-              "ViewState": "AQIAAJEBAAAAAAAAAAAWwOwBAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-02-21T15:15:28.544Z",
               "EditorCaption": ""
