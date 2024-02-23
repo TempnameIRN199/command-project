@@ -15,16 +15,28 @@ using System.Windows.Shapes;
 namespace command_project.design.admin.choose
 {
     /// <summary>
+<<<<<<<< HEAD:command-project/command-project/design/admin/choose/ChooseWindow.xaml.cs
     /// Логика взаимодействия для ChooseWindow.xaml
     /// </summary>
     public partial class ChooseWindow : Window
     {
         public ChooseWindow()
+========
+    /// Логика взаимодействия для WindowMyProfile.xaml
+    /// </summary>
+    public partial class WindowMyProfile : Window
+    {
+        public WindowMyProfile()
+>>>>>>>> design:command-project/command-project/design/WindowMyProfile.xaml.cs
         {
             InitializeComponent();
         }
 
+<<<<<<<< HEAD:command-project/command-project/design/admin/choose/ChooseWindow.xaml.cs
         private void Button_Click(object sender, RoutedEventArgs e)
+========
+        private void cbMyProfile_SelectionChanged(object sender, SelectionChangedEventArgs e)
+>>>>>>>> design:command-project/command-project/design/WindowMyProfile.xaml.cs
         {
 
         }

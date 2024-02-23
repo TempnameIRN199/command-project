@@ -1,0 +1,68 @@
+D:\ItStep\Current\command-project\command-project\Server\bin\Debug\Server.exe.config
+D:\ItStep\Current\command-project\command-project\Server\bin\Debug\Server.exe
+D:\ItStep\Current\command-project\command-project\Server\bin\Debug\Server.pdb
+D:\ItStep\Current\command-project\command-project\Server\bin\Debug\EntityFramework.dll
+D:\ItStep\Current\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.dll
+D:\ItStep\Current\command-project\command-project\Server\bin\Debug\EntityFramework.xml
+D:\ItStep\Current\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.csproj.CopyComplete
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.exe
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.pdb
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.exe.config
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.exe
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.pdb
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.dll
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.dll
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.xml
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CopyComplete
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.exe
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.pdb
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
+D:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.exe.config
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.exe
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\Server.pdb
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.dll
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.dll
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.xml
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CopyComplete
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.exe
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.pdb
+C:\adsdadsdadas\pro2\command-project\Server\bin\Debug\Server.exe.config
+C:\adsdadsdadas\pro2\command-project\Server\bin\Debug\Server.exe
+C:\adsdadsdadas\pro2\command-project\Server\bin\Debug\Server.pdb
+C:\adsdadsdadas\pro2\command-project\Server\bin\Debug\EntityFramework.dll
+C:\adsdadsdadas\pro2\command-project\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\adsdadsdadas\pro2\command-project\Server\bin\Debug\EntityFramework.xml
+C:\adsdadsdadas\pro2\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
+C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.csproj.CopyComplete
+C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.exe
+C:\adsdadsdadas\pro2\command-project\Server\obj\Debug\Server.pdb
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\Server.exe.config
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\Server.exe
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\Server.pdb
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.dll
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.xml
+C:\adsdadsdadas\comand\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.exe
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.pdb
+C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.Up2Date
