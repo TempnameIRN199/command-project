@@ -19,7 +19,7 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <TabControl TabStripPlacement="Left" Margin="5,-2,0,0">
+        <TabControl TabStripPlacement="Left" Margin="5,-2,0,0" Name="myTabControl" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Name="_Dashboard" Header="Дашборд" Tag="../icon/stats.png"
                      Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight"
                      Width="270">
@@ -132,15 +132,15 @@
                                     </Style>
                                 </GridView.ColumnHeaderContainerStyle>
 
-                                <GridViewColumn Width="100">
-                                    <GridViewColumnHeader Content="ПІБ"/>
+                                <GridViewColumn Width="300">
+                                    <GridViewColumnHeader Content="Info"/>
                                 </GridViewColumn>
-                                <GridViewColumn Width="100">
+                                <!--<GridViewColumn Width="100">
                                     <GridViewColumnHeader Content="Навички"/>
                                 </GridViewColumn>
                                 <GridViewColumn Width="100">
                                     <GridViewColumnHeader Content="Вакансія"/>
-                                </GridViewColumn>
+                                </GridViewColumn>-->
                             </GridView>
                         </ListView.View>
 

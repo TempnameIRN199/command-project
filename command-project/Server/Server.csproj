@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="coding\Functions.cs" />
     <Compile Include="EDM\CV.cs" />
     <Compile Include="EDM\Request.cs" />
     <Compile Include="EDM\RequestCV.cs" />

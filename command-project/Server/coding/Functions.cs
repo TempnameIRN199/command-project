@@ -16,13 +16,15 @@ namespace command_project.coding
             //Из C#^5|SQL^2 в Skill(){Name = "C#", Time = 5}, Skill(){Name = "SQL", Time = 2}
             List<Skill> skills = new List<Skill>();
 
+            //if (skillsText != "")
+            //{
             List<string> skillsTextParts = skillsText.Split('|').ToList();
             foreach (string skill in skillsTextParts)
             {
                 List<string> parts = skill.Split('^').ToList();
                 skills.Add(new Skill() { Name = parts[0], Time = int.Parse(parts[1]) });
             }
-
+            //}
             return skills;
         }
 

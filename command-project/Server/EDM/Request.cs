@@ -19,6 +19,7 @@ namespace Work.EDM
         [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
         public string RequestInfo { get; set; }
+        public string Skills { get; set; }
         public virtual ICollection<RequestCV> RequestCVs { get; set; }
         public Request() 
         {
