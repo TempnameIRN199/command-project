@@ -10,6 +10,18 @@ namespace command_project.coding
 {
     internal class Functions
     {
+        //посчитать возраст по дате(дата параметр)
+        public static int GetAge(DateTime UserDay)
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - UserDay.Year;
+            if (today < UserDay.AddYears(age))
+            {
+                age--;
+            }
+            return age;
+        }
+
         //Из поля баз данных перевод в лист навыков
         public static List<Skill> GetSkills(string skillsText)
         {

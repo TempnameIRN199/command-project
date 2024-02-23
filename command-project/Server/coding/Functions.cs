@@ -10,21 +10,30 @@ namespace command_project.coding
 {
     internal class Functions
     {
+        public static int GetAge(DateTime UserDay)
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - UserDay.Year;
+            if (today < UserDay.AddYears(age))
+            {
+                age--;
+            }
+            return age;
+        }
+
         //Из поля баз данных перевод в лист навыков
         public static List<Skill> GetSkills(string skillsText)
         {
             //Из C#^5|SQL^2 в Skill(){Name = "C#", Time = 5}, Skill(){Name = "SQL", Time = 2}
             List<Skill> skills = new List<Skill>();
 
-            //if (skillsText != "")
-            //{
             List<string> skillsTextParts = skillsText.Split('|').ToList();
             foreach (string skill in skillsTextParts)
             {
                 List<string> parts = skill.Split('^').ToList();
                 skills.Add(new Skill() { Name = parts[0], Time = int.Parse(parts[1]) });
             }
-            //}
+
             return skills;
         }
 
@@ -36,7 +45,7 @@ namespace command_project.coding
 
             foreach (Skill skill in requiredSkills)
             {
-                if (userSkills.Select(i => i.Name).Contains(skill.Name))
+                if (requiredSkills.Select(i => i.Name).Contains(skill.Name))
                 {
                     Skill userCurrentSkill = userSkills.First(i => i.Name == skill.Name);
                     Skill requiredCurrentSkill = requiredSkills.First(i => i.Name == skill.Name);
@@ -139,7 +148,7 @@ namespace command_project.coding
         }
     }
 
-    public class Skill
+    class Skill
     {
         public string Name { get; set; }
         public int Time { get; set; }

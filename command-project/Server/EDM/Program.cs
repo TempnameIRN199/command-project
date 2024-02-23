@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Work.EDM;
-using System.ComponentModel.DataAnnotations;
+using command_project.coding;
 
 namespace Server
 {
@@ -21,127 +21,13 @@ namespace Server
         static void Main(string[] args)
         {
             //WorkContext context = new WorkContext();
-            //context.Users.Add(new User()
-            //{
-            //    Name = "admin",
-            //    SecondName = "admin",
-            //    Login = "admin",
-            //    Password = "a1d2m3i4n5",
-            //    Country = "Empty",
-            //    City = "Empty",
-            //    PhoneNumber = "Empty",
-            //    Email = "Empty",
-            //    Status = "Admin",
-            //    BirthDate = DateTime.Now,
-            //    CreationDate = DateTime.Now
-            //});
+            //context.Skills.Add(new Work.EDM.Skill() { Name = "SQL" });
+            //context.Users.Add(new User() {Name = "firstname",SecondName = "secondname",Login = "login123",Password = "password",
+                //Status = "Worker",City = "City2",Country = "Country2", PhoneNumber  = "0972438593", Email = "email1@gmail.com", 
+                //BirthDate = new DateTime(2000,1,1),CreationDate = new DateTime(2024,1,1)});
             //context.SaveChanges();
-            //DateTime birthDate = new DateTime(2006, 2, 20);
-            //Console.WriteLine(GetAge(birthDate));
-
-            //WorkContext context = new WorkContext();
-            //context.Users.Add(new User()
-            //{
-            //    Name = "user1",
-            //    SecondName = "user1",
-            //    Login = "user1",
-            //    Password = "1",
-            //    Country = "Empty",
-            //    City = "Empty",
-            //    PhoneNumber = "Empty",
-            //    Email = "Empty",
-            //    Status = "Worker",
-            //    BirthDate = DateTime.Now,
-            //    CreationDate = DateTime.Now
-            //});
-            //context.Users.Add(new User()
-            //{
-            //    Name = "user2",
-            //    SecondName = "user2",
-            //    Login = "user2",
-            //    Password = "1",
-            //    Country = "Empty",
-            //    City = "Empty",
-            //    PhoneNumber = "Empty",
-            //    Email = "Empty",
-            //    Status = "Worker",
-            //    BirthDate = DateTime.Now,
-            //    CreationDate = DateTime.Now
-            //});
-            //context.Users.Add(new User()
-            //{
-            //    Name = "user3",
-            //    SecondName = "user3",
-            //    Login = "user3",
-            //    Password = "1",
-            //    Country = "Empty",
-            //    City = "Empty",
-            //    PhoneNumber = "Empty",
-            //    Email = "Empty",
-            //    Status = "Employer",
-            //    BirthDate = DateTime.Now,
-            //    CreationDate = DateTime.Now
-            //});
-            //context.CVs.Add(new CV()
-            //{
-            //    UserId = context.Users.First(i => i.Name == "user1").Id,
-            //    UserInfo = "Info1",
-            //    Skills = "C#^5|SQL^1",
-            //    CreationDate = DateTime.Now
-            //});
-            //context.CVs.Add(new CV()
-            //{
-            //    UserId = context.Users.First(i => i.Name == "user2").Id,
-            //    UserInfo = "Info2",
-            //    Skills = "C#^3|SQL^3",
-            //    CreationDate = DateTime.Now
-            //});
-            //context.Requests.Add(new Request()
-            //{
-            //    Name = "request1",
-            //    UserId = context.Users.First(i => i.Name == "user3").Id,
-            //    RequestInfo = "Info2",
-            //    Skills = "C#^3|SQL^3",
-            //    CreationDate = DateTime.Now
-            //});
-            //context.RequestCVs.Add(new RequestCV()
-            //{
-            //    CreationDate = DateTime.Now,
-            //    Status = "statusA",
-            //    CVId = 1,
-            //    RequestId = 1
-            //});
-            //context.RequestCVs.Add(new RequestCV()
-            //{
-            //    CreationDate = DateTime.Now,
-            //    Status = "statusB",
-            //    CVId = 2,
-            //    RequestId = 1
-            //});
-            //context.SaveChanges();
-
-            //WorkContext workContext = new WorkContext();
-            //workContext.Skills.Add(new Skill { Name = "C#" });
-            //workContext.Skills.Add(new Skill { Name = "C++" });
-            //workContext.Skills.Add(new Skill { Name = "SQL" });
-            //workContext.SaveChanges();
-
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
             while (true) { }
-        }
-
-        public static int GetAge(DateTime birthDate)
-        {
-            int age = DateTime.Now.Year - birthDate.Year;
-            if (DateTime.Now.Month < birthDate.Month) 
-            {
-                age--;
-            }
-            else if (DateTime.Now.Month == birthDate.Month && DateTime.Now.Day < birthDate.Day)
-            {
-                age--;
-            }
-            return age;
         }
         public static int GetFreePort()
         {
@@ -182,7 +68,7 @@ namespace Server
                         {
                             int clientPort = int.Parse(texts[3]);
                             int serverPort = GetFreePort();
-                            //rightPassword>login>newServerPort
+                            //rightPassword(0)>login(1)>newServerPort(2)>status(3)
                             string data = "rightPassword>" + thisUser.Login + ">" + serverPort + ">" + thisUser.Status;
                             SendData(data, int.Parse(texts[3]));
 
@@ -204,18 +90,17 @@ namespace Server
                 }
                 else if (texts[0] == "login")
                 {
-                    //login>login>password>name>secondName>email>number>country>city>BirthDate>status>port
+                    //login>login>password>name>secondName>email>number>country>city>age>status>port
 
                     if (context.Users.ToList().Count(i => i.Login == texts[1]) == 0)
                     {
-                        User tempUser = new User()
-                        {
+                        User tempUser = new User() 
+                        { 
                             Login = texts[1], Password = texts[2],
                             Name = texts[3], SecondName = texts[4],
                             Email = texts[5], PhoneNumber = texts[6],
                             Country = texts[7], City = texts[8],
-                            BirthDate = DateTime.Parse(texts[9]), Status = texts[10],
-                            CreationDate = DateTime.Now
+                            //Age = int.Parse(texts[9]), Status = texts[10]
                         };
 
                         context.Users.Add(tempUser);
@@ -247,7 +132,6 @@ namespace Server
             client.Close();
 
             Console.WriteLine(text);
-            Console.WriteLine();
         }
 
         static void ConnectionServerClient(object connection)
@@ -274,7 +158,6 @@ namespace Server
             ServerPort = serverPort;
             conName = ClientPort.ToString() + "-" + ServerPort.ToString();
         }
-
         public void ReceiveData()
         {
             UdpClient client = new UdpClient(ServerPort);
@@ -290,39 +173,14 @@ namespace Server
                 sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
                 SendData(sendIt);
             }
-            else if (texts[0] == "getAdminTab1Info")
-            {
-                //List<coding.Skill> skills = coding.Functions.GetSkills(texts[1]).ToList();
-                WorkContext context = new WorkContext();
-                //Console.WriteLine(command_project.coding.Functions.IsEnoughSkills(command_project.coding.Functions.GetSkills(context.RequestCVs.First().CV.Skills), command_project.coding.Functions.GetSkills(context.RequestCVs.First().Request.Skills)));
-                string sendMe = "adminTab1Info>" + string.Join(">", context.RequestCVs.Where(t => t.Status != "status0"
-                //&&
-                //coding.Functions.IsEnoughSkills
-                //(
-                //    coding.Functions.GetSkills(
-                //        //t.CV.Skills.ToString()
-                //        context.RequestCVs.First(q => q.Id == t.Id).CV.Skills
-                //        ),
-
-                //    coding.Functions.GetSkills(
-                //        //t.Request.Skills.ToString()
-                //        context.RequestCVs.First(q => q.Id == t.Id).Request.Skills
-                //        )
-                //)
-                )
-                    .Select(t => t.CV.User.Name + " " + t.CV.User.SecondName + "&" + t.CV.UserInfo + "&" + t.CV.Skills + "&" +
-                    t.Request.Name + "&" + t.Request.RequestInfo + "&" + t.Request.Skills + "&" + t.Status).Take(10));
-                SendData(sendMe);
-                Console.WriteLine(sendMe);
-                Console.WriteLine();
-            }
             else if (texts[0] == "getWorker")
             {
                 string sendIt = "infoForWorker>";
                 WorkContext context = new WorkContext();
-                User user = context.Users.ToList().First(i => i.Login == texts[1]);
+                User user = context.Users.ToList().First(i=>i.Login == texts[1]);
                 //sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
-                sendIt += user.Email;
+                //login(1)>status(2)>name(3)>secondname(4)>email(5)>CreationDate(6)>BirthDate(7)>Country(8)>City(9)>Phonenumber(10)>age(11)
+                sendIt += user.Login + ">" + user.Status + ">" + user.Name + ">" + user.SecondName + ">" + user.Email + ">" + user.CreationDate.ToString() + ">" + user.BirthDate.ToString() + ">" + user.Country + ">" + user.City + ">" + user.PhoneNumber + ">" + Functions.GetAge(user.BirthDate).ToString();
                 SendData(sendIt);
             }
             else if (texts[0] == "close")
@@ -345,7 +203,6 @@ namespace Server
             client.Close();
 
             Console.WriteLine(text);
-            Console.WriteLine();
         }
     }
 }
