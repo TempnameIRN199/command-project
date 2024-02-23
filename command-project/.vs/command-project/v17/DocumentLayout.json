@@ -1,0 +1,208 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|c:\\adsdadsdadas\\comand\\command-project\\command-project\\server\\edm\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|c:\\adsdadsdadas\\comand\\command-project\\command-project\\server\\edm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\design\\windowmyprofile.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\windowmyprofile.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\design\\windowmyprofile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\windowmyprofile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\coding\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\coding\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|C:\\adsdadsdadas\\comand\\command-project\\command-project\\server\\edm\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|C:\\adsdadsdadas\\comand\\command-project\\command-project\\server\\edm\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|C:\\adsdadsdadas\\comand\\command-project\\command-project\\server\\edm\\requestcv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\requestcv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|C:\\adsdadsdadas\\comand\\command-project\\command-project\\server\\edm\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Skill.cs",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\Skill.cs",
+              "RelativeDocumentMoniker": "Server\\EDM\\Skill.cs",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\Skill.cs",
+              "RelativeToolTip": "Server\\EDM\\Skill.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T14:47:03.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CV.cs",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\CV.cs",
+              "RelativeDocumentMoniker": "Server\\EDM\\CV.cs",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\CV.cs",
+              "RelativeToolTip": "Server\\EDM\\CV.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T13:36:12.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RequestCV.cs",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\RequestCV.cs",
+              "RelativeDocumentMoniker": "Server\\EDM\\RequestCV.cs",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\RequestCV.cs",
+              "RelativeToolTip": "Server\\EDM\\RequestCV.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T13:30:56.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\User.cs",
+              "RelativeDocumentMoniker": "Server\\EDM\\User.cs",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\User.cs",
+              "RelativeToolTip": "Server\\EDM\\User.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T13:30:01.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Request.cs",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\Request.cs",
+              "RelativeDocumentMoniker": "Server\\EDM\\Request.cs",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\Request.cs",
+              "RelativeToolTip": "Server\\EDM\\Request.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T13:29:48.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "command-project\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\MainWindow.xaml.cs",
+              "RelativeToolTip": "command-project\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAowGMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T16:00:19.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\EDM\\Program.cs",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\Server\\EDM\\Program.cs",
+              "RelativeToolTip": "Server\\EDM\\Program.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAwwDcAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T15:37:01.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Functions.cs",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\coding\\Functions.cs",
+              "RelativeDocumentMoniker": "command-project\\coding\\Functions.cs",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\coding\\Functions.cs",
+              "RelativeToolTip": "command-project\\coding\\Functions.cs",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAAwBkAAAAgAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADtSURBVDhPYxgFCHDh4YX/sQtj/6u3qP9XblL\u002BHzk/8j9UiuHtx7f/VZpVwHxkNggwgohLjy79D18SzmAua86QZJbEwM/Bz3D91XWGCNMIRpAGo34jsGJkwMrMynCn9g5YP0PK0pT/3tO9/3/58gVuMjLA5wImEHH68WkGN3U3Bh4eHoiJJACwAb/\u002B/gI7CRuAeeH3398M8g3ycDayKxjC5oX9D54TjNX5IIDPC2Ann7x78n/E4ggGDw0PhgiDCLBrLj2/xJBhl0HQS3AFe67t\u002BT/lyBSGO2/uMHCxcTHYK9szdAd2kxwmIw8wMAAAESl0qwYO77cAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-02-21T15:15:19.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WindowMyProfile.xaml",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\design\\WindowMyProfile.xaml",
+              "RelativeDocumentMoniker": "command-project\\design\\WindowMyProfile.xaml",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\design\\WindowMyProfile.xaml",
+              "RelativeToolTip": "command-project\\design\\WindowMyProfile.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-02-16T16:00:19.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WindowMyProfile.xaml.cs",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\design\\WindowMyProfile.xaml.cs",
+              "RelativeDocumentMoniker": "command-project\\design\\WindowMyProfile.xaml.cs",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\design\\WindowMyProfile.xaml.cs",
+              "RelativeToolTip": "command-project\\design\\WindowMyProfile.xaml.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAcwC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T16:00:19.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "command-project\\MainWindow.xaml",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\command-project\\command-project\\command-project\\MainWindow.xaml",
+              "RelativeToolTip": "command-project\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-02-16T16:00:19.568Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

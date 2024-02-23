@@ -167,9 +167,9 @@ C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug
 C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command_project.Properties.Resources.resources
 C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.csproj.GenerateResource.cache
 C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.csproj.CoreCompileInputs.cache
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.csproj.CopyComplete
 C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.exe
 C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.pdb
 C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\Server.exe
 C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\Server.pdb
 C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\Server.exe.config
+C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-.8D188C85.Up2Date
