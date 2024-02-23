@@ -103,7 +103,6 @@
         <Border Background="LightGray" Margin="1104,65,50,415" CornerRadius="10" Grid.Row="1">
             <Grid>
                 <TextBlock Text="Опис обраної Вакансії" TextAlignment="Center" FontWeight="Bold" FontSize="24" Margin="0,10,0,392" />
-                <Button Content="Редагувати" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="34" Width="276" Style="{StaticResource CustomButtonStyle}" Margin="0,406,0,0" FontSize="20"/>
             </Grid>
         </Border>
         <TabControl x:Name="MainTabControl" Margin="1303,213,-110,677" RenderTransformOrigin="0.5,0.5" Grid.Row="1" SelectionChanged="MainTabControl_SelectionChanged">
@@ -158,7 +157,7 @@
                 <Button Content="Розробити базу даних співробітників SQL" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,136,0,0" FontSize="20"/>
             </Grid>
         </Border>
-        <Border Background="Gray" Margin="1104,125,50,465" CornerRadius="10" Grid.Row="1"></Border>
+        <Border Background="Gray" Margin="1104,125,50,415" CornerRadius="10" Grid.Row="1"></Border>
         <Border Background="Gray" Margin="1104,567,50,10" CornerRadius="10" Grid.Row="1">
             <Grid Margin="0,51,0,0">
                 
