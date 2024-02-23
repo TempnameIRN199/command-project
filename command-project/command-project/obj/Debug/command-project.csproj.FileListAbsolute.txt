@@ -99,6 +99,6 @@ E:\Coding\Learn\Управління проектами\command-project\command-
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command_project.Properties.Resources.resources
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project.csproj.GenerateResource.cache
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project.csproj.CoreCompileInputs.cache
-E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project.csproj.CopyComplete
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\style\TransparentButtonStyle.baml
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\style\GradientStackPanel.baml
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-.8D188C85.Up2Date
