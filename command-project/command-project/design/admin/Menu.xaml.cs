@@ -262,7 +262,7 @@ namespace command_project.design.admin
             Dispatcher.Invoke(new Action(() => _VerifiedResumes.ItemsSource = tab1List.Select(i => i.Show())));
         }
 
-        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void myTabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (myTabControl.SelectedIndex != -1)
             {
@@ -282,6 +282,101 @@ namespace command_project.design.admin
                         break;
                 }
             }
+        }
+
+        private void _addSkillsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _addApprovedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _addRejectedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _AllExperience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void _AllSkills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _ApprovedExperience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void _ApprovedSkills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _changeApprovedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _deleteApprovedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _changeRejectedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _deleteRejectedSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _listAllFindData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _listApprovedFindData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _listRejectedFindData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _RejectedExperience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void _RejectedSkills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _txtAllFindSkills_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void _txtApprovedFindSkills_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void _txtRejectedFindSkills_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
 
 
