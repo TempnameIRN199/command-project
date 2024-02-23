@@ -38,7 +38,8 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
 
-            <Border Background="#808080" Grid.ColumnSpan="15" Grid.RowSpan="2" Grid.Row="0" BorderThickness="0" CornerRadius="30,30,0,00"></Border>
+
+            <Border Background="#808080" Grid.ColumnSpan="10" Grid.RowSpan="2" Grid.Row="0" BorderThickness="0" CornerRadius="30,30,0,00"/>
 
 
             <ComboBox x:Name="cbMyProfile" Foreground="Black" Background="#808080" Height="50" FontSize="21" Grid.Column="6" Grid.Row="1"  FontFamily="Cascadia Mono ExtraLight" SelectedIndex="0" Grid.ColumnSpan="2" Margin="181,12,58,0" VerticalAlignment="Top" SelectionChanged="cbMyProfile_SelectionChanged" >
@@ -68,7 +69,7 @@
                 FontFamily="Cascadia Mono ExtraLight"
                 FontSize="21" 
                 Content="Подати об'яву" Click="bAddAd_Click" Cursor="Hand" Grid.ColumnSpan="2" Margin="206,12,32,13"
-           ></Button>
+           />
             <Button                
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Bottom" 
@@ -81,22 +82,34 @@
 
             </Button>
 
+            <TabControl  x:Name="tabControlProf" 
+                         Grid.ColumnSpan="10" 
+                         Margin="28,10,10,10" 
+                         Grid.RowSpan="11" Grid.Row="2">
+                <TabItem Header="Мій профіль"
+                         FontSize="20" Margin="1019,-74,-1023,71"
+                         Grid.Row="2"
+                         Panel.ZIndex="5"/>
+
+
+            </TabControl>
+
             <Border BorderThickness="0" CornerRadius="10,10,10,10" Background="WhiteSmoke" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2">
                 <Grid >
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
-                        <ColumnDefinition Width="150"></ColumnDefinition>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
-                        <ColumnDefinition ></ColumnDefinition>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="20"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="20"></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="20"/>
                     </Grid.RowDefinitions>
 
-                    <Label x:Name="lVerificationProfile" Foreground="#FF434B54" VerticalContentAlignment="Center" FontFamily="Cascadia Mono Light" Grid.Column="3" Grid.Row="1" Content="[Верифіковано]" FontSize="25"></Label>
+                    <Label x:Name="lVerificationProfile" Foreground="#FF434B54" VerticalContentAlignment="Center" FontFamily="Cascadia Mono Light" Grid.Column="3" Grid.Row="1" Content="[Верифіковано]" FontSize="25"/>
                     <!--<Button x:Name="bVerificationProfile" Background="Transparent" Foreground="Black" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono ExtraLight" Grid.Column="3" Grid.Row="1" Content="Додати фото" FontSize="15" Margin="0,128,0,0" Click="bVerificationProfile_Click" Cursor="Hand"/>-->
 
                     <Border x:Name="MaskIcon" Background="White" CornerRadius="10" Grid.Column="1" Grid.Row="1"/>
@@ -111,83 +124,83 @@
             <Border BorderThickness="0" Background="WhiteSmoke" CornerRadius="10,10,10,10" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="3">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
-                        <ColumnDefinition Width="400"></ColumnDefinition>
-                        <ColumnDefinition ></ColumnDefinition>
-                        <ColumnDefinition ></ColumnDefinition>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="400"/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="20"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="15"></RowDefinition>
-                        <RowDefinition Height="50"></RowDefinition>
-                        <RowDefinition Height="15"></RowDefinition>
-                        <RowDefinition Height="50"></RowDefinition>
-                        <RowDefinition Height="15"></RowDefinition>
-                        <RowDefinition Height="50"></RowDefinition>
-                        <RowDefinition Height="15"></RowDefinition>
-                        <RowDefinition Height="50"></RowDefinition>
-                        <RowDefinition Height="15"></RowDefinition>
-                        <RowDefinition Height="50"></RowDefinition>
-                        <RowDefinition Height="15"></RowDefinition>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="15"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Основна інформація" Grid.Row="1" Grid.Column="1" FontSize="30" Foreground="#FF434B54" VerticalContentAlignment="Center" FontFamily="Cascadia Mono Light"></Label>
-                    <Image x:Name="imgEditInfoProf" Grid.Row="1" Grid.Column="3" MouseDown="imgEditInfoProf_MouseDown" Cursor="Hand"  HorizontalAlignment="Right" Width="30"></Image>
-                    <Label Content="Ім'я та прізвище" Grid.Row="3" Grid.Column="1" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"></Label>
-                    <Label x:Name="lName" Content="[test] [test]" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"></Label>
-                    <Label Content="Номер телефону" Grid.Row="7" Grid.Column="1" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"></Label>
-                    <Label x:Name="lPhone" Content="[test] [test]" Grid.Row="9" Grid.Column="1" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"></Label>
-                    <Label Content="Електронна пошта" Grid.Row="7" Grid.Column="2" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"></Label>
-                    <Label x:Name="lEmail" Content="[test] [test]" Grid.Row="9" Grid.Column="2" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"></Label>
-                    <Label Content="Місце проживання" Grid.Row="7" Grid.Column="3" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"></Label>
-                    <Label x:Name="lPlaceOfResidence" Content="[test] [test]" Grid.Row="9" Grid.Column="3" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"></Label>
+                    <Label Content="Основна інформація" Grid.Row="1" Grid.Column="1" FontSize="30" Foreground="#FF434B54" VerticalContentAlignment="Center" FontFamily="Cascadia Mono Light"/>
+                    <Image x:Name="imgEditInfoProf" Grid.Row="1" Grid.Column="3" MouseDown="imgEditInfoProf_MouseDown" Cursor="Hand"  HorizontalAlignment="Right" Width="30"/>
+                    <Label Content="Ім'я та прізвище" Grid.Row="3" Grid.Column="1" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"/>
+                    <Label x:Name="lName" Content="[test] [test]" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"/>
+                    <Label Content="Номер телефону" Grid.Row="7" Grid.Column="1" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"/>
+                    <Label x:Name="lPhone" Content="[test] [test]" Grid.Row="9" Grid.Column="1" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"/>
+                    <Label Content="Електронна пошта" Grid.Row="7" Grid.Column="2" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"/>
+                    <Label x:Name="lEmail" Content="[test] [test]" Grid.Row="9" Grid.Column="2" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"/>
+                    <Label Content="Місце проживання" Grid.Row="7" Grid.Column="3" FontSize="24" Foreground="#FF434B54" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono Light"/>
+                    <Label x:Name="lPlaceOfResidence" Content="[test] [test]" Grid.Row="9" Grid.Column="3" FontSize="20" Foreground="#FF434B54" VerticalContentAlignment="Top" FontFamily="Cascadia Mono ExtraLight"/>
                     <Label Content="Вік"  Grid.Column="3" FontSize="24" Foreground="#FF434B54" Margin="0,10,10,0" Grid.Row="3"/>
                     <Label  x:Name="lAge" Content="[test] [test]"  Grid.Column="3" FontSize="20" Foreground="#FF434B54" Margin="0,10,10,0" Grid.Row="5"/>
                 </Grid>
             </Border>
             <Border BorderThickness="0" CornerRadius="10,10,10,10" Background="WhiteSmoke" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="7">
-                <Image x:Name="imgRerified" ></Image>
+                <Image x:Name="imgRerified" />
             </Border>
 
 
             <Border BorderThickness="0" CornerRadius="10,10,10,10" Background="WhiteSmoke" Grid.Column="4" Grid.Row="7" Grid.ColumnSpan="5" Grid.RowSpan="5">
                 <Grid >
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
-                        <ColumnDefinition Width="441*" ></ColumnDefinition>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="441*" />
                         <ColumnDefinition Width="712*"/>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition Width="20"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="20"></RowDefinition>
-                        <RowDefinition Height="60"></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="20"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Останні сеанси" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" FontSize="30" Foreground="#FF434B54" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Cascadia Mono Light"></Label>
+                    <Label Content="Останні сеанси" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" FontSize="30" Foreground="#FF434B54" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Cascadia Mono Light"/>
 
-                    <ListView Name="ListAds" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
+                    <ListView x:Name="ListAds" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
                         <ListView.ItemsPanel >
                             <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+                                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
                             </ItemsPanelTemplate>
                         </ListView.ItemsPanel>
                         <ListView.ItemTemplate>
                             <DataTemplate  >
                                 <Grid x:Name="GridAdPig" Width="1000" Height="50" Background="White">
                                     <Grid.Triggers>
-                                        <EventTrigger RoutedEvent="Grid.MouseEnter">
+                                        <EventTrigger RoutedEvent="UIElement.MouseEnter">
                                             <BeginStoryboard>
                                                 <Storyboard>
-                                                    <ColorAnimation Storyboard.TargetName="GridAdPig" Storyboard.TargetProperty="(Grid.Background).(SolidColorBrush.Color)" To="LightGray" Duration="0:0:0.250"/>
+                                                    <ColorAnimation Storyboard.TargetName="GridAdPig" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" To="LightGray" Duration="0:0:0.250"/>
                                                 </Storyboard>
                                             </BeginStoryboard>
                                         </EventTrigger>
-                                        <EventTrigger RoutedEvent="Grid.MouseLeave">
+                                        <EventTrigger RoutedEvent="UIElement.MouseLeave">
                                             <BeginStoryboard>
                                                 <Storyboard>
-                                                    <ColorAnimation Storyboard.TargetName="GridAdPig" Storyboard.TargetProperty="(Grid.Background).(SolidColorBrush.Color)" To="White" Duration="0:0:0.250"/>
+                                                    <ColorAnimation Storyboard.TargetName="GridAdPig" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" To="White" Duration="0:0:0.250"/>
                                                 </Storyboard>
                                             </BeginStoryboard>
                                         </EventTrigger>
@@ -203,9 +216,7 @@
                                         <RowDefinition Height="5"/>
                                     </Grid.RowDefinitions>
                                     <Label x:Name="lSessions" Margin="0,0,30,0" FontFamily="Cascadia Mono ExtraLight" FontSize="35" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left">
-                                        <Label.Content>
-                                            <AccessText TextWrapping="Wrap" Text="{Binding SessionUser}"></AccessText>
-                                        </Label.Content>
+                                        <AccessText TextWrapping="Wrap" Text="{Binding SessionUser}"/>
                                     </Label>
                                 </Grid>
                             </DataTemplate>
