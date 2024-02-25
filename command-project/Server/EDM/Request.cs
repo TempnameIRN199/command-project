@@ -20,6 +20,7 @@ namespace Work.EDM
         public DateTime CreationDate { get; set; }
         public string RequestInfo { get; set; }
         public virtual ICollection<RequestCV> RequestCVs { get; set; }
+        public bool IsActive { get; set; }
         public Request() 
         {
             RequestCVs = new List<RequestCV>();

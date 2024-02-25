@@ -21,11 +21,115 @@ namespace Server
         static void Main(string[] args)
         {
             //WorkContext context = new WorkContext();
-            //context.Skills.Add(new Work.EDM.Skill() { Name = "SQL" });
-            //context.Users.Add(new User() {Name = "firstname",SecondName = "secondname",Login = "login123",Password = "password",
-                //Status = "Worker",City = "City2",Country = "Country2", PhoneNumber  = "0972438593", Email = "email1@gmail.com", 
-                //BirthDate = new DateTime(2000,1,1),CreationDate = new DateTime(2024,1,1)});
+            //context.Skills.Add(new Work.EDM.Skill() { Name = "C++" });
+            //context.Users.Add(new User()
+            //{
+            //    Name = "admin",
+            //    SecondName = "admin",
+            //    Login = "admin",
+            //    Password = "a1d2m3i4n5",
+            //    Country = "Empty",
+            //    City = "Empty",
+            //    PhoneNumber = "Empty",
+            //    Email = "Empty",
+            //    Status = "Admin",
+            //    BirthDate = DateTime.Now,
+            //    CreationDate = DateTime.Now
+            //});
+            ////DateTime birthDate = new DateTime(2006, 2, 20);
+            ////Console.WriteLine(GetAge(birthDate));
+
+            ////WorkContext context = new WorkContext();
+            //context.Users.Add(new User()
+            //{
+            //    Name = "user1",
+            //    SecondName = "user1",
+            //    Login = "user1",
+            //    Password = "1",
+            //    Country = "Empty",
+            //    City = "Empty",
+            //    PhoneNumber = "Empty",
+            //    Email = "Empty",
+            //    Status = "Worker",
+            //    BirthDate = DateTime.Now,
+            //    CreationDate = DateTime.Now
+            //});
+            //context.Users.Add(new User()
+            //{
+            //    Name = "user2",
+            //    SecondName = "user2",
+            //    Login = "user2",
+            //    Password = "1",
+            //    Country = "Empty",
+            //    City = "Empty",
+            //    PhoneNumber = "Empty",
+            //    Email = "Empty",
+            //    Status = "Worker",
+            //    BirthDate = DateTime.Now,
+            //    CreationDate = DateTime.Now
+            //});
+            //context.Users.Add(new User()
+            //{
+            //    Name = "user3",
+            //    SecondName = "user3",
+            //    Login = "user3",
+            //    Password = "1",
+            //    Country = "Empty",
+            //    City = "Empty",
+            //    PhoneNumber = "Empty",
+            //    Email = "Empty",
+            //    Status = "Employer",
+            //    BirthDate = DateTime.Now,
+            //    CreationDate = DateTime.Now
+            //});
             //context.SaveChanges();
+
+
+
+
+            //WorkContext workContext = new WorkContext();
+            //context.CVs.Add(new CV()
+            //{
+            //    UserId = context.Users.First(i => i.Name == "user1").Id,
+            //    UserInfo = "Info1",
+            //    Skills = "C#^5|SQL^1",
+            //    CreationDate = DateTime.Now
+            //});
+            //context.CVs.Add(new CV()
+            //{
+            //    UserId = context.Users.First(i => i.Name == "user2").Id,
+            //    UserInfo = "Info2",
+            //    Skills = "C#^3|SQL^3",
+            //    CreationDate = DateTime.Now
+            //});
+            //context.Requests.Add(new Request()
+            //{
+            //    Name = "request1",
+            //    UserId = context.Users.First(i => i.Name == "user3").Id,
+            //    RequestInfo = "Info2",
+            //    Skills = "C#^3|SQL^3",
+            //    CreationDate = DateTime.Now
+            //});
+            //context.RequestCVs.Add(new RequestCV()
+            //{
+            //    CreationDate = DateTime.Now,
+            //    Status = "statusA",
+            //    CVId = 1,
+            //    RequestId = 1
+            //});
+            //context.RequestCVs.Add(new RequestCV()
+            //{
+            //    CreationDate = DateTime.Now,
+            //    Status = "statusB",
+            //    CVId = 2,
+            //    RequestId = 1
+            //});
+
+            //context.SaveChanges();
+            //Console.WriteLine("a");
+            //workContext.Skills.Add(new Work.EDM.Skill { Name = "C#" });
+            //workContext.Skills.Add(new Work.EDM.Skill { Name = "SQL" });
+            //workContext.SaveChanges();
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
             while (true) { }
         }
@@ -50,7 +154,6 @@ namespace Server
         {
             while (true)
             {
-
                 UdpClient client = new UdpClient(serverPort);
                 IPEndPoint ipEnd = null;
                 byte[] responce = client.Receive(ref ipEnd);
@@ -100,6 +203,9 @@ namespace Server
                             Name = texts[3], SecondName = texts[4],
                             Email = texts[5], PhoneNumber = texts[6],
                             Country = texts[7], City = texts[8],
+                            BirthDate = DateTime.Parse(texts[9]),
+                            Status = texts[10],
+                            CreationDate = DateTime.Now
                             //Age = int.Parse(texts[9]), Status = texts[10]
                         };
 
@@ -182,6 +288,47 @@ namespace Server
                 //login(1)>status(2)>name(3)>secondname(4)>email(5)>CreationDate(6)>BirthDate(7)>Country(8)>City(9)>Phonenumber(10)>age(11)
                 sendIt += user.Login + ">" + user.Status + ">" + user.Name + ">" + user.SecondName + ">" + user.Email + ">" + user.CreationDate.ToString() + ">" + user.BirthDate.ToString() + ">" + user.Country + ">" + user.City + ">" + user.PhoneNumber + ">" + Functions.GetAge(user.BirthDate).ToString();
                 SendData(sendIt);
+            }
+            else if (texts[0] == "getAdminTab1Info")
+            {
+                int page = int.Parse(texts[1]);
+                List<string> list = new List<string>();
+                Console.WriteLine(texts[2]);
+
+                switch (texts[2])
+                {
+                    case "Всі":
+                        {
+                            list = new List<string> { "Accepted", "Declined", "Under Review", "Accepted byAdmin", "Declined byAdmin" };
+                        }
+                        break;
+
+                    case "Підтверджені":
+                        {
+                            list = new List<string> { "Accepted", "Accepted byAdmin" };
+                        }
+                        break;
+
+                    case "Відхилені":
+                        {
+                            list = new List<string> { "Declined", "Declined byAdmin" };
+                        }
+                        break;
+
+                    case "Потребують підтвердження":
+                        {
+                            list = new List<string> { "Accepted", "Declined", "Under Review" };
+                        }
+                        break;
+                }
+
+                WorkContext context = new WorkContext();
+                string sendMe = "adminTab1Info>" + string.Join(">", context.RequestCVs.Where(t => list.Contains(t.Status)).OrderBy(t => t.RequestId)
+                    .Select(t => t.CV.User.Name + " " + t.CV.User.SecondName + "&" + t.CV.UserInfo + "&" + t.CV.Skills + "&" +
+                    t.Request.Name + "&" + t.Request.RequestInfo + "&" + t.Request.Skills + "&" + t.Status).Skip((page - 1) * 10).Take(10));
+                SendData(sendMe);
+                //Console.WriteLine(sendMe);
+                Console.WriteLine();
             }
             else if (texts[0] == "close")
             {

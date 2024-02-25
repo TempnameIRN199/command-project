@@ -153,6 +153,7 @@ namespace command_project.design.admin
                     tab1List.Clear();
                     for (int i = 1; i < texts.Count; i++)
                     {
+                        if (texts[i] == "") continue;
                         List<string> rcvs = texts[i].Split('&').ToList();
                         tab1List.Add(new tClass() 
                         { 
@@ -264,24 +265,16 @@ namespace command_project.design.admin
 
         private void myTabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (myTabControl.SelectedIndex != -1)
+            if (myTabControl.SelectedIndex == 1)
             {
-                switch (myTabControl.SelectedIndex)
-                {
-                    case 0:
-                        {
-
-                        }
-                        break;
-                    case 1:
-                        {
-                            string tSkills = Functions.SkillsIntoDBFormat(listSkills.ToList());
-                            string sendIt = "getAdminTab1Info";
-                            SendData(sendIt);
-                        }
-                        break;
-                }
+                string sendIt = "getAdminTab1Info>" + pageLabel.Content + ">" + (_Status.SelectedItem as ComboBoxItem).Content;
+                SendData(sendIt);
             }
+        }
+        private void _Status_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string sendIt = "getAdminTab1Info>" + pageLabel.Content + ">" + (_Status.SelectedItem as ComboBoxItem).Content;
+            SendData(sendIt);
         }
 
         private void _addSkillsButton_Click(object sender, RoutedEventArgs e)
@@ -289,10 +282,31 @@ namespace command_project.design.admin
 
         }
 
-        private void _Status_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void _minusPage_Click(object sender, RoutedEventArgs e)
         {
-
+            int page = int.Parse(pageLabel.Content.ToString());
+            if (page <= 1)
+            {
+                return;
+            }
+            else
+            {
+                page--;
+                pageLabel.Content = page.ToString();
+                string sendIt = "getAdminTab1Info>" + pageLabel.Content + ">" + (_Status.SelectedItem as ComboBoxItem).Content;
+                SendData(sendIt);
+            }
         }
+
+        private void _plusPage_Click(object sender, RoutedEventArgs e)
+        {
+            int page = int.Parse(pageLabel.Content.ToString());
+            page++;
+            pageLabel.Content = page.ToString();
+            string sendIt = "getAdminTab1Info>" + pageLabel.Content + ">" + (_Status.SelectedItem as ComboBoxItem).Content;
+            SendData(sendIt);
+        }
+
         // Зробити сортування за алфавітом для кожного стовпця з _VerifiedResumes
     }
 
@@ -320,7 +334,7 @@ namespace command_project.design.admin
         }
         public string Show()
         {
-            return UserName + " " + WorkName + " " + isEnough;
+            return UserName + " " + WorkName + " " + isEnough + " " + Status;
         }
         public void Check(List<Skill> skills)
         {

@@ -21,7 +21,7 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <TabControl Name="myTabControl" TabStripPlacement="Left" Margin="5,-2,0,0">
+        <TabControl Name="myTabControl" TabStripPlacement="Left" Margin="5,-2,0,0" SelectionChanged="myTabControl_SelectionChanged">
             <TabItem Name="_Dashboard" Header="Дашборд" Tag="../icon/stats.png"
                      Style="{StaticResource TundraTabItem}" FontFamily="Cascadia Mono ExtraLight"
                      Width="270">
@@ -156,9 +156,9 @@
 
                         <Border Style="{StaticResource CustomStackPanelStyle}" Grid.Row="1" >
                             <StackPanel Orientation="Horizontal">
-                                <Button Content="🡸" FontSize="20" Width="100" Height="40" Margin="5" Style="{StaticResource TransparentButtonStyle}"/>
-                                <Label Content="1" Width="735" FontSize="20" Height="40" Margin="5" Padding="360,10,0,0"/>
-                                <Button Content="🡺" FontSize="20" Width="100" Height="40" Margin="5" Style="{StaticResource TransparentButtonStyle}"/>
+                                <Button Name="_minusPage" Content="🡸" FontSize="20" Width="100" Height="40" Margin="5" Style="{StaticResource TransparentButtonStyle}" Click="_minusPage_Click"/>
+                                <Label Name="pageLabel" Content="1" Width="735" FontSize="20" Height="40" Margin="5" Padding="360,10,0,0"/>
+                                <Button Name="_plusPage" Content="🡺" FontSize="20" Width="100" Height="40" Margin="5" Style="{StaticResource TransparentButtonStyle}" Click="_plusPage_Click"/>
                             </StackPanel>
                         </Border>
                     </Grid>
@@ -168,7 +168,7 @@
                         <ComboBox Name="_Status" Width="190" Height="25" Margin="5"
                                   FontFamily="Cascadia Mono ExtraLight" FontSize="20"
                                   SelectionChanged="_Status_SelectionChanged">
-                            <ComboBoxItem Content="Всі"/>
+                            <ComboBoxItem IsSelected="True" Content="Всі"/>
                             <ComboBoxItem Content="Підтверджені"/>
                             <ComboBoxItem Content="Відхилені"/>
                             <ComboBoxItem Content="Потребують підтвердження"/>

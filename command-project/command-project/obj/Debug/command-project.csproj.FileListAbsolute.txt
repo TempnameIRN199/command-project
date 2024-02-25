@@ -144,3 +144,6 @@ E:\Coding\Learn\Управління проектами\command-project\command-
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\Server.pdb
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\Server.exe.config
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-.8D188C85.Up2Date
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\Server.exe
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\Server.pdb
+D:\ItStep\Current\command-project\command-project\command-project\bin\Debug\Server.exe.config
