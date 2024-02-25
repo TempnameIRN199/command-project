@@ -99,7 +99,6 @@ E:\Coding\Learn\Управління проектами\command-project\command-
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command_project.Properties.Resources.resources
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project.csproj.GenerateResource.cache
 E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project.csproj.CoreCompileInputs.cache
-E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-project.csproj.CopyComplete
 C:\adsdadsdadas\pro2\command-project\command-project\bin\Debug\command-project.exe.config
 C:\adsdadsdadas\pro2\command-project\command-project\bin\Debug\command-project.exe
 C:\adsdadsdadas\pro2\command-project\command-project\bin\Debug\command-project.pdb
@@ -135,43 +134,16 @@ C:\adsdadsdadas\pro2\command-project\command-project\obj\Debug\command-project.c
 C:\adsdadsdadas\pro2\command-project\command-project\obj\Debug\command-project.csproj.CopyComplete
 C:\adsdadsdadas\pro2\command-project\command-project\obj\Debug\command-project.exe
 C:\adsdadsdadas\pro2\command-project\command-project\obj\Debug\command-project.pdb
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\command-project.exe.config
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\command-project.exe
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\command-project.pdb
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\EntityFramework.dll
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\EntityFramework.SqlServer.dll
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\LiveCharts.dll
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.dll
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\EntityFramework.xml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\EntityFramework.SqlServer.xml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\LiveCharts.pdb
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\LiveCharts.xml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.pdb
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\LiveCharts.Wpf.xml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.csproj.AssemblyReference.cache
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\style\CustomCartesianChart.baml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\style\CustomLabel.baml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\style\CustomTabItem.baml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\style\GradientLabel.baml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\style\GradientLabel2.baml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\admin\Menu.g.cs
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\WindowMyProfile.g.cs
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\MainWindow.g.cs
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\App.g.cs
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project_MarkupCompile.cache
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project_MarkupCompile.lref
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\admin\Menu.baml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\WindowMyProfile.baml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\MainWindow.baml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.g.resources
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command_project.Properties.Resources.resources
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.csproj.GenerateResource.cache
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.csproj.CoreCompileInputs.cache
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.exe
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-project.pdb
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\Server.exe
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\Server.pdb
-C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\Server.exe.config
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-.8D188C85.Up2Date
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\style\GradientStackPanel.baml
-C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\style\TransparentButtonStyle.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\WindowMyProfile.g.cs
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\WindowMyProfile.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\style\GradientStackPanel.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\style\TransparentButtonStyle.baml
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\style\GradientStackPanel.baml
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\style\TransparentButtonStyle.baml
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\Server.exe
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\Server.pdb
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\bin\Debug\Server.exe.config
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\command-.8D188C85.Up2Date
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\style\InfoStackPanel.baml
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\admin\InfoWindow.g.cs
+E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\obj\Debug\design\admin\InfoWindow.baml

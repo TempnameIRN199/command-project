@@ -34,10 +34,7 @@ E:\Coding\Learn\Управління проектами\command-project\command-
 E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.xml
 E:\Coding\Learn\Управління проектами\command-project\command-project\Server\bin\Debug\EntityFramework.SqlServer.xml
 E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.AssemblyReference.cache
-E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
-E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
 E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
-E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.CopyComplete
 E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.exe
 E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.pdb
 C:\adsdadsdadas\pro2\command-project\Server\bin\Debug\Server.exe.config
@@ -66,3 +63,4 @@ C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.c
 C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.exe
 C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.pdb
 C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.csproj.Up2Date
+E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.Up2Date

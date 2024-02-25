@@ -21,11 +21,90 @@ namespace Server
         static void Main(string[] args)
         {
             WorkContext context = new WorkContext();
-            context.Skills.Add(new Work.EDM.Skill() { Name = "SQL" });
-            context.Users.Add(new User() {Name = "firstname",SecondName = "secondname",Login = "login123",Password = "password",
-                Status = "Worker",City = "City2",Country = "Country2", PhoneNumber  = "0972438593", Email = "email1@gmail.com", 
-                BirthDate = new DateTime(2000,1,1),CreationDate = new DateTime(2024,1,1)});
-            context.SaveChanges();
+            //context.Users.Add(new User()
+            //{
+            //    Name = "user1",
+            //    SecondName = "user1",
+            //    Login = "user1",
+            //    Password = "1",
+            //    Country = "Empty",
+            //    City = "Empty",
+            //    PhoneNumber = "Empty",
+            //    Email = "Empty",
+            //    Status = "Worker",
+            //    BirthDate = DateTime.Now,
+            //    CreationDate = DateTime.Now
+            //});
+            //context.Users.Add(new User()
+            //{
+            //    Name = "user2",
+            //    SecondName = "user2",
+            //    Login = "user2",
+            //    Password = "1",
+            //    Country = "Empty",
+            //    City = "Empty",
+            //    PhoneNumber = "Empty",
+            //    Email = "Empty",
+            //    Status = "Worker",
+            //    BirthDate = DateTime.Now,
+            //    CreationDate = DateTime.Now
+            //});
+            //context.CVs.Add(new CV()
+            //{
+            //    UserId = context.Users.First(i => i.Name == "user1").Id,
+            //    UserInfo = "Info1",
+            //    Skills = "C#^5|SQL^1",
+            //    CreationDate = DateTime.Now
+            //});
+            //context.CVs.Add(new CV()
+            //{
+            //    UserId = context.Users.First(i => i.Name == "user2").Id,
+            //    UserInfo = "Info2",
+            //    Skills = "C#^3|SQL^3",
+            //    CreationDate = DateTime.Now
+            //});
+            //context.RequestCVs.Add(new RequestCV()
+            //{
+            //    CreationDate = DateTime.Now,
+            //    Status = "statusA",
+            //    CVId = 1,
+            //    RequestId = 1
+            //});
+            //context.RequestCVs.Add(new RequestCV()
+            //{
+            //    CreationDate = DateTime.Now,
+            //    Status = "statusB",
+            //    CVId = 2,
+            //    RequestId = 1
+            //});
+            //context.SaveChanges();
+
+            //WorkContext context = new WorkContext();
+            //context.Skills.Add(new Work.EDM.Skill() { Name = "C++" });
+            //context.Users.Add(new User()
+            //{
+            //    Name = "admin",
+            //    SecondName = "admin",
+            //    Login = "admin",
+            //    Password = "a1d2m3i4n5",
+            //    Country = "Empty",
+            //    City = "Empty",
+            //    PhoneNumber = "Empty",
+            //    Email = "Empty",
+            //    Status = "Admin",
+            //    BirthDate = DateTime.Now,
+            //    CreationDate = DateTime.Now
+            //});
+            //context.SaveChanges();
+            //DateTime birthDate = new DateTime(2006, 2, 20);
+            //Console.WriteLine(Functions.GetAge(birthDate));
+
+            //WorkContext context = new WorkContext();
+            //context.Skills.Add(new Work.EDM.Skill() { Name = "SQL" });
+            //context.Users.Add(new User() {Name = "firstname",SecondName = "secondname",Login = "login123",Password = "password",
+            //Status = "Worker",City = "City2",Country = "Country2", PhoneNumber  = "0972438593", Email = "email1@gmail.com", 
+            //BirthDate = new DateTime(2000,1,1),CreationDate = new DateTime(2024,1,1)});
+            //context.SaveChanges();
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
             while (true) { }
         }
@@ -94,13 +173,16 @@ namespace Server
 
                     if (context.Users.ToList().Count(i => i.Login == texts[1]) == 0)
                     {
-                        User tempUser = new User() 
-                        { 
+                        User tempUser = new User()
+                        {
                             Login = texts[1], Password = texts[2],
                             Name = texts[3], SecondName = texts[4],
                             Email = texts[5], PhoneNumber = texts[6],
                             Country = texts[7], City = texts[8],
                             //Age = int.Parse(texts[9]), Status = texts[10]
+                            BirthDate = DateTime.Parse(texts[9]),
+                            Status = texts[10],
+                            CreationDate = DateTime.Now
                         };
 
                         context.Users.Add(tempUser);
@@ -182,6 +264,32 @@ namespace Server
                 //login(1)>status(2)>name(3)>secondname(4)>email(5)>CreationDate(6)>BirthDate(7)>Country(8)>City(9)>Phonenumber(10)>age(11)
                 sendIt += user.Login + ">" + user.Status + ">" + user.Name + ">" + user.SecondName + ">" + user.Email + ">" + user.CreationDate.ToString() + ">" + user.BirthDate.ToString() + ">" + user.Country + ">" + user.City + ">" + user.PhoneNumber + ">" + Functions.GetAge(user.BirthDate).ToString();
                 SendData(sendIt);
+            }
+            else if (texts[0] == "getAdminTab1Info")
+            {
+                //List<coding.Skill> skills = coding.Functions.GetSkills(texts[1]).ToList();
+                WorkContext context = new WorkContext();
+                //Console.WriteLine(command_project.coding.Functions.IsEnoughSkills(command_project.coding.Functions.GetSkills(context.RequestCVs.First().CV.Skills), command_project.coding.Functions.GetSkills(context.RequestCVs.First().Request.Skills)));
+                string sendMe = "adminTab1Info>" + string.Join(">", context.RequestCVs.Where(t => t.Status != "status0"
+                //&&
+                //coding.Functions.IsEnoughSkills
+                //(
+                //    coding.Functions.GetSkills(
+                //        //t.CV.Skills.ToString()
+                //        context.RequestCVs.First(q => q.Id == t.Id).CV.Skills
+                //        ),
+
+                //    coding.Functions.GetSkills(
+                //        //t.Request.Skills.ToString()
+                //        context.RequestCVs.First(q => q.Id == t.Id).Request.Skills
+                //        )
+                //)
+                )
+                    .Select(t => t.CV.User.Name + " " + t.CV.User.SecondName + "&" + t.CV.UserInfo + "&" + t.CV.Skills + "&" +
+                    t.Request.Name + "&" + t.Request.RequestInfo + "&" + t.Request.Skills + "&" + t.Status).Take(10));
+                SendData(sendMe);
+                Console.WriteLine(sendMe);
+                Console.WriteLine();
             }
             else if (texts[0] == "close")
             {

@@ -46,7 +46,7 @@ namespace command_project.coding
 
             foreach (Skill skill in requiredSkills)
             {
-                if (requiredSkills.Select(i => i.Name).Contains(skill.Name))
+                if (userSkills.Select(i => i.Name).Contains(skill.Name))
                 {
                     Skill userCurrentSkill = userSkills.First(i => i.Name == skill.Name);
                     Skill requiredCurrentSkill = requiredSkills.First(i => i.Name == skill.Name);
@@ -149,7 +149,7 @@ namespace command_project.coding
         }
     }
 
-    class Skill
+    public class Skill
     {
         public string Name { get; set; }
         public int Time { get; set; }
