@@ -21,6 +21,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Threading;
 using command_project.coding;
+using System.Diagnostics;
 
 namespace command_project.design.admin
 {
@@ -110,8 +111,8 @@ namespace command_project.design.admin
 
         private int GetUserDataForMonth(DateTime month)
         {
-            //string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"D:\Coding\Learn\Управління проектами\command-project\command-project\command-project\design\statsTest.txt");
-            string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"D:\ItStep\Current\command-project\command-project\command-project\design\statsTest.txt");
+            string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"E:\Coding\Learn\Управління проектами\command-project\command-project\command-project\design\statsTest.txt");
+            //string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"D:\ItStep\Current\command-project\command-project\command-project\design\statsTest.txt");
             //string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\adsdadsdadas\pro2\command-project\command-project\design\statsTest.txt");
             for (int i = 0; i < numberOfMonths; i++)
             {
@@ -292,6 +293,40 @@ namespace command_project.design.admin
         private void _Status_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void git_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender == Mark)
+            {
+                Process.Start("https://github.com/Mark111P");
+            }
+            else if(sender == Semen)
+            {
+                Process.Start("https://github.com/merphyth");
+            }
+            else if(sender == Ilya)
+            {
+                Process.Start("https://github.com/o4hools");
+            }
+            else if (sender == Sanya)
+            {
+                Process.Start("https://github.com/kriomanser2000");
+            }
+            else if (sender == Victor)
+            {
+                Process.Start("https://github.com/TempnameIRN199");
+            }
+        }
+
+        private void _VerifiedResumes_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (_VerifiedResumes.SelectedItem != null)
+            {
+                InfoWindow infoWindow = new InfoWindow();
+                infoWindow.Show();
+            }
+            else { MessageBox.Show("Виберіть резюме"); }
         }
         // Зробити сортування за алфавітом для кожного стовпця з _VerifiedResumes
     }
