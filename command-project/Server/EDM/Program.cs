@@ -20,12 +20,12 @@ namespace Server
         static WorkContext context = new WorkContext();
         static void Main(string[] args)
         {
-            //WorkContext context = new WorkContext();
-            //context.Skills.Add(new Work.EDM.Skill() { Name = "SQL" });
-            //context.Users.Add(new User() {Name = "firstname",SecondName = "secondname",Login = "login123",Password = "password",
-                //Status = "Worker",City = "City2",Country = "Country2", PhoneNumber  = "0972438593", Email = "email1@gmail.com", 
-                //BirthDate = new DateTime(2000,1,1),CreationDate = new DateTime(2024,1,1)});
-            //context.SaveChanges();
+            WorkContext context = new WorkContext();
+            context.Skills.Add(new Work.EDM.Skill() { Name = "SQL" });
+            context.Users.Add(new User() {Name = "firstname",SecondName = "secondname",Login = "login123",Password = "password",
+                Status = "Worker",City = "City2",Country = "Country2", PhoneNumber  = "0972438593", Email = "email1@gmail.com", 
+                BirthDate = new DateTime(2000,1,1),CreationDate = new DateTime(2024,1,1)});
+            context.SaveChanges();
             ThreadPool.QueueUserWorkItem(ReceiveData, 0);
             while (true) { }
         }

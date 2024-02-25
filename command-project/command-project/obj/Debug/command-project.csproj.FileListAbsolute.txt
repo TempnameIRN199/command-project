@@ -173,3 +173,5 @@ C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug
 C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\Server.pdb
 C:\adsdadsdadas\comand\command-project\command-project\command-project\bin\Debug\Server.exe.config
 C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\command-.8D188C85.Up2Date
+C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\style\GradientStackPanel.baml
+C:\adsdadsdadas\comand\command-project\command-project\command-project\obj\Debug\design\style\TransparentButtonStyle.baml
