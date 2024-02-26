@@ -1,0 +1,264 @@
+﻿<Window x:Class="command_project.Employer.NewFolder1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:command_project.Employer.NewFolder1"
+        mc:Ignorable="d"
+        Title="Window1" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" ResizeMode="NoResize" Height="930" Width="1450">
+    <Window.Style>
+        <Style TargetType="Window">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Window">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="30,30,30,30">
+                            <AdornerDecorator>
+                                <ContentPresenter/>
+                            </AdornerDecorator>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Style>
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="CustomButtonStyle">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                                To="#FF333333" Duration="0:0:0.5"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                                To="Transparent" Duration="0:0:0.5"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <TabControl SelectionChanged="TabControl_SelectionChanged" Margin="0,-25,0,0">
+            <TabItem Header="Profile" Margin="1415,245,-1413,-246" RenderTransformOrigin="0.5,0.5">
+                <TabItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TabItem.RenderTransform>
+                <Grid Height="901">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" MinHeight="38"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="Gray" CornerRadius="30,30,0,0" Margin="-3,-12,-3,0" RenderTransformOrigin="0.5,0.5">
+                        <Grid VerticalAlignment="Top" Height="70">
+                            <Button Content="EXIT" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" Height="36" Width="130" Click="BackButton_Click" Style="{StaticResource CustomButtonStyle}"/>
+                        </Grid>
+                    </Border>
+                    <Border Background="LightGray" Margin="50,25,1050,583" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <Image Source="../icon1/Ava.png" Margin="10,4,231,24" />
+                            <TextBlock Text="[Верифіковано]" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" Margin="130,0,0,0"/>
+                            <Button Content="Верифікувати?" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="37" Width="200" Style="{StaticResource CustomButtonStyle}" Margin="124,157,0,0"/>
+                        </Grid>
+                    </Border>
+                    <Border Background="LightGray" Margin="50,334,1050,50" CornerRadius="10" Grid.Row="1">
+                        <TextBlock Text="Кандидати" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Margin="0,10,0,0"/>
+                    </Border>
+                    <Border Background="LightGray" Margin="455,25,50,429" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <Image Source="../icon1/edit.png" Margin="871,-20,0,318" />
+                            <TextBlock Text="Основна інформація" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="24"/>
+                            <TextBlock Text="Ім'я та Прізвище" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,68,0,0" FontSize="20"/>
+                            <TextBlock Text="Тарас Шевченко" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,105,0,0" FontSize="14"/>
+                            <TextBlock Text="Номер телефону" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,191,0,0" FontSize="20"/>
+                            <TextBlock Text="+38 (000) 000-00-00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,234,0,0" FontSize="14"/>
+                            <TextBlock Text="Електронна пошта" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="367,191,0,0" FontSize="20"/>
+                            <TextBlock Text="mystat12345@itstep.org" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="367,234,0,0" FontSize="14"/>
+                            <TextBlock Text="Дата реєстрації" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="676,191,0,0" FontSize="20"/>
+                            <TextBlock Text="06.16.2016" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="676,234,0,0" FontSize="14"/>
+                            <TextBlock Text="Регіон" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="367,68,0,0" FontSize="20"/>
+                            <TextBlock Text="Дата народження" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="676,68,0,0" FontSize="20"/>
+                            <TextBlock Text="Україна Кривий Ріг" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="367,105,0,0" FontSize="14"/>
+                            <TextBlock Text="02.02.2002" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="676,105,0,0" FontSize="14"/>
+                        </Grid>
+                    </Border>
+                    <Border Background="LightGray" Margin="455,452,50,50" CornerRadius="10" Grid.Row="1">
+                        <TextBlock Text=" Створення вакансії" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24"/>
+                    </Border>
+                    <Border Background="Gray" Margin="70,394,1070,70" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <Button Content="Валерій Залужний C#" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="290" Style="{StaticResource CustomButtonStyle}" Margin="0,10,0,0" FontSize="20"/>
+                            <Button Content="Валерій Бойченко C++" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="290" Style="{StaticResource CustomButtonStyle}" Margin="0,73,0,0" FontSize="20"/>
+                            <Button Content="Валерій Гончаренко SQL" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="290" Style="{StaticResource CustomButtonStyle}" Margin="0,136,0,0" FontSize="20"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Chats" Margin="1368,200,-1374,-201" RenderTransformOrigin="0.5,0.5">
+                <TabItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TabItem.RenderTransform>
+                <Grid Height="931">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="Gray" CornerRadius="30,30,0,0" Margin="0,0,-2,870" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+                        <Grid VerticalAlignment="Top" Height="70">
+                            <Button Content="EXIT" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" Height="36" Width="130" Click="BackButton_Click" Style="{StaticResource CustomButtonStyle}"/>
+                        </Grid>
+                    </Border>
+                    <Border Background="LightGray" Margin="10,120,1050,10" CornerRadius="10" Grid.Row="1"/>
+                    <Border Background="LightGray" Margin="419,65,50,10" CornerRadius="10" Grid.Row="1"/>
+                    <Border Background="Gray" Margin="10,120,1050,10" CornerRadius="10" Grid.Row="1">
+                        <StackPanel>
+                            <Button Height="58" Width="370" Style="{StaticResource CustomButtonStyle}" Margin="0,10,0,0" FontSize="20">
+                                <StackPanel>
+                                    <TextBlock Text="2:22 PM" Height="19" Width="92" TextAlignment="Right" HorizontalAlignment="Right" Margin="0,0,10,0" FontSize="16"/>
+                                    <TextBlock Text="Валерій Залужний" Width="356" FontSize="24" Height="33"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Height="58" Width="370" Style="{StaticResource CustomButtonStyle}" Margin="0,10,0,0" FontSize="20">
+                                <StackPanel>
+                                    <TextBlock Text="1:32 PM" Height="19" Width="92" TextAlignment="Right" HorizontalAlignment="Right" Margin="0,0,10,0" FontSize="16"/>
+                                    <TextBlock Text="Валерій Бойченко" Width="356" FontSize="24" Height="33"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Height="58" Width="370" Style="{StaticResource CustomButtonStyle}" Margin="0,10,0,0" FontSize="20">
+                                <StackPanel>
+                                    <TextBlock Text="11:45 AM" Height="19" Width="92" TextAlignment="Right" HorizontalAlignment="Right" Margin="0,0,10,0" FontSize="16"/>
+                                    <TextBlock Text="Валерій Гончаренко" Width="356" FontSize="24" Height="33"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                    <Border Background="Gray" Margin="10,65,1050,815" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" VerticalAlignment="Top" Margin="5,15,61,0" Height="40" Background="Transparent" BorderThickness="0" TextAlignment="left" FontSize="15" FontWeight="Bold" />
+                            <Button Content="Search" VerticalAlignment="Center" Margin="329,0,5,0" Style="{StaticResource CustomButtonStyle}" Grid.ColumnSpan="2" Height="30" />
+                        </Grid>
+                    </Border>
+                    <Border Background="Gray" Margin="419,864,50,10" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" VerticalAlignment="Top" Margin="5,15,100,0" Height="40" Background="Transparent" BorderThickness="0" TextAlignment="left" FontSize="20" FontWeight="Bold" />
+                        </Grid>
+                    </Border>
+                    <Border Background="Gray" Margin="419,65,50,792" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Валерій Залужний" FontWeight="Bold" FontSize="25" Margin="15,5,733,30"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="My Vacancy" Margin="1313,141,-1311,-141" RenderTransformOrigin="0.5,0.5">
+                <TabItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TabItem.RenderTransform>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Background="Gray" CornerRadius="30,30,0,0" Margin="0,0,0,870" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+                        <Grid VerticalAlignment="Top" Height="70">
+                            <Button Content="EXIT" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" Height="36" Width="130" Click="BackButton_Click" Style="{StaticResource CustomButtonStyle}"/>
+                        </Grid>
+                    </Border>
+                    <Border Background="Gray" Margin="10,65,1052,10" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <Button Content="Валерій Залужний C#" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="368" Style="{StaticResource CustomButtonStyle}" Margin="0,10,0,0" FontSize="20"/>
+                            <Button Content="Валерій Бойченко C++" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="368" Style="{StaticResource CustomButtonStyle}" Margin="0,73,0,0" FontSize="20"/>
+                            <Button Content="Валерій Гончаренко SQL" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="368" Style="{StaticResource CustomButtonStyle}" Margin="0,136,0,0" FontSize="20"/>
+                        </Grid>
+                    </Border>
+                    <Border Background="LightGray" Margin="403,65,351,10" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <TextBlock Text="Мої вакансії" TextAlignment="Center" FontSize="36" FontFamily="Arial" FontWeight="Bold" Margin="0,10,0,802"/>
+                            <Button Content="Валерій Залужний C#" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,73,0,0" FontSize="20"/>
+                            <Button Content="Валерій Бойченко C++" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,136,0,0" FontSize="20"/>
+                            <Button Content="Валерій Гончаренко SQL" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,199,0,0" FontSize="20"/>
+                        </Grid>
+                    </Border>
+                    <Border Background="LightGray" Margin="1104,65,50,415" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <TextBlock Text="Опис обраної Вакансії" TextAlignment="Center" FontWeight="Bold" FontSize="24" Margin="0,10,0,392" />
+                        </Grid>
+                    </Border>
+                    <Border Background="LightGray" Margin="1104,520,50,10" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <TextBlock Text="Резюме обраного працівника" TextAlignment="Center" FontSize="18" FontFamily="Arial" FontWeight="Bold" Margin="10,10,10,366"/>
+                        </Grid>
+                    </Border>
+                    <Border Background="Gray" Margin="403,125,351,10" CornerRadius="10" Grid.Row="1">
+                        <Grid>
+                            <Button Content="Розробити UDP сервер C#" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,10,0,0" FontSize="20"/>
+                            <Button Content="Написати код для гри 'Хрестики Нулики' C++" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,73,0,0" FontSize="20"/>
+                            <Button Content="Розробити базу даних співробітників SQL" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,136,0,0" FontSize="20"/>
+                        </Grid>
+                    </Border>
+                    <Border Background="Gray" Margin="1104,125,50,415" CornerRadius="10" Grid.Row="1"></Border>
+                    <Border Background="Gray" Margin="1104,567,50,10" CornerRadius="10" Grid.Row="1">
+                        <Grid Margin="0,51,0,0">
+
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

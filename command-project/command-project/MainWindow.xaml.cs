@@ -20,8 +20,6 @@ namespace command_project
         public MainWindow()
         {
             InitializeComponent();
-            Employer.Profile profile = new Employer.Profile();
-            profile.Show();
         }
     }
 }
