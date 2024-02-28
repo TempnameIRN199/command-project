@@ -21,7 +21,6 @@ namespace Work.EDM
         public string RequestInfo { get; set; }
         public bool IsActive { get; set; }
         public virtual ICollection<RequestCV> RequestCVs { get; set; }
-        public bool IsActive { get; set; }
         public Request() 
         {
             RequestCVs = new List<RequestCV>();

@@ -21,6 +21,7 @@ using System.Net.Sockets;
 using System.Net;
 using System.Threading;
 using command_project.coding;
+using System.Diagnostics;
 
 namespace command_project.design.admin
 {
@@ -306,6 +307,46 @@ namespace command_project.design.admin
             pageLabel.Content = page.ToString();
             string sendIt = "getAdminTab1Info>" + pageLabel.Content + ">" + (_Status.SelectedItem as ComboBoxItem).Content;
             SendData(sendIt);
+        }
+
+        private void git_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender == Mark)
+            {
+                Process.Start("https://github.com/Mark111P");
+            }
+            else if (sender == Semen)
+            {
+                Process.Start("https://github.com/merphyth");
+            }
+            else if (sender == Ilya)
+            {
+                Process.Start("https://github.com/o4hools");
+            }
+            else if (sender == Sanya)
+            {
+                Process.Start("https://github.com/kriomanser2000");
+            }
+            else if (sender == Victor)
+            {
+                Process.Start("https://github.com/TempnameIRN199");
+            }
+        }
+
+        private void _VerifiedResumes_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (_VerifiedResumes.SelectedItem != null)
+            {
+                InfoWindow infoWindow = new InfoWindow();
+                infoWindow.Show();
+            }
+            else { MessageBox.Show("Виберіть резюме"); }
+        }
+
+        private void _VerifiedResumes_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _VerifiedResumes.ItemsSource = null;
+            _VerifiedResumes.ItemsSource = tab1List.Select(i => i.Show());
         }
 
         // Зробити сортування за алфавітом для кожного стовпця з _VerifiedResumes
