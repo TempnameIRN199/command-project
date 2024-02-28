@@ -5,8 +5,123 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:command_project.design.admin"
         mc:Ignorable="d"
-        Title="InfoWindow" Height="600" Width="400">
+        Title="InfoWindow" Height="800" Width="400">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../style/GradientStackPanel.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border x:Name="brd1" Style="{StaticResource InfoStackPanel}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+            <ScrollViewer>
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text="Юзбеков Віктор Сергійович"  Width="{Binding ActualWidth, ElementName=brd1}" Height="Auto" Margin="5" Padding="0,0,10,0"
+                               FontSize="20" TextWrapping="Wrap" FontFamily="Cascadia Mono ExtraLight"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <!--TextBlock для резюме та ScrollView-->
+        <Border x:Name="brd2" Style="{StaticResource InfoStackPanel}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+            <ScrollViewer>
+                <StackPanel Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=brd2}" Height="Auto">
+                    <TextBox x:Name="_txt1" IsReadOnly="true"
+                               Width="{Binding ActualWidth, ElementName=brd2}" Height="Auto" Margin="0" Padding="0,0,10,0" FontSize="15" TextWrapping="Wrap"
+                               FontFamily="Cascadia Mono ExtraLight"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <Border x:Name="brd3" Style="{StaticResource InfoStackPanel}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+            <ScrollViewer>
+                <StackPanel Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=brd3}" Height="Auto">
+                    <TextBlock Text="SQL - 1 рік
+                               C# - 4 роки
+                               C++ - 6 років
+                               Pascal - 2 роки
+                               Kotlin - 3 роки"
+                               Width="{Binding ActualWidth, ElementName=brd3}" Height="Auto" Margin="0" Padding="0,0,10,0" FontSize="15" TextWrapping="Wrap"
+                               FontFamily="Cascadia Mono ExtraLight"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <Border x:Name="brd4" Style="{StaticResource InfoStackPanel}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="назвава вакансії"  Width="{Binding ActualWidth, ElementName=brd4}" Height="50" Margin="5" Padding="0,0,0,0" FontSize="15" TextWrapping="Wrap"
+                           FontFamily="Cascadia Mono ExtraLight"/>
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="brd5" Style="{StaticResource InfoStackPanel}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+            <ScrollViewer>
+                <StackPanel Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=brd5}" Height="Auto">
+                    <TextBlock Text="скіли вакансії
+                               SQL - 1 рік
+                               C# - 4 роки
+                               C++ - 6 років
+                               Pascal - 2 роки
+                               Kotlin - 3 роки"
+                       Width="{Binding ActualWidth, ElementName=brd5}" Height="Auto" Margin="0" Padding="0,0,10,0" FontSize="15" TextWrapping="Wrap"
+                       FontFamily="Cascadia Mono ExtraLight"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <Border x:Name="brd6" Style="{StaticResource InfoStackPanel}" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+            <ScrollViewer>
+                <StackPanel Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=brd6}" Height="Auto">
+                    <TextBlock Text="опис вакансії"
+               Width="{Binding ActualWidth, ElementName=brd6}" Height="Auto" Margin="0" Padding="0,0,10,0" FontSize="15" TextWrapping="Wrap"
+               FontFamily="Cascadia Mono ExtraLight"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <Border x:Name="brd7" Style="{StaticResource InfoStackPanel}" Grid.Row="6" Grid.Column="0" Margin="5">
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="пригодність"  Width="{Binding ActualWidth, ElementName=brd7}" Height="50" Margin="5" Padding="0,0,10,0"
+                           FontSize="20" TextWrapping="Wrap" FontFamily="Cascadia Mono ExtraLight"/>
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="brd8" Style="{StaticResource InfoStackPanel}" Grid.Row="6" Grid.Column="1" Margin="5">
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="статус"  Width="{Binding ActualWidth, ElementName=brd8}" Height="50" Margin="5" Padding="0,0,10,0"
+                           FontSize="20" TextWrapping="Wrap" FontFamily="Cascadia Mono ExtraLight"/>
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="brd9" Style="{StaticResource InfoStackPanel}" Grid.Row="7" Grid.Column="0" Margin="5">
+            <StackPanel Orientation="Horizontal" >
+                <Button  Content="Accept" FontFamily="Cascadia Mono ExtraLight" FontSize="20" Click="Accept_Click"
+                         Width="{Binding ActualWidth, ElementName=brd9}"/>
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="brd10" Style="{StaticResource InfoStackPanel}" Grid.Row="7" Grid.Column="1" Margin="5">
+            <StackPanel Orientation="Horizontal" >
+                <Button  Content="Decline" FontFamily="Cascadia Mono ExtraLight" FontSize="20" Click="Decline_Click"
+                         Width="{Binding ActualWidth, ElementName=brd10}"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

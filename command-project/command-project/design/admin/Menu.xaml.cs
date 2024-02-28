@@ -328,6 +328,12 @@ namespace command_project.design.admin
             }
             else { MessageBox.Show("Виберіть резюме"); }
         }
+
+        private void _VerifiedResumes_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _VerifiedResumes.ItemsSource = null;
+            _VerifiedResumes.ItemsSource = tab1List.Select(i => i.Show());
+        }
         // Зробити сортування за алфавітом для кожного стовпця з _VerifiedResumes
     }
 

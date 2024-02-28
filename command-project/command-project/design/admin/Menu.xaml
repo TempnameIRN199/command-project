@@ -119,9 +119,8 @@
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
 
-                        <!--додати нове вікно з інформацією про вакансію-->
-
-                        <ListView Name="_VerifiedResumes" Grid.Row="0" BorderBrush="Black" MouseDoubleClick="_VerifiedResumes_MouseDoubleClick">
+                        <ListView Name="_VerifiedResumes" Grid.Row="0" BorderBrush="Black" MouseDoubleClick="_VerifiedResumes_MouseDoubleClick"
+                                  MouseDown="_VerifiedResumes_MouseDown" FontSize="20">
                             <ListView.View>
                                 <GridView>
                                     <GridView.ColumnHeaderContainerStyle>
@@ -165,10 +164,10 @@
 
                     <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Left"
                                 VerticalAlignment="Stretch">
-                        <ComboBox Name="_Status" Width="190" Height="30" Margin="5"
-                                  FontFamily="Cascadia Mono ExtraLight" FontSize="20"
+                        <ComboBox Name="_Status" Width="190" Height="25" Margin="5"
+                                  FontFamily="Cascadia Mono ExtraLight" FontSize="14"
                                   SelectionChanged="_Status_SelectionChanged">
-                            <ComboBoxItem Content="Всі"/>
+                            <ComboBoxItem IsSelected="True" Content="Всі"/>
                             <ComboBoxItem Content="Підтверджені"/>
                             <ComboBoxItem Content="Відхилені"/>
                             <ComboBoxItem Content="Потребують підтвердження"/>

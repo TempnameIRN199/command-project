@@ -22,6 +22,17 @@ namespace command_project.design.admin
         public InfoWindow()
         {
             InitializeComponent();
+            _txt1.Text = "Name: \n" + "Name";
+        }
+
+        private void Accept_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Decline_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

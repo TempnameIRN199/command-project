@@ -21,6 +21,11 @@ namespace Server
         static void Main(string[] args)
         {
             WorkContext context = new WorkContext();
+
+            //context.Skills.Add(new Work.EDM.Skill() { Name = "C#" });
+            //context.Skills.Add(new Work.EDM.Skill() { Name = "SQL" });
+            //context.Skills.Add(new Work.EDM.Skill() { Name = "C++" });
+
             //context.Users.Add(new User()
             //{
             //    Name = "user1",
