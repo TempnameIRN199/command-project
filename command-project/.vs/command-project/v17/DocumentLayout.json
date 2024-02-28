@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\server\\edm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\infowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\infowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\infowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\infowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\server\\edm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "InfoWindow.xaml.cs",
               "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\InfoWindow.xaml.cs",
               "RelativeDocumentMoniker": "command-project\\design\\admin\\InfoWindow.xaml.cs",
@@ -42,28 +42,30 @@
               "RelativeToolTip": "command-project\\design\\admin\\InfoWindow.xaml.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAIAwwBgAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T12:40:21.529Z"
+              "WhenOpened": "2024-02-25T12:40:21.529Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "InfoWindow.xaml",
               "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\InfoWindow.xaml",
               "RelativeDocumentMoniker": "command-project\\design\\admin\\InfoWindow.xaml",
               "ToolTip": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\InfoWindow.xaml",
               "RelativeToolTip": "command-project\\design\\admin\\InfoWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-02-24T15:20:55.058Z"
+              "WhenOpened": "2024-02-24T15:20:55.058Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\Server\\EDM\\Program.cs",
               "RelativeDocumentMoniker": "Server\\EDM\\Program.cs",
               "ToolTip": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\Server\\EDM\\Program.cs",
               "RelativeToolTip": "Server\\EDM\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAOAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAABoAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-23T19:07:34.449Z",
               "EditorCaption": ""
