@@ -35,7 +35,18 @@ namespace command_project.design.admin
             if (isGood)
             {
                 _txtIsGood.Text = "Достатньо";
-                //_txtIsGood.Foreground = B
+                _txtIsGood.Foreground = Brushes.Green;
+            }
+            else
+            {
+                _txtIsGood.Text = "Не достатньо";
+                _txtIsGood.Foreground = Brushes.Red;
+            }
+
+            if (tClass.Status == "Accepted byAdmin" || tClass.Status == "Declined byAdmin")
+            {
+                _bAccept.IsEnabled = false;
+                _bDecline.IsEnabled = false;
             }
         }
 

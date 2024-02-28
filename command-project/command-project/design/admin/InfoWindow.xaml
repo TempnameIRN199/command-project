@@ -112,14 +112,14 @@
 
         <Border x:Name="brd9" Style="{StaticResource InfoStackPanel}" Grid.Row="7" Grid.Column="0" Margin="5">
             <StackPanel Orientation="Horizontal" >
-                <Button  Content="Accept" FontFamily="Cascadia Mono ExtraLight" FontSize="20" Click="Accept_Click"
+                <Button Name="_bAccept" Content="Accept" FontFamily="Cascadia Mono ExtraLight" FontSize="20" Click="Accept_Click"
                          Width="{Binding ActualWidth, ElementName=brd9}"/>
             </StackPanel>
         </Border>
 
         <Border x:Name="brd10" Style="{StaticResource InfoStackPanel}" Grid.Row="7" Grid.Column="1" Margin="5">
             <StackPanel Orientation="Horizontal" >
-                <Button  Content="Decline" FontFamily="Cascadia Mono ExtraLight" FontSize="20" Click="Decline_Click"
+                <Button Name="_bDecline" Content="Decline" FontFamily="Cascadia Mono ExtraLight" FontSize="20" Click="Decline_Click"
                          Width="{Binding ActualWidth, ElementName=brd10}"/>
             </StackPanel>
         </Border>
