@@ -33,5 +33,26 @@ namespace command_project.Employer.NewFolder1
         {
             this.Close();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+        private void _listFindName_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        private void _listFindName1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        private void _Skills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        private void _Experience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
     }
 }

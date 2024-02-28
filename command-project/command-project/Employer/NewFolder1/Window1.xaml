@@ -95,34 +95,49 @@
                         </Grid>
                     </Border>
                     <Border Background="LightGray" Margin="50,334,1050,50" CornerRadius="10" Grid.Row="1">
-                        <TextBlock Text="Кандидати" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Margin="0,10,0,0"/>
-                    </Border>
-                    <Border Background="LightGray" Margin="455,25,50,429" CornerRadius="10" Grid.Row="1">
                         <Grid>
-                            <Image Source="../icon1/edit.png" Margin="871,-20,0,318" />
-                            <TextBlock Text="Основна інформація" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="24"/>
-                            <TextBlock Text="Ім'я та Прізвище" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,68,0,0" FontSize="20"/>
-                            <TextBlock Text="Тарас Шевченко" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,105,0,0" FontSize="14"/>
-                            <TextBlock Text="Номер телефону" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,191,0,0" FontSize="20"/>
-                            <TextBlock Text="+38 (000) 000-00-00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,234,0,0" FontSize="14"/>
-                            <TextBlock Text="Електронна пошта" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="367,191,0,0" FontSize="20"/>
-                            <TextBlock Text="mystat12345@itstep.org" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="367,234,0,0" FontSize="14"/>
-                            <TextBlock Text="Дата реєстрації" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="676,191,0,0" FontSize="20"/>
-                            <TextBlock Text="06.16.2016" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="676,234,0,0" FontSize="14"/>
-                            <TextBlock Text="Регіон" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="367,68,0,0" FontSize="20"/>
-                            <TextBlock Text="Дата народження" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="676,68,0,0" FontSize="20"/>
-                            <TextBlock Text="Україна Кривий Ріг" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="367,105,0,0" FontSize="14"/>
-                            <TextBlock Text="02.02.2002" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="676,105,0,0" FontSize="14"/>
+                            <TextBlock Text="Основна інформація" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,10,0,0"/>
+                            <TextBlock Text="Ім'я та Прізвище" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,47,0,0" FontSize="20"/>
+                            <TextBlock Text="Тарас Шевченко" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,79,0,0" FontSize="14"/>
+                            <TextBlock Text="Регіон" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,111,0,0" FontSize="20"/>
+                            <TextBlock Text="Україна Кривий Ріг" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0" FontSize="14"/>
+                            <TextBlock Text="Дата народження" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,175,0,0" FontSize="20"/>
+                            <TextBlock Text="02.02.2002" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,207,0,0" FontSize="14"/>
+                            <TextBlock Text="Номер телефону" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,239,0,0" FontSize="20"/>
+                            <TextBlock Text="+38 (000) 000-00-00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,271,0,0" FontSize="14"/>
+                            <TextBlock Text="Електронна пошта" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,303,0,0" FontSize="20"/>
+                            <TextBlock Text="mystat12345@itstep.org" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,335,0,0" FontSize="14"/>
+                            <TextBlock Text="Дата реєстрації" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,367,0,0" FontSize="20"/>
+                            <TextBlock Text="06.16.2016" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,399,0,0" FontSize="14"/>
+                            <Image Source="../icon1/edit.png" Margin="274,180,2,-191" />
                         </Grid>
                     </Border>
-                    <Border Background="LightGray" Margin="455,452,50,50" CornerRadius="10" Grid.Row="1">
-                        <TextBlock Text=" Створення вакансії" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24"/>
-                    </Border>
-                    <Border Background="Gray" Margin="70,394,1070,70" CornerRadius="10" Grid.Row="1">
+                    <Border Background="LightGray" Margin="455,25,50,50" CornerRadius="10" Grid.Row="1">
                         <Grid>
-                            <Button Content="Валерій Залужний C#" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="290" Style="{StaticResource CustomButtonStyle}" Margin="0,10,0,0" FontSize="20"/>
-                            <Button Content="Валерій Бойченко C++" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="290" Style="{StaticResource CustomButtonStyle}" Margin="0,73,0,0" FontSize="20"/>
-                            <Button Content="Валерій Гончаренко SQL" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="290" Style="{StaticResource CustomButtonStyle}" Margin="0,136,0,0" FontSize="20"/>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,10,0,0"><Run Text="Створ"/><Run Language="uk-ua" Text="ити"/><Run Text=" ваканс"/><Run Language="uk-ua" Text="ію"/></TextBlock>
+                            <TextBlock Text="Назва вакансії:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" Margin="10,41,0,0"/>
+                            <TextBox x:Name="_txtvacancyName" Height="30" Margin="10,78,337,660"/>
+                            <Button Content="Додати" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="157" Style="{StaticResource CustomButtonStyle}" Margin="607,78,0,0"/>
+                            <ListBox x:Name="_listFindName" Margin="10,113,175,384"
+                            FontFamily="Cascadia Mono ExtraLight" FontSize="20"
+                            SelectionChanged="_listFindName_SelectionChanged"/>
+                            <TextBlock Text="Опис вакансії:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" Margin="10,405,0,0"/>
+                            <TextBox x:Name="_txtvacancyName_Copy" Height="30" Margin="10,434,337,304"/>
+                            <Button Content="Додати" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="157" Style="{StaticResource CustomButtonStyle}" Margin="607,434,0,0"/>
+                            <ListBox x:Name="_listFindName1" Margin="10,469,10,10"
+                            FontFamily="Cascadia Mono ExtraLight" FontSize="20"
+                            SelectionChanged="_listFindName1_SelectionChanged"/>
+                            <TextBlock Text="Додати скіл:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" Margin="772,79,0,0"/>
+                            <TextBox x:Name="_txtvacancyName_Copy1" Margin="769,113,10,625"/>
+                            <Button Content="Додати" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="160" Style="{StaticResource CustomButtonStyle}" Margin="769,201,0,0"/>
+                            <ListBox x:Name="_listFindName_Copy" Margin="769,271,10,304"
+                                FontFamily="Cascadia Mono ExtraLight" FontSize="20"
+                                SelectionChanged="_listFindName_SelectionChanged"/>
+                            <ComboBox Name="_Skills" Height="25" Margin="769,148,10,595"
+                            FontFamily="Cascadia Mono ExtraLight" FontSize="20" SelectionChanged="_Skills_SelectionChanged"/>
+                            <Slider Name="_Experience" Margin="769,178,10,572" Minimum="1" Maximum="5"
+                            TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="_Experience_ValueChanged"/>
+                            <Button Content="Видалити" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="160" Style="{StaticResource CustomButtonStyle}" Margin="769,236,0,0"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -186,7 +201,8 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <TextBox Grid.Column="0" VerticalAlignment="Top" Margin="5,15,100,0" Height="40" Background="Transparent" BorderThickness="0" TextAlignment="left" FontSize="20" FontWeight="Bold" />
+                            <TextBox Grid.Column="0" VerticalAlignment="Top" Margin="5,15,100,0" Height="40" Background="Transparent" BorderThickness="0" TextAlignment="left" FontSize="20" FontWeight="Bold" TextChanged="TextBox_TextChanged" />
+                            <Button Content="Send" VerticalAlignment="Center" Margin="880,0,10,0" Style="{StaticResource CustomButtonStyle}" Height="36" />
                         </Grid>
                     </Border>
                     <Border Background="Gray" Margin="419,65,50,792" CornerRadius="10" Grid.Row="1">
@@ -242,6 +258,7 @@
                     <Border Background="LightGray" Margin="1104,520,50,10" CornerRadius="10" Grid.Row="1">
                         <Grid>
                             <TextBlock Text="Резюме обраного працівника" TextAlignment="Center" FontSize="18" FontFamily="Arial" FontWeight="Bold" Margin="10,10,10,366"/>
+                            <Button Content="Надіслати повідомлення" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="31" Width="270" Style="{StaticResource CustomButtonStyle}" Margin="0,356,0,0"/>
                         </Grid>
                     </Border>
                     <Border Background="Gray" Margin="403,125,351,10" CornerRadius="10" Grid.Row="1">
@@ -252,7 +269,7 @@
                         </Grid>
                     </Border>
                     <Border Background="Gray" Margin="1104,125,50,415" CornerRadius="10" Grid.Row="1"></Border>
-                    <Border Background="Gray" Margin="1104,567,50,10" CornerRadius="10" Grid.Row="1">
+                    <Border Background="Gray" Margin="1104,560,50,62" CornerRadius="10" Grid.Row="1">
                         <Grid Margin="0,51,0,0">
 
                         </Grid>
