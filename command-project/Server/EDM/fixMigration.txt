@@ -1,0 +1,2 @@
+Enable-Migrations -ProjectName Server -StartUpProjectName 'command-project' -Verbose
+Enable-Migrations -ProjectName Server -StartUpProjectName 'command-project' -Force -Verbose

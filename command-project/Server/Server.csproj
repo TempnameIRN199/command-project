@@ -61,11 +61,24 @@
     <Compile Include="EDM\User.cs" />
     <Compile Include="EDM\WorkContext.cs" />
     <Compile Include="EDM\Program.cs" />
+    <Compile Include="Migrations\202402281539077_InitialCreate.cs" />
+    <Compile Include="Migrations\202402281539077_InitialCreate.Designer.cs">
+      <DependentUpon>202402281539077_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202402281539077_InitialCreate.resx">
+      <DependentUpon>202402281539077_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EDM\fixMigration.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
