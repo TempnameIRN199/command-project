@@ -147,6 +147,7 @@ namespace command_project.design.admin
                 {
                     skills = texts[1].Split('|').ToList();
                     Dispatcher.Invoke(new Action(() => _Skills.ItemsSource = skills));
+                    Dispatcher.Invoke(new Action(() => _addSkillsView.ItemsSource = skills));
                 }
                 if (texts[0] == "adminTab1Info")
                 {
@@ -279,7 +280,7 @@ namespace command_project.design.admin
 
         private void _addSkillsButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (!skills.Contains(_txtAddSkills.Text)) SendData("addSkill>" + _txtAddSkills.Text);
         }
 
         private void _minusPage_Click(object sender, RoutedEventArgs e)

@@ -330,6 +330,16 @@ namespace Server
                 //Console.WriteLine(sendMe);
                 Console.WriteLine();
             }
+            else if (texts[0] == "addSkill")
+            {
+                WorkContext context = new WorkContext();
+                context.Skills.Add(new Work.EDM.Skill { Name = texts[1] });
+                context.SaveChanges();
+
+                string sendIt = "infoForAdmin>";
+                sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                SendData(sendIt);
+            }
             else if (texts[0] == "close")
             {
                 isWorking = false;
