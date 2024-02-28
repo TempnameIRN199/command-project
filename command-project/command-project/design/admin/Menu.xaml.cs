@@ -337,7 +337,7 @@ namespace command_project.design.admin
         {
             if (_VerifiedResumes.SelectedItem != null)
             {
-                InfoWindow infoWindow = new InfoWindow();
+                InfoWindow infoWindow = new InfoWindow(tab1List[_VerifiedResumes.SelectedIndex]);
                 infoWindow.Show();
             }
             else { MessageBox.Show("Виберіть резюме"); }
@@ -352,7 +352,7 @@ namespace command_project.design.admin
         // Зробити сортування за алфавітом для кожного стовпця з _VerifiedResumes
     }
 
-    class tClass
+    public class tClass
     {
         public string UserName { get; set; }
         public string UserDescription { get; set; }
@@ -365,14 +365,7 @@ namespace command_project.design.admin
 
         public tClass() 
         { 
-            //if (Functions.IsEnoughSkills(Functions.GetSkills(UserSkills), Functions.GetSkills(WorkSkills)))
-            //{
-                isEnough = "Достатньо навичок";
-            //}
-            //else
-            //{
-            //    isEnough = "Не достатньо навичок";
-            //}
+            isEnough = "Достатньо навичок";
         }
         public string Show()
         {

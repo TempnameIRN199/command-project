@@ -19,10 +19,24 @@ namespace command_project.design.admin
     /// </summary>
     public partial class InfoWindow : Window
     {
-        public InfoWindow()
+        public InfoWindow(tClass tClass)
         {
             InitializeComponent();
-            _txt1.Text = "Name: \n" + "Name";
+            _txtUserName.Text = tClass.UserName;
+            _txtUserInfo.Text = tClass.UserDescription;
+            _txtUserSkills.Text = coding.Functions.SkillsIntoText(tClass.UserSkills);
+
+            _txtRequestName.Text = tClass.WorkName;
+            _txtRequestInfo.Text = tClass.WorkDescription;
+            _txtRequestSkills.Text = coding.Functions.SkillsIntoText(tClass.WorkSkills);
+
+            _txtStatus.Text = tClass.Status;
+            bool isGood = coding.Functions.IsEnoughSkills(coding.Functions.GetSkills(tClass.UserSkills), coding.Functions.GetSkills(tClass.WorkSkills));
+            if (isGood)
+            {
+                _txtIsGood.Text = "Достатньо";
+                //_txtIsGood.Foreground = B
+            }
         }
 
         private void Accept_Click(object sender, RoutedEventArgs e)

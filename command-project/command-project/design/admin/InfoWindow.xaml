@@ -33,7 +33,7 @@
         <Border x:Name="brd1" Style="{StaticResource InfoStackPanel}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
             <ScrollViewer>
                 <StackPanel Orientation="Horizontal" >
-                    <TextBlock Text="Юзбеков Віктор Сергійович"  Width="{Binding ActualWidth, ElementName=brd1}" Height="Auto" Margin="5" Padding="0,0,10,0"
+                    <TextBlock Name="_txtUserName" Text="Юзбеков Віктор Сергійович"  Width="{Binding ActualWidth, ElementName=brd1}" Height="Auto" Margin="5" Padding="0,0,10,0"
                                FontSize="20" TextWrapping="Wrap" FontFamily="Cascadia Mono ExtraLight"/>
                 </StackPanel>
             </ScrollViewer>
@@ -43,7 +43,7 @@
         <Border x:Name="brd2" Style="{StaticResource InfoStackPanel}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
             <ScrollViewer>
                 <StackPanel Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=brd2}" Height="Auto">
-                    <TextBox x:Name="_txt1" IsReadOnly="true"
+                    <TextBox x:Name="_txtUserInfo" IsReadOnly="true"
                                Width="{Binding ActualWidth, ElementName=brd2}" Height="Auto" Margin="0" Padding="0,0,10,0" FontSize="15" TextWrapping="Wrap"
                                FontFamily="Cascadia Mono ExtraLight"/>
                 </StackPanel>
@@ -53,7 +53,7 @@
         <Border x:Name="brd3" Style="{StaticResource InfoStackPanel}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
             <ScrollViewer>
                 <StackPanel Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=brd3}" Height="Auto">
-                    <TextBlock Text="SQL - 1 рік
+                    <TextBlock Name="_txtUserSkills" Text="SQL - 1 рік
                                C# - 4 роки
                                C++ - 6 років
                                Pascal - 2 роки
@@ -66,7 +66,7 @@
 
         <Border x:Name="brd4" Style="{StaticResource InfoStackPanel}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
             <StackPanel Orientation="Horizontal" >
-                <TextBlock Text="назвава вакансії"  Width="{Binding ActualWidth, ElementName=brd4}" Height="50" Margin="5" Padding="0,0,0,0" FontSize="15" TextWrapping="Wrap"
+                <TextBlock Name="_txtRequestName" Text="назвава вакансії"  Width="{Binding ActualWidth, ElementName=brd4}" Height="50" Margin="5" Padding="0,0,0,0" FontSize="15" TextWrapping="Wrap"
                            FontFamily="Cascadia Mono ExtraLight"/>
             </StackPanel>
         </Border>
@@ -74,7 +74,7 @@
         <Border x:Name="brd5" Style="{StaticResource InfoStackPanel}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
             <ScrollViewer>
                 <StackPanel Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=brd5}" Height="Auto">
-                    <TextBlock Text="скіли вакансії
+                    <TextBlock Name="_txtRequestSkills" Text="скіли вакансії
                                SQL - 1 рік
                                C# - 4 роки
                                C++ - 6 років
@@ -89,7 +89,7 @@
         <Border x:Name="brd6" Style="{StaticResource InfoStackPanel}" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
             <ScrollViewer>
                 <StackPanel Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=brd6}" Height="Auto">
-                    <TextBlock Text="опис вакансії"
+                    <TextBlock Name="_txtRequestInfo" Text="опис вакансії"
                Width="{Binding ActualWidth, ElementName=brd6}" Height="Auto" Margin="0" Padding="0,0,10,0" FontSize="15" TextWrapping="Wrap"
                FontFamily="Cascadia Mono ExtraLight"/>
                 </StackPanel>
@@ -98,14 +98,14 @@
 
         <Border x:Name="brd7" Style="{StaticResource InfoStackPanel}" Grid.Row="6" Grid.Column="0" Margin="5">
             <StackPanel Orientation="Horizontal" >
-                <TextBlock Text="пригодність"  Width="{Binding ActualWidth, ElementName=brd7}" Height="50" Margin="5" Padding="0,0,10,0"
+                <TextBlock Name="_txtIsGood" Text="пригодність"  Width="{Binding ActualWidth, ElementName=brd7}" Height="50" Margin="5" Padding="0,0,10,0"
                            FontSize="20" TextWrapping="Wrap" FontFamily="Cascadia Mono ExtraLight"/>
             </StackPanel>
         </Border>
 
         <Border x:Name="brd8" Style="{StaticResource InfoStackPanel}" Grid.Row="6" Grid.Column="1" Margin="5">
             <StackPanel Orientation="Horizontal" >
-                <TextBlock Text="статус"  Width="{Binding ActualWidth, ElementName=brd8}" Height="50" Margin="5" Padding="0,0,10,0"
+                <TextBlock Name="_txtStatus" Text="статус"  Width="{Binding ActualWidth, ElementName=brd8}" Height="50" Margin="5" Padding="0,0,10,0"
                            FontSize="20" TextWrapping="Wrap" FontFamily="Cascadia Mono ExtraLight"/>
             </StackPanel>
         </Border>
