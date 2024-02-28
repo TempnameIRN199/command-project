@@ -163,7 +163,7 @@
 
                     </Grid>
                 </TabItem>
-                <TabItem BorderBrush="{x:Null}" Header="Реєстрація" Height="50" Width="238" FontFamily="Cascadia Mono ExtraLight"  FontSize="20" Margin="0,0,-132,0" HorizontalAlignment="Right"  >
+                <TabItem BorderBrush="{x:Null}" Header="Реєстрація" Height="50" Width="213" FontFamily="Cascadia Mono ExtraLight"  FontSize="20" Margin="0,0,-107,0" HorizontalAlignment="Right"  >
                     <Grid>
 
                         <TextBox Name="tbEmailReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,35,-13,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="447" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
@@ -194,10 +194,10 @@
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="10,365,0,0" TextWrapping="Wrap" Text="Статус" VerticalAlignment="Top" Width="124" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
                         <ComboBox Margin="0,390,281,199">
                             <ComboBoxItem Name="Юзер" IsSelected="True" Height="25">
-                                
+
                             </ComboBoxItem>
                             <ComboBoxItem Name="Работодавець" IsSelected="False" Height="25">
-                                
+
                             </ComboBoxItem>
                         </ComboBox>
                         <Button  Name="bRegistration" BorderBrush="{x:Null}" FontSize="20"  Content="Реєстрація" HorizontalAlignment="Center" Margin="0,566,0,0" VerticalAlignment="Top" Width="444" Height="48" Background="Black" Foreground="White"  FontFamily="Cascadia Mono ExtraLight" Click="bRegistration_Click" Cursor="Hand"/>
