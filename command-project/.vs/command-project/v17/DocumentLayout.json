@@ -3,27 +3,31 @@
   "WorkspaceRootPath": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\server\\migrations\\202402281539077_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\migrations\\202402281539077_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\server\\edm\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\windowmyprofile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\windowmyprofile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\server\\edm\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\server\\migrations\\202402281539077_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\migrations\\202402281539077_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\infowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\infowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\server\\edm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\server\\edm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{452C4440-436B-43E2-9B53-99712E1C5148}|Server\\Server.csproj|solutionrelative:server\\edm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,20 +50,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "WindowMyProfile.xaml",
+              "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\WindowMyProfile.xaml",
+              "RelativeDocumentMoniker": "command-project\\design\\WindowMyProfile.xaml",
+              "ToolTip": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\WindowMyProfile.xaml",
+              "RelativeToolTip": "command-project\\design\\WindowMyProfile.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-01T14:55:17.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "202402281539077_InitialCreate.cs",
               "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\Server\\Migrations\\202402281539077_InitialCreate.cs",
               "RelativeDocumentMoniker": "Server\\Migrations\\202402281539077_InitialCreate.cs",
               "ToolTip": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\Server\\Migrations\\202402281539077_InitialCreate.cs",
               "RelativeToolTip": "Server\\Migrations\\202402281539077_InitialCreate.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-28T15:51:00.612Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Request.cs",
               "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\Server\\EDM\\Request.cs",
               "RelativeDocumentMoniker": "Server\\EDM\\Request.cs",
@@ -72,20 +88,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Menu.xaml.cs",
               "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\Menu.xaml.cs",
               "RelativeDocumentMoniker": "command-project\\design\\admin\\Menu.xaml.cs",
               "ToolTip": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\Menu.xaml.cs",
               "RelativeToolTip": "command-project\\design\\admin\\Menu.xaml.cs",
-              "ViewState": "AQIAAAEBAAAAAAAAAAAwwC4BAAAkAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAmwEgAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-28T15:50:22.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "InfoWindow.xaml.cs",
               "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\InfoWindow.xaml.cs",
               "RelativeDocumentMoniker": "command-project\\design\\admin\\InfoWindow.xaml.cs",
@@ -97,19 +113,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "InfoWindow.xaml",
               "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\InfoWindow.xaml",
               "RelativeDocumentMoniker": "command-project\\design\\admin\\InfoWindow.xaml",
               "ToolTip": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\InfoWindow.xaml",
               "RelativeToolTip": "command-project\\design\\admin\\InfoWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-02-24T15:20:55.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-24T15:20:55.058Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\Server\\EDM\\Program.cs",
               "RelativeDocumentMoniker": "Server\\EDM\\Program.cs",
@@ -117,8 +132,7 @@
               "RelativeToolTip": "Server\\EDM\\Program.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-23T19:07:34.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-23T19:07:34.449Z"
             },
             {
               "$type": "Document",
