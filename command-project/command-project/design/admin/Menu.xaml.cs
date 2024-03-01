@@ -149,23 +149,39 @@ namespace command_project.design.admin
                     skills = texts[1].Split('|').ToList();
                     Dispatcher.Invoke(new Action(() => _Skills.ItemsSource = skills));
                     Dispatcher.Invoke(new Action(() => _addSkillsView.ItemsSource = skills));
+                    Dispatcher.Invoke(new Action(() => _lbl1.Content = texts[5]));
+                    Dispatcher.Invoke(new Action(() => _lbl2.Content = texts[3]));
+                    Dispatcher.Invoke(new Action(() => _lbl3.Content = texts[2]));
+                    Dispatcher.Invoke(new Action(() => _lbl4.Content = texts[4]));
                 }
-                if (texts[0] == "adminTab1Info")
+                else if (texts[0] == "adminTab1Info")
                 {
                     tab1List.Clear();
                     for (int i = 1; i < texts.Count; i++)
                     {
                         if (texts[i] == "") continue;
                         List<string> rcvs = texts[i].Split('&').ToList();
-                        tab1List.Add(new tClass() 
-                        { 
-                            UserName = rcvs[0], UserDescription = rcvs[1], UserSkills = rcvs[2],
-                            WorkName = rcvs[3], WorkDescription = rcvs[4], WorkSkills = rcvs[5],
-                            Status = rcvs[6]
+                        tab1List.Add(new tClass()
+                        {
+                            UserName = rcvs[0],
+                            UserDescription = rcvs[1],
+                            UserSkills = rcvs[2],
+                            WorkName = rcvs[3],
+                            WorkDescription = rcvs[4],
+                            WorkSkills = rcvs[5],
+                            Status = rcvs[6],
+                            IsActiveWork = bool.Parse(rcvs[7]),
+                            Id = int.Parse(rcvs[8]),
+                            UserNumber = rcvs[9],
+                            UserEmail = rcvs[10]
                         });
                     }
                     tab1List.ForEach(i => i.Check(listSkills));
                     Dispatcher.Invoke(new Action(() => _VerifiedResumes.ItemsSource = tab1List.Select(i => i.Show())));
+                }
+                else if (texts[0] == "reload")
+                {
+                    Dispatcher.Invoke(new Action(() => SendData("getAdminTab1Info>" + pageLabel.Content + ">" + (_Status.SelectedItem as ComboBoxItem).Content)));
                 }
                 client.Close();
             }
@@ -272,6 +288,11 @@ namespace command_project.design.admin
                 string sendIt = "getAdminTab1Info>" + pageLabel.Content + ">" + (_Status.SelectedItem as ComboBoxItem).Content;
                 SendData(sendIt);
             }
+            else if (myTabControl.SelectedIndex == 0)
+            {
+                string sendIt = "getAdmin";
+                SendData(sendIt);
+            }
         }
         private void _Status_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -338,7 +359,8 @@ namespace command_project.design.admin
             if (_VerifiedResumes.SelectedItem != null)
             {
                 InfoWindow infoWindow = new InfoWindow(tab1List[_VerifiedResumes.SelectedIndex]);
-                infoWindow.Show();
+                infoWindow.ShowDialog();
+                SendData(infoWindow.sendIt);
             }
             else { MessageBox.Show("Виберіть резюме"); }
         }
@@ -362,6 +384,10 @@ namespace command_project.design.admin
         public string WorkSkills { get; set; }
         public string isEnough;
         public string Status { get; set; }
+        public bool IsActiveWork { get; set; }
+        public int Id { get; set; }
+        public string UserNumber { get; set; }
+        public string UserEmail { get; set; }
 
         public tClass() 
         { 
@@ -369,7 +395,7 @@ namespace command_project.design.admin
         }
         public string Show()
         {
-            return UserName + " " + WorkName + " " + isEnough + " " + Status;
+            return UserName + " " + WorkName + " " + Status + " " + StrActive() +" " + isEnough;
         }
         public void Check(List<Skill> skills)
         {
@@ -383,6 +409,10 @@ namespace command_project.design.admin
             {
                 isEnough = "Не достатньо навичок";
             }
+        }
+        public string StrActive()
+        {
+            return IsActiveWork == true ? "Active" : "Not Active";
         }
     }
 }

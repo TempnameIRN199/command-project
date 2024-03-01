@@ -14,7 +14,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         AllowsTransparency="True">
-    <Border BorderThickness="0" Background="White" CornerRadius="30,30,30,30" Margin="0,0,0,-63">
+    <Border BorderThickness="0" Background="White" CornerRadius="30,30,30,30" Margin="0,0,0 0">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25"></ColumnDefinition>
@@ -49,7 +49,7 @@
                     Grid.Row="1"
                     Grid.Column="1"
                     Grid.ColumnSpan="3"
-            Grid.RowSpan="17" Margin="0,0,0,-40">
+            Grid.RowSpan="17" Margin="0,0,0,0">
 
                 <TabItem BorderBrush="{x:Null}"
                      Header="Увійти" 
@@ -58,9 +58,10 @@
 
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="148*"></ColumnDefinition>
+                            <ColumnDefinition Width="148*"></ColumnDefinition>
+                            <ColumnDefinition Width="41*"></ColumnDefinition>
+                            <ColumnDefinition Width="107*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="15"></RowDefinition>
@@ -79,8 +80,6 @@
                             <RowDefinition Height="50"></RowDefinition>
                             <RowDefinition Height="40"></RowDefinition>
                             <RowDefinition Height="50"></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
 
                         <Button Name="bSign"
@@ -88,7 +87,7 @@
                             Content="Увiйти"
                             FontSize="20" 
                             Height="50"
-                            Grid.Column="0" Grid.ColumnSpan="3"
+                            Grid.Column="0" Grid.ColumnSpan="4"
                             Grid.Row="11"
                             Background="Black"
                             Foreground="White" 
@@ -98,7 +97,7 @@
 
                         <TextBox Name="tbLoginSign"
                              BorderBrush="{x:Null}"
-                             Grid.Column="0" Grid.ColumnSpan="3"
+                             Grid.Column="0" Grid.ColumnSpan="4"
                              Grid.Row="3"
                              Padding="25,3,3,3"
                              FontSize="20"
@@ -109,23 +108,23 @@
                         <TextBlock FontSize="16"
                                Text="Логiн" 
                                Grid.Column="0" Grid.Row="1"
-                               VerticalAlignment="Bottom"
-                               FontFamily="Cascadia Mono ExtraLight"/>
+                               VerticalAlignment="Top"
+                               FontFamily="Cascadia Mono ExtraLight" Margin="0,11,0,0"/>
 
                         <PasswordBox Name="pbPassSign"
                                  BorderBrush="{x:Null}"
                                  Padding="25,3,3,3"
                                  VerticalContentAlignment="Center"
                                  FontSize="20" 
-                                 Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="7"
+                                 Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="7"
                                  FontFamily="Cascadia Mono ExtraLight"
                                  Background="WhiteSmoke" Cursor="IBeam" PasswordChanged="pbPassSign_PasswordChanged"></PasswordBox>
 
                         <TextBlock FontSize="16"
-                               VerticalAlignment="Bottom"
+                               VerticalAlignment="Top"
                                Grid.Column="0" Grid.Row="5"
                                Text="Пароль"
-                               FontFamily="Cascadia Mono ExtraLight"/>
+                               FontFamily="Cascadia Mono ExtraLight" Margin="0,11,0,0"/>
 
                         <Label x:Name="bCantSign" FontSize="14"
                             Content="Не можете увiйти?" 
@@ -133,28 +132,29 @@
                             Grid.Row="9"
                             VerticalAlignment="Center"
                             FontFamily="Corbel" FontWeight="ExtraBlack" Foreground="#FFA4A4A4"
-                            BorderBrush="{x:Null}"/>
+                            BorderBrush="{x:Null}" Grid.ColumnSpan="2"/>
 
 
                         <Rectangle 
                                 Grid.Row="13"
                         Height="3"
                                Stroke="LightGray"
-                               Fill="LightGray" Grid.ColumnSpan="2" Margin="0,23"/>
+                               Fill="LightGray" Grid.ColumnSpan="2" Margin="0,23,0,23"/>
 
                         <Rectangle 
                                 Grid.Row="13"
                         Grid.Column="2"
                         Height="3"
                                Stroke="LightGray"
-                               Fill="LightGray"/>
-                        <Button Name="bSingGuest" 
+                               Fill="LightGray" Grid.ColumnSpan="2" Margin="0,23,0,23"/>
+                        <Button Name="bSingGuest"
                             BorderBrush="{x:Null}" 
                             FontSize="20" 
                             Height="50"
-                            Grid.ColumnSpan="3"
+                            Grid.ColumnSpan="1"
+                            Grid.Column="1"
                             Grid.Row="15"
-                            Content="Увiйти, як адмін"
+                            Content="Вийти"
                             FontFamily="Cascadia Mono Light"
                             Foreground="Black"
                             Background="#FFEAEAEA" 
@@ -165,48 +165,49 @@
                 <TabItem BorderBrush="{x:Null}" Header="Реєстрація" Height="50" Width="213" FontFamily="Cascadia Mono ExtraLight"  FontSize="20" Margin="0,0,-107,0" HorizontalAlignment="Right"  >
                     <Grid>
 
-                        <TextBox Name="tbEmailReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,35,-13,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="447" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
+                        <TextBox TextChanged="tb_TextChanged" Name="tbEmailReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,35,-13,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="424" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="88" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="Ім'я" VerticalAlignment="Top" Width="88" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
-                        <TextBox Name="tbNameReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,100,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="189" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
+                        <TextBox TextChanged="tb_TextChanged" Name="tbNameReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,100,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="189" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
 
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="248,75,0,0" TextWrapping="Wrap" Text="Фамілія" VerticalAlignment="Top" Width="88" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
-                        <TextBox Name="tbSNameReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="217,100,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="217" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
+                        <TextBox TextChanged="tb_TextChanged" Name="tbSNameReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="217,100,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="217" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
 
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="10,135,0,0" TextWrapping="Wrap" Text="Номер телефону" VerticalAlignment="Top" Width="124" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
-                        <TextBox Name="tbPhoneNumberReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,160,-13,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="447" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
+                        <TextBox TextChanged="tb_TextChanged" Name="tbPhoneNumberReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,160,-13,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="424" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
 
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="10,195,0,0" TextWrapping="Wrap" Text="Країна" VerticalAlignment="Top" Width="143" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
-                        <TextBox Name="tbCountryReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,220,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="189" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
+                        <TextBox TextChanged="tb_TextChanged" Name="tbCountryReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,220,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="189" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
 
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="217,190,0,0" TextWrapping="Wrap" Text="Місто" VerticalAlignment="Top" Width="143" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
-                        <TextBox Name="tbCityReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="217,220,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="217" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
+                        <TextBox TextChanged="tb_TextChanged" Name="tbCityReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="217,220,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="217" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
 
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="10,255,0,0" TextWrapping="Wrap" Text="Логін" VerticalAlignment="Top" Width="143" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
-                        <TextBox Name="tbLoginReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,275,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="189" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
+                        <TextBox TextChanged="tb_TextChanged" Name="tbLoginReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="10,275,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="189" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
 
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="217,255,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="143" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
-                        <TextBox Name="tbPasswordReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="217,275,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="217" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
+                        <TextBox TextChanged="tb_TextChanged" Name="tbPasswordReg" Padding="25,3,3,3" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Margin="217,275,0,0" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="217" Height="30" FontFamily="Cascadia Mono ExtraLight" Background="WhiteSmoke" ></TextBox>
 
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="10,310,0,0" TextWrapping="Wrap" Text="Дата народження" VerticalAlignment="Top" Width="124" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
-                        <DatePicker Margin="0,327,281,0" Height="33" VerticalAlignment="Top"></DatePicker>
+                        <DatePicker Name="dpBirth" Margin="0,327,281,0" Height="33" VerticalAlignment="Top" SelectedDateChanged="dpBirth_SelectedDateChanged"></DatePicker>
                         <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="10,365,0,0" TextWrapping="Wrap" Text="Статус" VerticalAlignment="Top" Width="124" Height="20" FontFamily="Cascadia Mono ExtraLight"/>
-                        <ComboBox Margin="0,390,281,199">
+                        <ComboBox Name="_cbStatus" Margin="0,390,281,150" Background="Red"><!--<ComboBox Margin="0,390,281,199" Height="20" Background="Red">-->
                             <ComboBoxItem Name="Юзер" IsSelected="True" Height="25">
-
+                                Worker
                             </ComboBoxItem>
                             <ComboBoxItem Name="Работодавець" IsSelected="False" Height="25">
-
+                                Employer
                             </ComboBoxItem>
                         </ComboBox>
-                        <Button  Name="bRegistration" BorderBrush="{x:Null}" FontSize="20"  Content="Реєстрація" HorizontalAlignment="Center" Margin="0,566,0,0" VerticalAlignment="Top" Width="444" Height="48" Background="Black" Foreground="White"  FontFamily="Cascadia Mono ExtraLight" Click="bRegistration_Click" Cursor="Hand"/>
-                        <CheckBox Name="cbCheckReg" Margin="27,469,37,63">
+                        <Button  Name="bRegistration"  FontSize="20" BorderBrush="{x:Null}" Content="Реєстрація" HorizontalAlignment="Center" Margin="0,500,0,0" VerticalAlignment="Top" Width="444" Height="48" Background="Black" Foreground="White"  FontFamily="Cascadia Mono ExtraLight" Click="bRegistration_Click" Cursor="Hand"/>
+                        <!--<CheckBox Name="cbCheckReg" Margin="27,469,37,63">
                         </CheckBox>
-                        <TextBlock Margin="53,469,48,58" Text="* Я погоджуюсь із правилами користування сервісом, а також з передачею та обробкою моїх даних авторитетом Марком." TextWrapping="Wrap"/>
+                        <TextBlock Margin="53,469,48,58" Text="* Я погоджуюсь із правилами користування сервісом, а також з передачею та обробкою моїх даних авторитетом Марком." TextWrapping="Wrap"/>-->
+                        <Label Name="_IsRightReg" Margin="0,350,0,0" Height="40" FontSize="14" Content=""></Label>
                     </Grid>
                 </TabItem>
             </TabControl>
-            <Grid Name="bExit" Grid.Column="2" Grid.Row="17" MouseDown="bExit_Click" Cursor="Hand" Height="15" VerticalAlignment="Bottom"  Background="#FFEAEAEA" Margin="0,0,0,-50"/>
+            <!--<Grid Name="bExit" Grid.Column="2" Grid.Row="17" MouseDown="bExit_Click" Cursor="Hand" Height="15" VerticalAlignment="Bottom"  Background="#FFEAEAEA" Margin="0,0,0,-50"/>-->
         </Grid>
     </Border>
 </Window>

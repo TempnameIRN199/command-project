@@ -52,9 +52,9 @@
                                        Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
                                        FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
-                            <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60"
+                            <Label Name="_lbl1" Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60"
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
-                            <Label Content="Оновлено 5 хвилин тому" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
+                            <Label Content="Оновлено нещодавно" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
                                    FontSize="20" Margin="2,25,0,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle}"/>
                         </StackPanel>
 
@@ -66,9 +66,9 @@
                                        Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
                                        FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
-                            <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
+                            <Label Name="_lbl2" Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
-                            <Label Content="Оновлено 5 хвилин тому" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
+                            <Label Content="Оновлено нещодавно" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
                                    FontSize="20" Margin="2,25,0,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle}"/>
                         </StackPanel>
 
@@ -80,9 +80,9 @@
                                        Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
                                        FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
-                            <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
+                            <Label Name="_lbl3" Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
-                            <Label Content="Оновлено 5 хвилин тому" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
+                            <Label Content="Оновлено нещодавно" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
                                    FontSize="20" Margin="2,25,2,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle2}"/>
                         </StackPanel>
 
@@ -94,9 +94,9 @@
                                        Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
                                        FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
-                            <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
+                            <Label Name="_lbl4" Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
-                            <Label Content="Оновлено 5 хвилин тому" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60" 
+                            <Label Content="Оновлено нещодавно" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60" 
                                    FontSize="20" Margin="2,25,2,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle2}"/>
                         </StackPanel>
                     </Grid>

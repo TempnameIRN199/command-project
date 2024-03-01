@@ -64,3 +64,5 @@ C:\adsdadsdadas\comand\command-project\command-project\Server\obj\Debug\Server.c
 E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.Up2Date
 E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
 E:\Coding\Learn\Управління проектами\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.Migrations.InitialCreate.resources
+D:\ItStep\Current\command-project\command-project\Server\obj\Debug\Server.csproj.GenerateResource.cache

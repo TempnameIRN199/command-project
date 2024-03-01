@@ -78,6 +78,16 @@ namespace command_project
                 {
                     Dispatcher.Invoke(new Action(() => bCantSign.Content = "Неправильний пароль"));
                 }
+                else if (texts[0] == "rightLogin")
+                {
+                    Dispatcher.Invoke(new Action(() => _IsRightReg.Content = "Ви зареєстровані"));
+                    Dispatcher.Invoke(new Action(() => _IsRightReg.Foreground = Brushes.Green));
+                }
+                else if (texts[0] == "existLogin")
+                {
+                    Dispatcher.Invoke(new Action(() => _IsRightReg.Content = "Цей логін вже зайнятий"));
+                    Dispatcher.Invoke(new Action(() => _IsRightReg.Foreground = Brushes.Red));
+                }
                 client?.Close();
             }
         }
@@ -135,7 +145,19 @@ namespace command_project
 
         private void bRegistration_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            //login > login > password > name > secondName > email > number > country > city > birthdate > status > port
+            if (tbEmailReg.Text == "" || tbLoginReg.Text == "" || tbPasswordReg.Text == "" || tbPhoneNumberReg.Text == ""
+                || tbNameReg.Text == "" || tbSNameReg.Text == "" || tbCountryReg.Text == "" || tbCityReg.Text == "" || dpBirth.SelectedDate == null)
+            {
+                _IsRightReg.Content = "Не всі поля заповнені";
+                _IsRightReg.Foreground = Brushes.Red;
+            }
+            else
+            {
+                string sendIt = "login>" + tbLoginReg.Text + ">" + tbPasswordReg.Text + ">" + tbNameReg.Text + ">" + tbSNameReg.Text + ">" +
+                    tbEmailReg.Text + ">" + tbPhoneNumberReg.Text + ">" + tbCountryReg.Text + ">" + tbCityReg.Text + ">" + dpBirth.SelectedDate.ToString() + ">" + _cbStatus.Text + ">" + clientPort;
+                SendData(sendIt);
+            }
         }
 
         private void bSingAdm_Click(object sender, RoutedEventArgs e)
@@ -161,6 +183,22 @@ namespace command_project
             if (bCantSign.Content.ToString() != "")
             {
                 bCantSign.Content = "";
+            }
+        }
+
+        private void dpBirth_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_IsRightReg.Content.ToString() != "")
+            {
+                _IsRightReg.Content = "";
+            }
+        }
+
+        private void tb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (_IsRightReg.Content.ToString() != "")
+            {
+                _IsRightReg.Content = "";
             }
         }
     }

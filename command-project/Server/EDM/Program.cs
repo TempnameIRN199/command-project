@@ -193,7 +193,7 @@ namespace Server
                 }
                 else if (texts[0] == "login")
                 {
-                    //login>login>password>name>secondName>email>number>country>city>age>status>port
+                    //login>login>password>name>secondName>email>number>country>city>birthdate>status>port
 
                     if (context.Users.ToList().Count(i => i.Login == texts[1]) == 0)
                     {
@@ -274,9 +274,15 @@ namespace Server
 
             if (texts[0] == "getAdmin")
             {
+                List<string> list1 = new List<string> { "Accepted", "Accepted byAdmin" };
+                List<string> list2 = new List<string> { "Declined", "Declined byAdmin" };
+                List<string> list3 = new List<string> { "Accepted", "Declined", "Under Review" };
+
                 string sendIt = "infoForAdmin>";
                 WorkContext context = new WorkContext();
                 sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                sendIt += ">" + context.RequestCVs.Count() + ">" + context.RequestCVs.Count(i => list1.Contains(i.Status))
+                    + ">" + context.RequestCVs.Count(i => list2.Contains(i.Status)) + ">" + context.RequestCVs.Count(i => list3.Contains(i.Status));
                 SendData(sendIt);
             }
             else if (texts[0] == "getWorker")
@@ -325,10 +331,28 @@ namespace Server
                 WorkContext context = new WorkContext();
                 string sendMe = "adminTab1Info>" + string.Join(">", context.RequestCVs.Where(t => list.Contains(t.Status)).OrderBy(t => t.RequestId)
                     .Select(t => t.CV.User.Name + " " + t.CV.User.SecondName + "&" + t.CV.UserInfo + "&" + t.CV.Skills + "&" +
-                    t.Request.Name + "&" + t.Request.RequestInfo + "&" + t.Request.Skills + "&" + t.Status).Skip((page - 1) * 10).Take(10));
+                    t.Request.Name + "&" + t.Request.RequestInfo + "&" + t.Request.Skills + "&" + t.Status + "&" + t.Request.IsActive + "&" + t.Id + "&" +
+                    t.CV.User.PhoneNumber + "&" + t.CV.User.Email).Skip((page - 1) * 20).Take(20));
                 SendData(sendMe);
                 //Console.WriteLine(sendMe);
                 Console.WriteLine();
+            }
+            else if (texts[0] == "acceptByAdmin")
+            {
+                int tId = int.Parse(texts[1]);
+                WorkContext context = new WorkContext();
+                context.RequestCVs.First(i => i.Id == tId).Status = "Accepted byAdmin";
+                context.RequestCVs.First(i => i.Id == tId).Request.IsActive = false;
+                context.SaveChanges();
+                SendData("reload");
+            }
+            else if (texts[0] == "declineByAdmin")
+            {
+                int tId = int.Parse(texts[1]);
+                WorkContext context = new WorkContext();
+                context.RequestCVs.First(i => i.Id == tId).Status = "Declined byAdmin";
+                context.SaveChanges();
+                SendData("reload");
             }
             else if (texts[0] == "addSkill")
             {

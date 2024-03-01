@@ -19,11 +19,17 @@ namespace command_project.design.admin
     /// </summary>
     public partial class InfoWindow : Window
     {
+        public string sendIt = "";
+        tClass myT = new tClass();
         public InfoWindow(tClass tClass)
         {
             InitializeComponent();
+            myT = tClass;
             _txtUserName.Text = tClass.UserName;
-            _txtUserInfo.Text = tClass.UserDescription;
+
+            string tText = "Number: " + tClass.UserNumber + "\n" + "Email: " + tClass.UserEmail + "\n" + tClass.UserDescription;
+
+            _txtUserInfo.Text = tText;
             _txtUserSkills.Text = coding.Functions.SkillsIntoText(tClass.UserSkills);
 
             _txtRequestName.Text = tClass.WorkName;
@@ -43,7 +49,8 @@ namespace command_project.design.admin
                 _txtIsGood.Foreground = Brushes.Red;
             }
 
-            if (tClass.Status == "Accepted byAdmin" || tClass.Status == "Declined byAdmin")
+            //if (tClass.Status == "Accepted byAdmin" || tClass.Status == "Declined byAdmin")
+            if (!tClass.IsActiveWork)
             {
                 _bAccept.IsEnabled = false;
                 _bDecline.IsEnabled = false;
@@ -52,12 +59,14 @@ namespace command_project.design.admin
 
         private void Accept_Click(object sender, RoutedEventArgs e)
         {
-
+            sendIt = "acceptByAdmin>" + myT.Id;
+            Close();
         }
 
         private void Decline_Click(object sender, RoutedEventArgs e)
         {
-
+            sendIt = "declineByAdmin>" + myT.Id;
+            Close();
         }
     }
 }
