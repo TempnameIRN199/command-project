@@ -34,6 +34,12 @@ namespace command_project.design
         coding.Skill currentSkill = new coding.Skill();
 
         List<string> skills = new List<string>();
+
+        List<rClass> requests = new List<rClass>();
+        string requestName = "";
+
+        int tabIndex = 0;
+
         public WindowMyProfile(string login, int serverPort, int clientPort)
         {
             InitializeComponent();
@@ -86,6 +92,7 @@ namespace command_project.design
                 if (texts[0] == "infoForWorker")
                 {
                     DateTime userBD = DateTime.Parse(texts[7]);
+                    Dispatcher.Invoke(new Action(() => lLogin.Content = login));
                     Dispatcher.Invoke(new Action(() => lName.Content = texts[3] + " " + texts[4]));
                     Dispatcher.Invoke(new Action(() => lAge.Content = texts[11]));
                     Dispatcher.Invoke(new Action(() => lPhone.Content = texts[10]));
@@ -93,9 +100,32 @@ namespace command_project.design
                     Dispatcher.Invoke(new Action(() => lPlaceOfResidence.Content = texts[8] + " " + texts[9]));
                     skills = texts[12].Split('|').ToList();
                     Dispatcher.Invoke(new Action(() => _Skills.ItemsSource = skills));
-                    Dispatcher.Invoke(new Action(() => _txtABout.Text = texts[13]));
+                    Dispatcher.Invoke(new Action(() => _txtAbout.Text = texts[13]));
                     listSkills = Functions.GetSkills(texts[14]);
                     Dispatcher.Invoke(new Action(() => _listFindData.ItemsSource = listSkills.Select(i => i.ReadSkill())));
+                }
+                else if (texts[0] == "requestsForYou")
+                {
+                    requests.Clear();
+                    for (int i = 1; i < texts.Count; i++)
+                    {
+                        if (texts[i] == "") break;
+                        List<string> parts = texts[i].Split('&').ToList();
+                        requests.Add(new rClass() { Name = parts[0], Info = parts[1], Skills = parts[2] });
+                    }
+                    Dispatcher.Invoke(new Action(() => _listRequests.ItemsSource = requests.Select(i => i.Name)));
+                }
+                else if (texts[0] == "requestsForYouAfter")
+                {
+                    Dispatcher.Invoke(new Action(() => MessageBox.Show("Ви надіслали своє резюме")));
+                    requests.Clear();
+                    for (int i = 1; i < texts.Count; i++)
+                    {
+                        if (texts[i] == "") break;
+                        List<string> parts = texts[i].Split('&').ToList();
+                        requests.Add(new rClass() { Name = parts[0], Info = parts[1], Skills = parts[2] });
+                    }
+                    Dispatcher.Invoke(new Action(() => _listRequests.ItemsSource = requests.Select(i => i.Name)));
                 }
                 client.Close();
             }
@@ -115,7 +145,8 @@ namespace command_project.design
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            string sendIt = "updateCV>" + login + ">" + _txtAbout.Text + ">" + coding.Functions.SkillsIntoDBFormat(listSkills);
+            SendData(sendIt);
         }
 
 
@@ -189,6 +220,61 @@ namespace command_project.design
         private void Window_Closed(object sender, EventArgs e)
         {
             SendData("close");
+        }
+
+        private void tabControlProf_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (tabControlProf.SelectedIndex != -1)
+            {
+                if (tabControlProf.SelectedIndex == 1)
+                {
+                    if (tabIndex == 0)
+                    {
+                        string sendIt = "getRequests>" + login;
+                        SendData(sendIt);
+                        tabIndex = 1;
+                    }
+                }
+                else if (tabControlProf.SelectedIndex == 0)
+                {
+                    if (tabIndex == 1)
+                    {
+                        string sendIt = "getWorker>" + login;
+                        SendData(sendIt);
+                        tabIndex = 0;
+                    }
+                }
+            }
+        }
+
+        private void _listRequests_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (_listRequests.SelectedIndex != -1)
+            {
+                _txtAboutRequest.Text = requests[_listRequests.SelectedIndex].Show();
+                requestName = requests[_listRequests.SelectedIndex].Name;
+            }
+        }
+
+        private void _sendCV_Click(object sender, RoutedEventArgs e)
+        {
+            if (_listRequests.SelectedIndex != -1)
+            {
+                string sendIt = "sendCV>" + login + ">" + requestName;
+                SendData(sendIt);
+            }
+        }
+    }
+    class rClass
+    {
+        public string Name { get; set; }
+        public string Info { get; set; }
+        public string Skills { get; set; }
+
+        public rClass() { }
+        public string Show()
+        {
+            return Name + "\n" + Info + "\n" + string.Join("\n", Functions.GetSkills(Skills).Select(i => i.ReadSkill()));
         }
     }
 }

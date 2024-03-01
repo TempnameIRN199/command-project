@@ -26,6 +26,8 @@ namespace command_project.coding
         public static List<Skill> GetSkills(string skillsText)
         {
             //Из C#^5|SQL^2 в Skill(){Name = "C#", Time = 5}, Skill(){Name = "SQL", Time = 2}
+            if (skillsText == "") return new List<Skill>();
+
             List<Skill> skills = new List<Skill>();
 
             List<string> skillsTextParts = skillsText.Split('|').ToList();

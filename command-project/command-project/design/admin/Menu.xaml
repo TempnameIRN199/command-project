@@ -130,7 +130,7 @@
                             </StackPanel>
                             <Label Name="_lbl6" Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
-                            <Label Content="Оновлено 5 хвилин тому" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
+                            <Label Content="Оновлено нещодавно" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
                                    FontSize="20" Margin="2,25,2,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle2}"/>
                         </StackPanel>
                     </Grid>
@@ -331,7 +331,7 @@
                                         </Border>
                                         <Border Style="{StaticResource InfoStackPanel}">
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
+                                                <TextBlock Text="12" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
                                             </StackPanel>
                                         </Border>
                                     </StackPanel>
@@ -353,7 +353,7 @@
                                         </Border>
                                         <Border Style="{StaticResource InfoStackPanel}">
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
+                                                <TextBlock Text="12" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
                                             </StackPanel>
                                         </Border>
                                     </StackPanel>
@@ -375,7 +375,7 @@
                                         </Border>
                                         <Border Style="{StaticResource InfoStackPanel}">
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
+                                                <TextBlock Text="12" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
                                             </StackPanel>
                                         </Border>
                                     </StackPanel>
@@ -397,7 +397,7 @@
                                         </Border>
                                         <Border Style="{StaticResource InfoStackPanel}">
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
+                                                <TextBlock Text="12" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
                                             </StackPanel>
                                         </Border>
                                     </StackPanel>
@@ -419,7 +419,7 @@
                                         </Border>
                                         <Border Style="{StaticResource InfoStackPanel}">
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
+                                                <TextBlock Text="12" Width="210" Height="50" Margin="5" Padding="0,0,0,0" FontSize="20" TextWrapping="Wrap"/>
                                             </StackPanel>
                                         </Border>
                                     </StackPanel>

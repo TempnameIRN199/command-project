@@ -58,7 +58,8 @@
             <TabControl  x:Name="tabControlProf" 
                          Grid.ColumnSpan="10" 
                          Margin="10,35,10,10" 
-                         Grid.RowSpan="12" Grid.Row="1">
+                         Grid.RowSpan="12" Grid.Row="1"
+                         SelectionChanged="tabControlProf_SelectionChanged">
                 <TabItem Header="Мій профіль"
                          FontSize="20" Margin="341,0,-345,-3"
                          Grid.Row="2"
@@ -80,7 +81,7 @@
                                     <RowDefinition Height="20"/>
                                 </Grid.RowDefinitions>
 
-                                <Label x:Name="lVerificationProfile" Foreground="#FF434B54" VerticalContentAlignment="Center" FontFamily="Cascadia Mono Light" Grid.Column="3" Grid.Row="1" Content="Никнейм(Логин)" FontSize="25"/>
+                                <Label x:Name="lLogin" Foreground="#FF434B54" VerticalContentAlignment="Center" FontFamily="Cascadia Mono Light" Grid.Column="3" Grid.Row="1" Content="Никнейм(Логин)" FontSize="25"/>
                                 <!--<Button x:Name="bVerificationProfile" Background="Transparent" Foreground="Black" VerticalContentAlignment="Bottom" FontFamily="Cascadia Mono ExtraLight" Grid.Column="3" Grid.Row="1" Content="Додати фото" FontSize="15" Margin="0,128,0,0" Click="bVerificationProfile_Click" Cursor="Hand"/>-->
 
                                 <Border x:Name="MaskIcon" Background="White" CornerRadius="10" Grid.Column="1" Grid.Row="1"/>
@@ -138,7 +139,7 @@
 
                                 <Label Content="Трохи про себе..." FontSize="30" Foreground="#FF434B54" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontFamily="Cascadia Mono Light" Margin="0,48,0,204" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"/>
 
-                                <TextBox Name="_txtABout" Grid.Column="1" Margin="10,32,0,0" Grid.Row="2" Grid.RowSpan="3">
+                                <TextBox Name="_txtAbout" Grid.Column="1" Margin="10,32,0,0" Grid.Row="2" Grid.RowSpan="3">
 
                                 </TextBox>
 
@@ -187,6 +188,41 @@
                 </TabItem>
 
                 <TabItem Header="ВакансіЇ"  FontSize="20" Margin="377,0,-466,-2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="399*"/>
+                            <ColumnDefinition Width="359*"/>
+                            <ColumnDefinition Width="1036*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Список вакансій" FontSize="30" HorizontalContentAlignment="Center" Margin="0,10,818,798" Grid.ColumnSpan="3">
+
+                        </Label>
+
+                        <ListBox Name="_listRequests" Margin="15,80,818,-1" BorderBrush ="Black" Grid.ColumnSpan="3" SelectionChanged="_listRequests_SelectionChanged">
+                        </ListBox>
+
+                        <Label Content="Опис обраної вакансії..." FontSize="30" HorizontalContentAlignment="Center" Margin="314,10,52,798" Grid.Column="2">
+
+                        </Label>
+
+
+                        <TextBox IsReadOnly="True" Name="_txtAboutRequest" BorderBrush ="Black" Margin="314,80,52,266" Grid.Column="2">
+
+                        </TextBox>
+
+                        <Label Margin="314,626,52,192" Grid.Column="2">
+
+                        </Label>
+
+                        <Button Name="_sendCV" Content="Кинути резюме" FontSize="33"  Margin="314,692,52,104" Grid.Column="2" Click="_sendCV_Click">
+
+                        </Button>
+
+                        <!--<Button Content="Відхилити" FontSize="33" Margin="314,786,52,10" Grid.Column="2">
+
+                        </Button>-->
+
+                    </Grid>
 
                 </TabItem>
 

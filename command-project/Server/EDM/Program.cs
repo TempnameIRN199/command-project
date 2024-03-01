@@ -377,6 +377,46 @@ namespace Server
                 sendIt += ">" + user.CVs.First().UserInfo + ">" + user.CVs.First().Skills;
                 SendData(sendIt);
             }
+            else if (texts[0] == "updateCV")
+            {
+                WorkContext context = new WorkContext();
+                string tStr1 = texts[1];
+                context.Users.FirstOrDefault(i => i.Login == tStr1).CVs.FirstOrDefault().UserInfo = texts[2];
+                context.Users.FirstOrDefault(i => i.Login == tStr1).CVs.FirstOrDefault().Skills = texts[3];
+                context.SaveChanges();
+            }
+            else if (texts[0] == "getRequests")
+            {
+                string tLogin = texts[1];
+                WorkContext context = new WorkContext();
+                int tCVId = context.CVs.FirstOrDefault(i => i.User.Login == tLogin).Id;
+                List<int> ids = context.RequestCVs.Where(j => j.CVId == tCVId).Select(j => j.RequestId).ToList();
+                string sendIt = "requestsForYou>" + string.Join(">", context.Requests.Where(i => i.IsActive &&
+                !ids.Contains(i.Id)).Select(
+                    i => i.Name + "&" + i.RequestInfo + "&" + i.Skills));
+                SendData(sendIt);
+            }
+            else if (texts[0] == "sendCV")
+            {
+                string tLogin = texts[1];
+                string tName = texts[2];
+                WorkContext context = new WorkContext();
+                int tCVId = context.CVs.FirstOrDefault(i => i.User.Login == tLogin).Id;
+                context.RequestCVs.Add(new RequestCV()
+                {
+                    CreationDate = DateTime.Now,
+                    Status = "Under Review",
+                    RequestId = context.Requests.FirstOrDefault(i => i.Name == tName).Id,
+                    CVId = tCVId
+                });
+                context.SaveChanges();
+                List<int> ids = context.RequestCVs.Where(j => j.CVId == tCVId).Select(j => j.RequestId).ToList();
+                //foreach (int i in ids) Console.WriteLine(i);
+                string sendIt = "requestsForYouAfter>" + string.Join(">", context.Requests.Where(i => i.IsActive &&
+                !ids.Contains(i.Id)).Select(
+                    i => i.Name + "&" + i.RequestInfo + "&" + i.Skills));
+                SendData(sendIt);
+            }
             else if (texts[0] == "getEmployer")
             {
                 string sendIt = "infoForEmployer>";
@@ -386,6 +426,67 @@ namespace Server
                 //login(1)>status(2)>name(3)>secondname(4)>email(5)>CreationDate(6)>BirthDate(7)>Country(8)>City(9)>Phonenumber(10)>age(11)
                 sendIt += user.Name + " " + user.SecondName + ">" + user.Email + ">" + user.CreationDate.ToString() + ">" + user.BirthDate.Day.ToString() + "." + user.BirthDate.Month.ToString() + "." + user.BirthDate.Year.ToString() + ">" + user.Country + " " + user.City + ">" + user.PhoneNumber + ">";
                 sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                SendData(sendIt);
+            }
+            else if (texts[0] == "addRequest")
+            {
+                
+                WorkContext context = new WorkContext();
+                string tStr1 = texts[1];
+                string tName = texts[2];
+                if (context.Requests.Count(i => i.Name == tName) == 0)
+                {
+                    int tId = context.Users.FirstOrDefault(i => i.Login == tStr1).Id;
+                    context.Requests.Add(new Request() { Name = texts[2], RequestInfo = texts[3], Skills = texts[4], UserId = tId, IsActive = true, CreationDate = DateTime.Now });
+                    context.SaveChanges();
+                    SendData("RequestAdded");
+                }
+                else
+                {
+                    SendData("RequestExist");
+                }
+            }
+            else if (texts[0] == "getMyRequests")
+            {
+                string tLogin = texts[1];
+                WorkContext context = new WorkContext();
+                int tId = context.Users.FirstOrDefault(i => i.Login == tLogin).Id;
+                string sendIt = "yourRequests>" + string.Join(">", context.Requests.Where(i => i.IsActive && i.UserId == tId).Select(
+                    i => i.Name + "&" + i.RequestInfo + "&" + i.Skills));
+                SendData(sendIt);
+            }
+            else if (texts[0] == "getWorkersOnRequest")
+            {
+                string rName = texts[1];
+                WorkContext context = new WorkContext();
+                string sendIt = "workersOnRequest>" +
+                    string.Join(">", context.RequestCVs.Where(i => i.Request.Name == rName && i.Status == "Under Review").Select
+                    (t => t.CV.User.Name + " " + t.CV.User.SecondName + "&" + t.CV.UserInfo + "&" + t.CV.Skills + "&" + t.CV.User.Login));
+                SendData(sendIt);
+            }
+            else if (texts[0] == "acceptWorkerOnRequest")
+            {
+                string tLogin = texts[1];
+                string rName = texts[2];
+                WorkContext context = new WorkContext();
+                context.RequestCVs.First(i => i.CV.User.Login == tLogin && i.Request.Name == rName).Status = "Accepted";
+                context.SaveChanges();
+
+                string sendIt = "workersOnRequest>" +
+                   string.Join(">", context.RequestCVs.Where(i => i.Request.Name == rName && i.Status == "Under Review").Select
+                   (t => t.CV.User.Name + " " + t.CV.User.SecondName + "&" + t.CV.UserInfo + "&" + t.CV.Skills + "&" + t.CV.User.Login));
+                SendData(sendIt);
+            }else if (texts[0] == "declinetWorkerOnRequest")
+            {
+                string tLogin = texts[1];
+                string rName = texts[2];
+                WorkContext context = new WorkContext();
+                context.RequestCVs.First(i => i.CV.User.Login == tLogin && i.Request.Name == rName).Status = "Declined";
+                context.SaveChanges();
+
+                string sendIt = "workersOnRequest>" +
+                   string.Join(">", context.RequestCVs.Where(i => i.Request.Name == rName && i.Status == "Under Review").Select
+                   (t => t.CV.User.Name + " " + t.CV.User.SecondName + "&" + t.CV.UserInfo + "&" + t.CV.Skills + "&" + t.CV.User.Login));
                 SendData(sendIt);
             }
 

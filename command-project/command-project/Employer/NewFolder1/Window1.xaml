@@ -67,7 +67,7 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <TabControl SelectionChanged="TabControl_SelectionChanged" Margin="0,-25,0,0">
+        <TabControl Name="_myTab" SelectionChanged="TabControl_SelectionChanged" Margin="0,-25,0,0">
             <TabItem Header="Profile" Margin="1414,244,-1412,-246" RenderTransformOrigin="0.5,0.5">
                 <TabItem.RenderTransform>
                     <TransformGroup>
@@ -117,20 +117,20 @@
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,10,0,0"><Run Text="Створ"/><Run Language="uk-ua" Text="ити"/><Run Text=" ваканс"/><Run Language="uk-ua" Text="ію"/></TextBlock>
                             <TextBlock Text="Назва вакансії:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" Margin="10,45,0,0"/>
                             <TextBox x:Name="_txtvacancyName" Margin="10,79,336,660" FontSize="20"/>
-                            <Button Content="Додати" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="157" Style="{StaticResource CustomButtonStyle}" Margin="607,78,0,0"/>
-                            <TextBox x:Name="_txtvacancyName_Copy" Margin="10,113,175,10" FontSize="20"/>
+                            <Button Name="_addRequestButton" Click="_addRequestButton_Click" Content="Додати" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="157" Style="{StaticResource CustomButtonStyle}" Margin="607,78,0,0"/>
+                            <TextBox x:Name="_txtvacancyInfo" Margin="10,113,175,10" FontSize="20"/>
                             <TextBlock Text="Додати скіл:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" Margin="772,79,0,0"/>
-                            <TextBox x:Name="_txtvacancyName_Copy1" Margin="769,113,10,625" FontSize="20"/>
-                            <Button Content="Додати" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="160" Style="{StaticResource CustomButtonStyle}" Margin="769,226,0,0"/>
-                            <ListBox x:Name="_listFindName_Copy" Margin="769,296,10,10"
-                                FontFamily="Cascadia Mono ExtraLight" FontSize="20"
+                            <TextBox x:Name="_txtFindSkills" Margin="769,113,10,625" FontSize="20" TextChanged="_txtFindSkills_TextChanged"/>
+                            <Button Click="_addSkillButton_Click"  Content="Додати" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="160" Style="{StaticResource CustomButtonStyle}" Margin="769,226,0,0"/>
+                            <ListBox x:Name="_listFindName" Margin="769,296,10,10"
+                                FontFamily="Cascadia Mono ExtraLight" FontSize="18"
                                 SelectionChanged="_listFindName_SelectionChanged"/>
                             <ComboBox Name="_Skills" Height="25" Margin="769,148,10,595"
-                            FontFamily="Cascadia Mono ExtraLight" FontSize="20" SelectionChanged="_Skills_SelectionChanged"/>
+                            FontFamily="Cascadia Mono ExtraLight" FontSize="18" SelectionChanged="_Skills_SelectionChanged"/>
                             <Label Content="1" FontSize="16" FontWeight="Bold" Foreground="gray" Margin="767,176,151,562"/>
                             <Slider Name="_Experience" Margin="772,203,7,547" Minimum="1" Maximum="5"
                             TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="_Experience_ValueChanged"/>
-                            <Button Content="Видалити" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="160" Style="{StaticResource CustomButtonStyle}" Margin="769,261,0,0"/>
+                            <Button Click="_deleteSkillButton_Click" Content="Видалити" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="30" Width="160" Style="{StaticResource CustomButtonStyle}" Margin="769,261,0,0"/>
                             <Label Content="2" FontSize="16" FontWeight="Bold" Foreground="gray" Margin="804,176,113,562"/>
                             <Label Content="3" FontSize="16" FontWeight="Bold" Foreground="gray" Margin="843,176,74,562"/>
                             <Label Content="4" FontSize="16" FontWeight="Bold" Foreground="gray" Margin="879,176,38,562"/>
@@ -159,11 +159,13 @@
                         </Grid>
                     </Border>
                     <Border Background="Gray" Margin="10,65,1052,10" CornerRadius="10" Grid.Row="1">
-                        <Grid>
+                        <ListBox Name="_listWorkers" SelectionChanged="_listWorkers_SelectionChanged" FontSize="16">
+                        </ListBox>
+                        <!--<Grid>
                             <Button Content="Валерій Залужний C#" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="368" Style="{StaticResource CustomButtonStyle}" Margin="0,10,0,0" FontSize="20"/>
                             <Button Content="Валерій Бойченко C++" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="368" Style="{StaticResource CustomButtonStyle}" Margin="0,73,0,0" FontSize="20"/>
                             <Button Content="Валерій Гончаренко SQL" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="368" Style="{StaticResource CustomButtonStyle}" Margin="0,136,0,0" FontSize="20"/>
-                        </Grid>
+                        </Grid>-->
                     </Border>
                     <Border Background="LightGray" Margin="403,65,351,10" CornerRadius="10" Grid.Row="1">
                         <Grid>
@@ -181,28 +183,29 @@
                     <Border Background="LightGray" Margin="1104,520,50,10" CornerRadius="10" Grid.Row="1">
                         <Grid>
                             <TextBlock Text="Резюме обраного працівника" TextAlignment="Center" FontSize="18" FontFamily="Arial" FontWeight="Bold" Margin="10,10,10,366"/>
-                            <Button Content="Прийняти" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="34" Width="130" Style="{StaticResource CustomButtonStyle}" Margin="10,356,0,0" FontSize="20"/>
-                            <Button Content="Відхилити" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="34" Width="135" Style="{StaticResource CustomButtonStyle}" Margin="145,356,0,0" FontSize="20"/>
+                            <Button Name="_buttonAccept" Click="_buttonAccept_Click" Content="Прийняти" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="34" Width="130" Style="{StaticResource CustomButtonStyle}" Margin="10,356,0,0" FontSize="20"/>
+                            <Button Name="_buttonDecline" Click="_buttonDecline_Click" Content="Відхилити" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="34" Width="135" Style="{StaticResource CustomButtonStyle}" Margin="145,356,0,0" FontSize="20"/>
                         </Grid>
                     </Border>
                     <Border Background="Gray" Margin="403,125,351,10" CornerRadius="10" Grid.Row="1">
-                        <Grid>
+                        <ListBox Name="_listMyRequests" SelectionChanged="_listMyRequests_SelectionChanged" FontSize="16">
+                        </ListBox>
+                        <!--<Grid>
                             <Button Content="Розробити UDP сервер C#" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,10,0,0" FontSize="20"/>
                             <Button Content="Написати код для гри 'Хрестики Нулики' C++" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,73,0,0" FontSize="20"/>
                             <Button Content="Розробити базу даних співробітників SQL" HorizontalAlignment="Center" VerticalAlignment="Top"  Height="58" Width="676" Style="{StaticResource CustomButtonStyle}" Margin="0,136,0,0" FontSize="20"/>
-                        </Grid>
+                        </Grid>-->
                     </Border>
                     <Border Background="Gray" Margin="1104,125,50,415" CornerRadius="10" Grid.Row="1">
                         <Grid>
-                            <TextBox x:Name="_txtAboutVacancy" Margin="10,10,10,342" FontSize="20"/>
-                            <TextBox x:Name="_txtAboutVacancy_Copy" Margin="10,50,10,10" FontSize="20"/>
-                            <TextBox x:Name="_txtAboutVacancy_Copy2" Margin="10,10,10,342" FontSize="20"/>
+                            <!--<TextBox IsReadOnly="True" x:Name="_txtRequestNameItem" Margin="10,10,10,342" FontSize="20"/>-->
+                            <TextBox IsReadOnly="True" x:Name="_txtRequestAboutItem" Margin="10,10,10,10" FontSize="20"/>
                         </Grid>
                     </Border>
                     <Border Background="Gray" Margin="1104,560,50,60" CornerRadius="10" Grid.Row="1">
                         <Grid>
-                            <TextBox x:Name="_txtAboutVacancy_Copy1" Margin="10,10,10,50" FontSize="20"/>
-                            <TextBox x:Name="_txtAboutVacancy_Copy3" Margin="10,262,10,10" FontSize="20"/>
+                            <TextBox IsReadOnly="True" x:Name="_txtAboutWorker" Margin="10,10,10,50" FontSize="20"/>
+                            <TextBox IsReadOnly="True" x:Name="_txtIsEnough" Margin="10,262,10,10" FontSize="20"/>
                         </Grid>
                     </Border>
                 </Grid>
