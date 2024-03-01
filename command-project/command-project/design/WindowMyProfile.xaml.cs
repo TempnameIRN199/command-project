@@ -101,5 +101,45 @@ namespace command_project.design
 
             Console.WriteLine(text);
         }
+
+        private void _addSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _changeSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _Experience_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void _listFindData_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _Skills_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void _txtFindSkills_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void _deleteSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

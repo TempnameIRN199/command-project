@@ -282,7 +282,8 @@ namespace Server
                 WorkContext context = new WorkContext();
                 sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
                 sendIt += ">" + context.RequestCVs.Count() + ">" + context.RequestCVs.Count(i => list1.Contains(i.Status))
-                    + ">" + context.RequestCVs.Count(i => list2.Contains(i.Status)) + ">" + context.RequestCVs.Count(i => list3.Contains(i.Status));
+                    + ">" + context.RequestCVs.Count(i => list2.Contains(i.Status)) + ">" + context.RequestCVs.Count(i => list3.Contains(i.Status))
+                    + ">" + context.Users.Count(i => i.Status == "Worker") + ">" + context.Users.Count(i => i.Status == "Employer");
                 SendData(sendIt);
             }
             else if (texts[0] == "getWorker")

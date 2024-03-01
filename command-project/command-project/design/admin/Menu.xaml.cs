@@ -153,6 +153,8 @@ namespace command_project.design.admin
                     Dispatcher.Invoke(new Action(() => _lbl2.Content = texts[3]));
                     Dispatcher.Invoke(new Action(() => _lbl3.Content = texts[2]));
                     Dispatcher.Invoke(new Action(() => _lbl4.Content = texts[4]));
+                    Dispatcher.Invoke(new Action(() => _lbl5.Content = texts[6]));
+                    Dispatcher.Invoke(new Action(() => _lbl6.Content = texts[7]));
                 }
                 else if (texts[0] == "adminTab1Info")
                 {

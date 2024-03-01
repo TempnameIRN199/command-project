@@ -114,21 +114,21 @@
                                        Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
                                        FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
-                            <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
+                            <Label Name="_lbl5" Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
-                            <Label Content="Оновлено 5 хвилин тому" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
-                                   FontSize="20" Margin="2,25,2,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle2}"/>
+                            <Label Content="Оновлено нещодавно" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
+                                   FontSize="20" Margin="2,25,2,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle}"/>
                         </StackPanel>
 
                         <StackPanel x:Name="_WidthPanel5" Grid.Column="1" Orientation="Vertical">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="../icon/free-icon-job-application-12538104.png" Width="50" Height="50" Margin="20,20,5,0"
                                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                <Label Content="Всього юзерів" Width="360" Height="50" FontSize="25" 
+                                <Label Content="Всього роботодавців" Width="360" Height="50" FontSize="25" 
                                        Margin="20,20,5,0" VerticalAlignment="Top" HorizontalAlignment="Stretch"
                                        FontFamily="Cascadia Mono ExtraLight"/>
                             </StackPanel>
-                            <Label Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
+                            <Label Name="_lbl6" Content="10" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="100" Height="60" 
                                    FontSize="40" Margin="20,0,5,0" FontWeight="Bold"/>
                             <Label Content="Оновлено 5 хвилин тому" Width="{Binding ActualWidth, ElementName=_WidthPanel1}" Height="60"
                                    FontSize="20" Margin="2,25,2,0" FontWeight="Bold" Style="{StaticResource RoundedLabelStyle2}"/>
@@ -150,7 +150,7 @@
                         </Grid.RowDefinitions>
 
                         <ListView Name="_VerifiedResumes" Grid.Row="0" BorderBrush="Black" MouseDoubleClick="_VerifiedResumes_MouseDoubleClick"
-                                  MouseDown="_VerifiedResumes_MouseDown" FontSize="20">
+                                  MouseDown="_VerifiedResumes_MouseDown" FontSize="20" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                             <ListView.View>
                                 <GridView>
                                     <GridView.ColumnHeaderContainerStyle>
@@ -243,7 +243,7 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <ListView x:Name="_addSkillsView" Grid.Column="0" Grid.Row="0">
+                    <ListView x:Name="_addSkillsView" Grid.Column="0" Grid.Row="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="{Binding ElementName=_addSkillsView, Path=ActualWidth}">

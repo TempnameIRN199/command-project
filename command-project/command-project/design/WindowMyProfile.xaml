@@ -144,14 +144,14 @@
 
                                 <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left"
                                             VerticalAlignment="Stretch" Margin="351,54,0,-20" Grid.Row="1" Width="275" Grid.RowSpan="5">
-                                    <ComboBox Name="_Status" Width="190" Height="25" Margin="5"
+                                    <!--<ComboBox Name="_Status" Width="190" Height="25" Margin="5"
                                               FontFamily="Cascadia Mono ExtraLight" FontSize="20"
                                               SelectionChanged="_Status_SelectionChanged">
                                         <ComboBoxItem IsSelected="True" Content="Всі"/>
                                         <ComboBoxItem Content="Підтверджені"/>
                                         <ComboBoxItem Content="Відхилені"/>
                                         <ComboBoxItem Content="Потребують підтвердження"/>
-                                    </ComboBox>
+                                    </ComboBox>-->
                                     <Label Content="Досвід розробки" Width="190" Height="34" Margin="42,5,43,5"/>
                                     <TextBox x:Name="_txtFindSkills" Width="190" Height="30" Margin="5"
                                              FontFamily="Cascadia Mono ExtraLight" FontSize="20" TextChanged="_txtFindSkills_TextChanged"/>
@@ -176,9 +176,11 @@
                                            FontFamily="Cascadia Mono ExtraLight"/>
                                     <Button Name="_changeSkillButton" Content="Редагувати" Width="190" Height="41" Margin="42,5,43,5"
                                             Click="_changeSkillButton_Click"/>
+                                    <Button Name="_deleteSkillButton" Content="Видалити" Width="190" Height="41" Margin="5"
+                                            Click="_deleteSkillButton_Click"/>
 
                                 </StackPanel>
-                                <Button Content="Зберегти" Grid.Column="2" Margin="140,213,421,0" Grid.Row="4"/>
+                                <Button Content="Зберегти" Grid.Column="2" Margin="140,213,421,0" Grid.Row="4" Click="Button_Click"/>
                             </Grid>
                         </Border>
                     </Grid>
