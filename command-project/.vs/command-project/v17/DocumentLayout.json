@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|e:\\coding\\learn\\\u0443\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\infowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\infowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BB576D2C-F69E-4FEF-BD0F-CC43926E106E}|command-project\\command-project.csproj|solutionrelative:command-project\\design\\admin\\infowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -68,8 +68,7 @@
               "ToolTip": "E:\\Coding\\Learn\\\u0423\u043F\u0440\u0430\u0432\u043B\u0456\u043D\u043D\u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0430\u043C\u0438\\command-project\\command-project\\command-project\\design\\admin\\InfoWindow.xaml",
               "RelativeToolTip": "command-project\\design\\admin\\InfoWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-02-24T15:20:55.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-24T15:20:55.058Z"
             },
             {
               "$type": "Document",

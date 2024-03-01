@@ -251,7 +251,7 @@
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="{Binding ElementName=_addSkillsView, Path=ActualWidth}">
-                                    <GridViewColumnHeader Content="Назва" />
+                                    <GridViewColumnHeader Content="Назва"/>
                                 </GridViewColumn>
                             </GridView>
                         </ListView.View>
