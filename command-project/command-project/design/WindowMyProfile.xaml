@@ -57,10 +57,10 @@
 
             <TabControl  x:Name="tabControlProf" 
                          Grid.ColumnSpan="10" 
-                         Margin="10,35,10,10" 
+                         Margin="0,35,0,17" 
                          Grid.RowSpan="12" Grid.Row="1">
                 <TabItem Header="Мій профіль"
-                         FontSize="20" Margin="341,0,-345,-3"
+                         FontSize="20" Margin="289,0,-293,-3"
                          Grid.Row="2"
                          Panel.ZIndex="5">
 
@@ -185,6 +185,38 @@
                 </TabItem>
 
                 <TabItem Header="ВакансіЇ"  FontSize="20" Margin="377,0,-466,-2">
+                    <Grid>
+                        <Label Content="Список вакансій" FontSize="30" HorizontalContentAlignment="Center" Margin="0,10,818,798">
+                            
+                        </Label>
+
+                        <ListBox Margin="15,80,818,-1" BorderBrush ="Black">
+                        
+                    
+                        </ListBox>
+
+                        <Label Content="Опис обраної вакансії..." FontSize="30" HorizontalContentAlignment="Center" Margin="1072,10,52,798">
+
+                        </Label>
+
+
+                        <TextBox  BorderBrush ="Black" Margin="1072,80,52,266">
+                            
+                        </TextBox>
+
+                        <Label Margin="1072,626,52,192">
+                            
+                        </Label>
+
+                        <Button Content="Прийняти" FontSize="33"  Margin="1072,692,52,104">
+                            
+                        </Button>
+
+                        <Button Content="Відхилити" FontSize="33" Margin="1072,786,52,10">
+
+                        </Button>
+
+                    </Grid>
 
                 </TabItem>
 
