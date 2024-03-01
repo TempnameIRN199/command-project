@@ -68,14 +68,14 @@ namespace command_project
                         Dispatcher.Invoke(new Action(() => window.Show()));
                         Dispatcher.Invoke(new Action(() => Close()));
                     }
-                    //else if (status == "Employer")
-                    //{
-                    //    working = false;
-                    //    design.WindowMyProfile window = null;
-                    //    Dispatcher.Invoke(new Action(() => window = new design.WindowMyProfile(login, serverPort, clientPort)));
-                    //    Dispatcher.Invoke(new Action(() => window.Show()));
-                    //    Dispatcher.Invoke(new Action(() => Close()));
-                    //}
+                    else if (status == "Employer")
+                    {
+                        working = false;
+                        Employer.NewFolder1.Window1 window = null;
+                        Dispatcher.Invoke(new Action(() => window = new Employer.NewFolder1.Window1(login, serverPort, clientPort)));
+                        Dispatcher.Invoke(new Action(() => window.Show()));
+                        Dispatcher.Invoke(new Action(() => Close()));
+                    }
                     Dispatcher.Invoke(new Action(() => Close()));
                 }
                 else if (texts[0] == "wrongLogin")

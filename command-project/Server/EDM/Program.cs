@@ -212,6 +212,12 @@ namespace Server
                         context.Users.Add(tempUser);
                         context.SaveChanges();
 
+                        if (tempUser.Status == "Worker")
+                        {
+                            context.CVs.Add(new CV() { UserId = context.Users.First(i => i.Login == tempUser.Login).Id, UserInfo = "", Skills = "", CreationDate = DateTime.Now });
+                        }
+                        context.SaveChanges();
+
                         string data = "rightLogin";
                         SendData(data, int.Parse(texts[11]));
                     }
@@ -286,16 +292,6 @@ namespace Server
                     + ">" + context.Users.Count(i => i.Status == "Worker") + ">" + context.Users.Count(i => i.Status == "Employer");
                 SendData(sendIt);
             }
-            else if (texts[0] == "getWorker")
-            {
-                string sendIt = "infoForWorker>";
-                WorkContext context = new WorkContext();
-                User user = context.Users.ToList().First(i=>i.Login == texts[1]);
-                //sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
-                //login(1)>status(2)>name(3)>secondname(4)>email(5)>CreationDate(6)>BirthDate(7)>Country(8)>City(9)>Phonenumber(10)>age(11)
-                sendIt += user.Login + ">" + user.Status + ">" + user.Name + ">" + user.SecondName + ">" + user.Email + ">" + user.CreationDate.ToString() + ">" + user.BirthDate.ToString() + ">" + user.Country + ">" + user.City + ">" + user.PhoneNumber + ">" + Functions.GetAge(user.BirthDate).ToString();
-                SendData(sendIt);
-            }
             else if (texts[0] == "getAdminTab1Info")
             {
                 int page = int.Parse(texts[1]);
@@ -368,6 +364,29 @@ namespace Server
             else if (texts[0] == "close")
             {
                 isWorking = false;
+            }
+            else if (texts[0] == "getWorker")
+            {
+                string sendIt = "infoForWorker>";
+                WorkContext context = new WorkContext();
+                User user = context.Users.ToList().First(i=>i.Login == texts[1]);
+                //sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                //login(1)>status(2)>name(3)>secondname(4)>email(5)>CreationDate(6)>BirthDate(7)>Country(8)>City(9)>Phonenumber(10)>age(11)
+                sendIt += user.Login + ">" + user.Status + ">" + user.Name + ">" + user.SecondName + ">" + user.Email + ">" + user.CreationDate.ToString() + ">" + user.BirthDate.ToString() + ">" + user.Country + ">" + user.City + ">" + user.PhoneNumber + ">" + Functions.GetAge(user.BirthDate).ToString() + ">";
+                sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                sendIt += ">" + user.CVs.First().UserInfo + ">" + user.CVs.First().Skills;
+                SendData(sendIt);
+            }
+            else if (texts[0] == "getEmployer")
+            {
+                string sendIt = "infoForEmployer>";
+                WorkContext context = new WorkContext();
+                User user = context.Users.ToList().First(i => i.Login == texts[1]);
+                //sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                //login(1)>status(2)>name(3)>secondname(4)>email(5)>CreationDate(6)>BirthDate(7)>Country(8)>City(9)>Phonenumber(10)>age(11)
+                sendIt += user.Name + " " + user.SecondName + ">" + user.Email + ">" + user.CreationDate.ToString() + ">" + user.BirthDate.Day.ToString() + "." + user.BirthDate.Month.ToString() + "." + user.BirthDate.Year.ToString() + ">" + user.Country + " " + user.City + ">" + user.PhoneNumber + ">";
+                sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                SendData(sendIt);
             }
 
             client.Close();

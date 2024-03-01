@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:command_project.Employer.NewFolder1"
         mc:Ignorable="d"
-        Title="Window1" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" ResizeMode="NoResize" Height="930" Width="1450">
+        Title="Window1" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" ResizeMode="NoResize" Height="930" Width="1450" Closed="Window_Closed">
     <Window.Style>
         <Style TargetType="Window">
             <Setter Property="Template">
@@ -90,25 +90,25 @@
                     <Border Background="LightGray" Margin="50,25,1050,583" CornerRadius="10" Grid.Row="1">
                         <Grid>
                             <Image Source="../icon1/Ava.png" Margin="10,4,231,24" />
-                            <TextBlock Text="[Верифіковано]" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" Margin="130,0,0,0"/>
-                            <Button Content="Верифікувати?" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="37" Width="200" Style="{StaticResource CustomButtonStyle}" Margin="124,157,0,0"/>
+                            <TextBlock Name="_lblLogin" Text="[Верифіковано]" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" Margin="130,0,0,0"/>
+                            <!--<Button Content="Верифікувати?" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="37" Width="200" Style="{StaticResource CustomButtonStyle}" Margin="124,157,0,0"/>-->
                         </Grid>
                     </Border>
                     <Border Background="LightGray" Margin="50,334,1050,50" CornerRadius="10" Grid.Row="1">
                         <Grid>
                             <TextBlock Text="Основна інформація" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,10,0,0"/>
                             <TextBlock Text="Ім'я та Прізвище" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,47,0,0" FontSize="20"/>
-                            <TextBlock Text="Тарас Шевченко" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,79,0,0" FontSize="14"/>
+                            <TextBlock Name="_lblName" Text="Тарас Шевченко" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,79,0,0" FontSize="14"/>
                             <TextBlock Text="Регіон" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,111,0,0" FontSize="20"/>
-                            <TextBlock Text="Україна Кривий Ріг" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0" FontSize="14"/>
+                            <TextBlock Name="_lblPlace" Text="Україна Кривий Ріг" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,143,0,0" FontSize="14"/>
                             <TextBlock Text="Дата народження" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,175,0,0" FontSize="20"/>
-                            <TextBlock Text="02.02.2002" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,207,0,0" FontSize="14"/>
+                            <TextBlock Name="_lblBD" Text="02.02.2002" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,207,0,0" FontSize="14"/>
                             <TextBlock Text="Номер телефону" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,239,0,0" FontSize="20"/>
-                            <TextBlock Text="+38 (000) 000-00-00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,271,0,0" FontSize="14"/>
+                            <TextBlock Name="_lblNumber" Text="+38 (000) 000-00-00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,271,0,0" FontSize="14"/>
                             <TextBlock Text="Електронна пошта" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,303,0,0" FontSize="20"/>
-                            <TextBlock Text="mystat12345@itstep.org" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,335,0,0" FontSize="14"/>
+                            <TextBlock Name="_lblEmail" Text="mystat12345@itstep.org" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,335,0,0" FontSize="14"/>
                             <TextBlock Text="Дата реєстрації" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,367,0,0" FontSize="20"/>
-                            <TextBlock Text="06.16.2016" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,399,0,0" FontSize="14"/>
+                            <TextBlock Name="_lblRDate" Text="06.16.2016" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,399,0,0" FontSize="14"/>
                             <Image Source="../icon1/edit.png" Margin="274,180,2,-191" />
                         </Grid>
                     </Border>

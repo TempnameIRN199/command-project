@@ -153,3 +153,5 @@ E:\Coding\Learn\Управління проектами\command-project\command-
 D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\style\InfoStackPanel.baml
 D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\admin\InfoWindow.g.cs
 D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\design\admin\InfoWindow.baml
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\Employer\NewFolder1\Window1.g.cs
+D:\ItStep\Current\command-project\command-project\command-project\obj\Debug\Employer\NewFolder1\Window1.baml
