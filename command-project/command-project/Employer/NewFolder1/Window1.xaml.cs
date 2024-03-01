@@ -212,6 +212,7 @@ namespace command_project.Employer.NewFolder1
                 selectedRequest = myRequests[_listMyRequests.SelectedIndex];
                 _txtRequestAboutItem.Text = selectedRequest.Show();
                 SendData("getWorkersOnRequest>" + selectedRequest.Name);
+                _listWorkers.SelectedIndex = -1;
                 selectedWorker = new wClass();
                 _txtAboutWorker.Text = "";
                 _txtIsEnough.Text = "";
