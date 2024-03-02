@@ -40,7 +40,6 @@ namespace command_project.coding
             return skills;
         }
 
-
         //Проверка достаточно ли навыков у пользователя для резюме по листу его навыков и листу необходимых навыков
         public static bool IsEnoughSkills(List<Skill> userSkills, List<Skill> requiredSkills)
         {

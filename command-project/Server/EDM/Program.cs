@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Work.EDM;
 using command_project.coding;
+using System.Collections;
 
 namespace Server
 {
@@ -353,12 +354,19 @@ namespace Server
             }
             else if (texts[0] == "addSkill")
             {
+                List<string> list1 = new List<string> { "Accepted", "Accepted byAdmin" };
+                List<string> list2 = new List<string> { "Declined", "Declined byAdmin" };
+                List<string> list3 = new List<string> { "Accepted", "Declined", "Under Review" };
+
                 WorkContext context = new WorkContext();
                 context.Skills.Add(new Work.EDM.Skill { Name = texts[1] });
                 context.SaveChanges();
 
                 string sendIt = "infoForAdmin>";
                 sendIt += string.Join("|", context.Skills.Select(i => i.Name).ToArray());
+                sendIt += ">" + context.RequestCVs.Count() + ">" + context.RequestCVs.Count(i => list1.Contains(i.Status))
+                + ">" + context.RequestCVs.Count(i => list2.Contains(i.Status)) + ">" + context.RequestCVs.Count(i => list3.Contains(i.Status))
+                    + ">" + context.Users.Count(i => i.Status == "Worker") + ">" + context.Users.Count(i => i.Status == "Employer");
                 SendData(sendIt);
             }
             else if (texts[0] == "close")

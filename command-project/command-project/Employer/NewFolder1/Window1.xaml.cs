@@ -128,6 +128,7 @@ namespace command_project.Employer.NewFolder1
             if (_myTab.SelectedIndex == 1)
             {
                 SendData("getMyRequests>" + login);
+                _listMyRequests.SelectedIndex = -1;
             }
         }
 
